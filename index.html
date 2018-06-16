@@ -167,6 +167,193 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-JavaScript中正则的使用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/2018/06/16/JavaScript中正则的使用/">JavaScript中正则的使用</a>
+    </h1>
+  
+
+        
+        <a href="/blog/2018/06/16/JavaScript中正则的使用/" class="archive-article-date">
+  	<time datetime="2018-06-15T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-16</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h2><p>类型是<code>object</code></p>
+<ol>
+<li>可以用正则的方法<br><code>reg = /\d/;</code><br><code>reg.exec(str);</code>返回查找的字符串或null,但是只能匹配一次不能全局匹配;返回一个数组,包含匹配到的字符串和分组规则匹配的值<br><code>reg.test(str);</code>返回true或false<br><code>str.match(reg);</code>返回查找的字符串数组或null,匹配一个;加g时才返回标准数组;不加g时返回类数组包含结果和子集<br><code>str.replace(reg , str1);</code>str1可以用函数代替<code>function(a,b,c,d){}</code>a: 匹配内容 b: 匹配的子集 c:匹配内容出现的序号 d: 整体str<br><code>str.search(reg);</code>返回查找匹配字符串首次出现的下标或-1<br><code>str.split(reg);</code></li>
+<li>创建正则表达式<ol>
+<li>直接量<br><code>var reg = /a/igm;</code></li>
+<li>构造函数<br><code>var reg = new RegExp(/\w/,&#39;igm&#39;);</code><br><code>var reg = new RegExp(&#39;\\w&#39;,&#39;igm&#39;);</code>需要转义</li>
+</ol>
+</li>
+<li>修饰符<br><code>i</code> 忽略大小写<br><code>g</code> 全局匹配(查找所有匹配,而非在找到第一个后停止),加了g后返回标准数组<br><code>m</code> 执行多行匹配</li>
+<li>特殊字符<ol>
+<li><code>|</code>表示或<br><code>var reg = new RegExp(/abc|def/,&#39;igm&#39;);</code></li>
+<li>字符集<code>[]</code>匹配括号中任意<strong>一个</strong>字符<br> <code>var reg = new RegExp(/[java]/,&#39;igm&#39;);</code><ol>
+<li>从str中依次遍历j,a,v,a(匹配j或a或v或a)</li>
+<li>[]中任何符号都会被认作匹配字符</li>
+<li><code>[a-zA-Z0-9]</code>匹配一个数字或字母</li>
+<li><code>[^0-9]</code>匹配一个非0-9的word</li>
+<li><code>[\u4e00-\u9fa5]</code>匹配一个中文</li>
+</ol>
+</li>
+<li><code>^</code>与<code>$</code><ol>
+<li><code>/^java\w*2017$/;</code>//匹配以java开头,2017结尾的字符</li>
+<li><code>/^a/;</code>//以a开头</li>
+<li><code>/a$/;</code>//以a结尾</li>
+<li>注<strong><code>^</code>在<code>[]</code>才表示非</strong></li>
+</ol>
+</li>
+<li>元字符(转义字符)<ol>
+<li><code>\</code> 转义符(将一个具有特殊意义的字符变得<strong>没有意义</strong>)<ol>
+<li><code>\n</code>字符串换行符 <code>\t</code>制表符 <code>\r</code>回车符</li>
+</ol>
+</li>
+<li><code>\w</code> 匹配一个[0-9A-Za-z_];word</li>
+<li><code>\W</code> 匹配一个[^0-9A-Za-z_]</li>
+<li><code>\d</code> 匹配一个[0-9];digital</li>
+<li><code>\D</code> 匹配一个[^0-9]</li>
+<li><code>\s</code> 匹配一个空格</li>
+<li><code>\S</code> 匹配一个非空格</li>
+<li><code>\b</code> 匹配一个 单词边界(除了\w之外的都可充当单词边界)</li>
+<li><code>\B</code>匹配不在单词边界上的字符</li>
+<li><code>.</code>匹配所有字符(除了字符串换行符\n,注意不是.)</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>量词(针对前面一个符号(或子集))</p>
+<pre><code>1. n? 匹配0个或1个n
+2. n* 匹配0个,1个或多个n
+3. n+ 匹配1个或多个n
+4. n{x} 匹配x个n
+5. n{x,y} 匹配x~y个n
+6. n{x,} 匹配至少x个n
+</code></pre></li>
+<li><p>贪婪和惰性(针对量词)<br>量词默认贪婪(尽可能多的匹配)<br>如要添加惰性,则<code>?</code>后面不能添加东西</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var str = &apos;a1111abc22222222222abc&apos;</span><br><span class="line">var reg = /a\w*?abc/;//惰性</span><br><span class="line">var reg1 = /a\w*abc/;//贪婪</span><br><span class="line">//贪婪: 匹配完整个字符串然后从最后开始吐</span><br><span class="line">//惰性: 从头开始匹配尽量少的匹配</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">尽可能多的匹配</th>
+<th style="text-align:center">尽可能少的匹配</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">+(匹配一个或多个)</td>
+<td style="text-align:center">+?(选择匹配1个)</td>
+</tr>
+<tr>
+<td style="text-align:center">*(匹配0个一个或多个)</td>
+<td style="text-align:center">*?(选择匹配0个</td>
+</tr>
+<tr>
+<td style="text-align:center">{1,20}</td>
+<td style="text-align:center">{1,20}?(选择匹配1个)</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>分组<ol>
+<li>捕获型分组<ol>
+<li><code>\1</code><br><code>(n)m\1</code> \1引用<strong>第一个</strong>分组( (n) )匹配的结果,第x个左括号就是第x个匹配规则</li>
+<li><code>RegExp.$1</code><br>获取第一个分组匹配的结果</li>
+</ol>
+</li>
+<li>非捕获型分组(一种断言)<ol>
+<li>正向前瞻<br><code>var reg = /javascript(?=2007)/;</code>匹配后面是2007的javascript(只拿到javascript);(<code>?:2007</code>)</li>
+<li>负向前瞻<br><code>var reg = /javascript(?!2007)/;</code>匹配后面不是2007的javascript</li>
+<li>正向后顾<br><code>?&lt;=2007</code></li>
+<li>负向后顾<br><code>?&lt;!2007</code>        </li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<ol>
+<li>常见的正则<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">QQ = /^[1-9]\d&#123;4,10&#125;$/;</span><br><span class="line">tel = /^1[3-9]\d&#123;9&#125;$/;</span><br><span class="line">username = /^[A-Za-z]\w&#123;5,15&#125;$/;</span><br><span class="line">password = /^[\w!@#$%^]&#123;6,16&#125;$/;</span><br><span class="line">email = /^[A-Za-z1-9]\w&#123;1,&#125;@[A-Za-z1-9\-]&#123;2,&#125;(\.[A-Za-z]&#123;2,&#125;)&#123;1,3&#125;&#125;$/;</span><br><span class="line">IDcard = /^[1-9]\d&#123;16&#125;\[\dxX]$/;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">正则</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/blog/categories/JavaScript//" class="article-tag-list-link color1">JavaScript</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/blog/2018/06/16/JavaScript中正则的使用/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-BeautifulSoup常用api总结" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -248,6 +435,117 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/blog/2018/06/16/BeautifulSoup常用api总结/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-python中正则的使用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/2018/06/16/python中正则的使用/">python中正则的使用</a>
+    </h1>
+  
+
+        
+        <a href="/blog/2018/06/16/python中正则的使用/" class="archive-article-date">
+  	<time datetime="2018-06-15T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-16</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ol>
+<li>与js一致,主要看方法</li>
+<li>特殊字符<ol>
+<li><code>.</code>除换行符外的任意字符</li>
+<li><code>^</code>与<code>$</code>起始于结束</li>
+<li>量词<ol>
+<li><code>* + ?</code></li>
+</ol>
+</li>
+</ol>
+</li>
+<li>非捕获型分组<ol>
+<li>正向前瞻<code>\d(?=xxx)</code>, 负向前瞻<code>\d(?!xxx)</code></li>
+<li>正向后顾<code>(?&lt;=xxx)\d</code>, 负向后顾<code>(?&lt;!xxx)\d</code></li>
+</ol>
+</li>
+<li>方法<ol>
+<li><code>re.match(pattern, string)</code>或<code>re.search(pattern, string)</code>返回一个或Null</li>
+<li><code>re.split(&#39;\d&#39;, &#39;1a2b3c&#39;)</code>以正则找到的字符把String切割成数组</li>
+<li><code>re.findall(pattern, string)</code></li>
+</ol>
+</li>
+</ol>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">正则</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/blog/categories/python//" class="article-tag-list-link color2">python</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/blog/2018/06/16/python中正则的使用/">展开全文 >></a>
         </p>
       
 
@@ -1026,201 +1324,10 @@
 
 
   
-    <article id="post-HTML学习笔记(2)-背景图片" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/2018/01/22/HTML学习笔记(2)-背景图片/">HTML学习笔记(2)-背景图片</a>
-    </h1>
-  
-
-        
-        <a href="/blog/2018/01/22/HTML学习笔记(2)-背景图片/" class="archive-article-date">
-  	<time datetime="2018-01-21T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-22</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="背景图片"><a href="#背景图片" class="headerlink" title="背景图片"></a>背景图片</h2><h3 id="背景颜色"><a href="#背景颜色" class="headerlink" title="背景颜色"></a>背景颜色</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">background-color: red;</span><br><span class="line">background-color: #fff;</span><br><span class="line">background-color: rgba(0,0,0,.5);</span><br></pre></td></tr></table></figure>
-<h3 id="背景图片-1"><a href="#背景图片-1" class="headerlink" title="背景图片"></a>背景图片</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">background-image:url(&apos;images/1.jpg&apos;);</span><br><span class="line">background-image:none;</span><br></pre></td></tr></table></figure>
-<h3 id="背景图片重复方式"><a href="#背景图片重复方式" class="headerlink" title="背景图片重复方式"></a>背景图片重复方式</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">不重复</span><br><span class="line">background-repeat:no-repeat;</span><br><span class="line"></span><br><span class="line">水平方向重复</span><br><span class="line">background-repeat:repeat-x;</span><br><span class="line"></span><br><span class="line">竖直方向重复</span><br><span class="line">background-repeat:repeat-y;</span><br><span class="line"></span><br><span class="line">默认值</span><br><span class="line">background-repeat:repeat;</span><br></pre></td></tr></table></figure>
-<h3 id="背景图片的位置"><a href="#背景图片的位置" class="headerlink" title="背景图片的位置"></a>背景图片的位置</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">第一个值水平,第二个值垂直</span><br><span class="line">background-position:X Y;</span><br></pre></td></tr></table></figure>
-<p><strong>参数的分类</strong></p>
-<ol>
-<li>关键词写法 top/bottom/left/right/center</li>
-<li>百分比写法</li>
-<li>具体的数值</li>
-<li>只给一个数值时,另一个数值默认为center</li>
-</ol>
-<h3 id="背景关联"><a href="#背景关联" class="headerlink" title="背景关联"></a>背景关联</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">背景图像相对于元素固定(默认值)</span><br><span class="line">background-attachment:scroll;</span><br><span class="line"></span><br><span class="line">背景图像相对于窗体固定</span><br><span class="line">background-attachment:fixed;</span><br></pre></td></tr></table></figure>
-<h3 id="背景图片的尺寸大小"><a href="#背景图片的尺寸大小" class="headerlink" title="背景图片的尺寸大小"></a>背景图片的尺寸大小</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">数值写法</span><br><span class="line">background-size:20px 30px;</span><br><span class="line"></span><br><span class="line">百分比写法(根据父级宽高决定)</span><br><span class="line">background-size:50% 50%;</span><br><span class="line"></span><br><span class="line">定宽或者高,另一个值自动适应</span><br><span class="line">background-size:200px auto;</span><br><span class="line">background-size:auto 200px;</span><br><span class="line"></span><br><span class="line">将背景图像等比缩放到宽度或者高度与容器的宽度或高度相等,背景图像始终被包含在容器内</span><br><span class="line">background-size:contain;</span><br><span class="line"></span><br><span class="line">将背景图像等比缩放到完全覆盖容器,背景图像有可能超出容器</span><br><span class="line">background-size:cover;</span><br></pre></td></tr></table></figure>
-<h3 id="多背景写法"><a href="#多背景写法" class="headerlink" title="多背景写法"></a>多背景写法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">background-image:url(&apos;&apos;),url(&apos;&apos;)</span><br></pre></td></tr></table></figure>
-<h3 id="背景图片的起始区域"><a href="#背景图片的起始区域" class="headerlink" title="背景图片的起始区域"></a>背景图片的起始区域</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">从padding位置开始(默认)    </span><br><span class="line">background-origin:padding-box;</span><br><span class="line"></span><br><span class="line">从内容区域开始</span><br><span class="line">background-origin:content-box;</span><br><span class="line"></span><br><span class="line">从边框线开始</span><br><span class="line">background-origin:border-box;</span><br></pre></td></tr></table></figure>
-<h3 id="背景图片的裁剪-遮盖"><a href="#背景图片的裁剪-遮盖" class="headerlink" title="背景图片的裁剪(遮盖)"></a>背景图片的裁剪(遮盖)</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">从border位置开始裁剪(默认)</span><br><span class="line">background-clip:border-box;</span><br><span class="line"></span><br><span class="line">从内容区域开始裁剪</span><br><span class="line">background-origin:content-box</span><br><span class="line"></span><br><span class="line">从padding位置开始裁剪</span><br><span class="line">background-clip:padding-box;</span><br><span class="line"></span><br><span class="line">背景显示在文字字体上</span><br><span class="line">-webbackground-clip:text;</span><br></pre></td></tr></table></figure>
-<h3 id="背景的复合写法"><a href="#背景的复合写法" class="headerlink" title="背景的复合写法"></a>背景的复合写法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">url;平铺;背景图片位置;背景图片起始位置;背景图片大小;背景图片裁剪位置;背景颜色(在多背景时必须写在最后)</span><br><span class="line">background:url(&apos;&apos;) no-repeat 10px 20px/cover,url(&apos;&apos;) repeat-x 10px 20px/cover content-box padding-box #666;</span><br></pre></td></tr></table></figure>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">html</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/blog/categories/前端//" class="article-tag-list-link color3">前端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/blog/2018/01/22/HTML学习笔记(2)-背景图片/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-HTML学习笔记(1)-外边距合并" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/2018/01/22/HTML学习笔记(1)-外边距合并/">HTML学习笔记(1)-外边距合并</a>
-    </h1>
-  
-
-        
-        <a href="/blog/2018/01/22/HTML学习笔记(1)-外边距合并/" class="archive-article-date">
-  	<time datetime="2018-01-21T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-22</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="外边距合并"><a href="#外边距合并" class="headerlink" title="外边距合并"></a>外边距合并</h1><h2 id="垂直方向的合并"><a href="#垂直方向的合并" class="headerlink" title="垂直方向的合并"></a>垂直方向的合并</h2><p><strong>垂直相遇</strong>的两个盒子会出现外边距合并的情况(水平的不会合并)合并后<strong>取较大的值</strong></p>
-<h2 id="嵌套盒子的合并"><a href="#嵌套盒子的合并" class="headerlink" title="嵌套盒子的合并"></a>嵌套盒子的合并</h2><p>当两个盒子之间没有外边距或者边框分开时,给里面的盒子加上外边距,会自动把外边距合并到外面的盒子上</p>
-<p><strong>解决办法</strong>:给外面的盒子加上内边距或者边框线,可以把border或者padding当成边框框住里面的盒子,使里面的盒子和外面盒子的外边距不相遇</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">html</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/blog/categories/前端//" class="article-tag-list-link color3">前端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/blog/2018/01/22/HTML学习笔记(1)-外边距合并/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/blog/page/2/">2</a><a class="extend next" rel="next" href="/blog/page/2/">Next &raquo;</a>
+    </nav>
   
 
 
@@ -1327,6 +1434,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">html</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">JavaScript</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">正则</a>
               </li>
              
               <li class="article-tag-list-item">
