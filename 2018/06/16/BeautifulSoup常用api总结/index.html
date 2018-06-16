@@ -6,18 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://hlg453839615.github.io">
-  <title>Tag: selenium | 像风走了八千里,不问归期</title>
+  <title>BeautifulSoup常用api | 像风走了八千里,不问归期</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="LostStars&apos;s blog">
-<meta property="og:type" content="website">
-<meta property="og:title" content="像风走了八千里,不问归期">
-<meta property="og:url" content="https://hlg453839615.github.io/tags/selenium/index.html">
+  <meta name="description" content="解析器Beautiful Soup支持python标准库中的HTML解析器,还支持一些第三方的解析器,常见的解析器有|解析器|使用方法||:-:|:-:||python标准库|BeautifulSoup(markup,’html.parser’)||lxml HTML解析器|BeautifulSoup(markup,’lxml’)||lxml XML解析器|BeautifulSoup(markup">
+<meta name="keywords" content="爬虫,python">
+<meta property="og:type" content="article">
+<meta property="og:title" content="BeautifulSoup常用api">
+<meta property="og:url" content="https://hlg453839615.github.io/2018/06/16/BeautifulSoup常用api总结/index.html">
 <meta property="og:site_name" content="像风走了八千里,不问归期">
-<meta property="og:description" content="LostStars&apos;s blog">
+<meta property="og:description" content="解析器Beautiful Soup支持python标准库中的HTML解析器,还支持一些第三方的解析器,常见的解析器有|解析器|使用方法||:-:|:-:||python标准库|BeautifulSoup(markup,’html.parser’)||lxml HTML解析器|BeautifulSoup(markup,’lxml’)||lxml XML解析器|BeautifulSoup(markup">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-06-16T01:11:49.713Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="像风走了八千里,不问归期">
-<meta name="twitter:description" content="LostStars&apos;s blog">
+<meta name="twitter:title" content="BeautifulSoup常用api">
+<meta name="twitter:description" content="解析器Beautiful Soup支持python标准库中的HTML解析器,还支持一些第三方的解析器,常见的解析器有|解析器|使用方法||:-:|:-:||python标准库|BeautifulSoup(markup,’html.parser’)||lxml HTML解析器|BeautifulSoup(markup,’lxml’)||lxml XML解析器|BeautifulSoup(markup">
   
     <link rel="alternative" href="/atom.xml" title="像风走了八千里,不问归期" type="application/atom+xml">
   
@@ -165,79 +167,216 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-BeautifulSoup常用api总结" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/blog/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/blog/2018/06/07/基于python + Selenium的自动化学习(unittest)/" class="archive-article-date">
-  	<time datetime="2018-06-06T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-07</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/blog/2018/06/07/基于python + Selenium的自动化学习(unittest)/">基于python + Selenium的自动化学习(unittest框架)</a>
+    <h1 class="article-title" itemprop="name">
+      BeautifulSoup常用api
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/blog/2018/06/16/BeautifulSoup常用api总结/" class="archive-article-date">
+  	<time datetime="2018-06-15T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-16</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="解析器"><a href="#解析器" class="headerlink" title="解析器"></a>解析器</h2><p>Beautiful Soup支持python标准库中的HTML解析器,还支持一些第三方的解析器,常见的解析器有<br>|解析器|使用方法|<br>|:-:|:-:|<br>|python标准库|BeautifulSoup(markup,’html.parser’)|<br>|lxml HTML解析器|BeautifulSoup(markup,’lxml’)|<br>|lxml XML解析器|BeautifulSoup(markup,’lxml’, ‘xml’)|<br>|html5lib|BeautifulSoup(markup,’html5lib’)|</p>
+<h2 id="基本使用"><a href="#基本使用" class="headerlink" title="基本使用"></a>基本使用</h2><ol>
+<li><code>soup.p</code>获取第一个p标签</li>
+<li><code>soup.p.attrs[&#39;class&#39;]</code>或<code>soup.p[&#39;class&#39;]</code>获取第一个p标签的name属性的值</li>
+<li><code>soup.p.string</code>或<code>soup.p.text</code>获取标签的文本属性</li>
+<li><code>soup.p.children</code>获取第一个p标签的子元素(数组形式)</li>
+<li><code>soup.a.parent</code>获取第一个a标签的父元素</li>
+<li><code>soup.a.next_siblings</code>获取后面的所有兄弟元素,<code>soup.a.next_sibling</code>获取下一个兄弟元素,<code>soup.a.previous_siblings</code>相同</li>
+<li><code>soup.title</code>获取title的内容,<code>soup.title.name</code>获取标签名称<h2 id="标准选择器find"><a href="#标准选择器find" class="headerlink" title="标准选择器find"></a>标准选择器<code>find</code></h2></li>
+<li><code>find_all</code>返回列表(数组)<ol>
+<li><code>soup.find_all(&#39;ul&#39;)</code>获取所有ul标签以及每个ul标签的内部标签</li>
+<li><code>soup.find_all(attrs={&#39;name&#39;: &#39;xxx&#39;})</code>获取所有属性name为xxx的标签</li>
+<li><code>soup.find_all(text=&#39;xxx&#39;)</code>获取文本为xxx的标签</li>
+</ol>
+</li>
+<li><code>find(name, attrs, recursive, text, **kwargs)</code>返回第一个元素 </li>
+</ol>
+<h2 id="CSS选择器"><a href="#CSS选择器" class="headerlink" title="CSS选择器"></a>CSS选择器</h2><ol>
+<li><code>soup.select(&#39;ul&#39;)</code>返回所有ul标签</li>
+<li><code>soup.select(&#39;li&#39;)[0].get_text()</code>获取文本内容</li>
+<li><code>soup.select(&#39;ul&#39;)[0].attrs[&#39;id&#39;]</code>获取第一个ul的id属性值</li>
+</ol>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">爬虫</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">自动化测试</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">selenium</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/blog/categories/测试//" class="article-tag-list-link color3">测试</a>
+        			<a href="/blog/categories/python//" class="article-tag-list-link color2">python</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://hlg453839615.github.io/2018/06/16/BeautifulSoup常用api总结/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/blog/2018/06/12/OSI七层模型结构/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">OSI七层模型结构, TCP/IP四层模型学习笔记</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#解析器"><span class="toc-number">1.</span> <span class="toc-text">解析器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#基本使用"><span class="toc-number">2.</span> <span class="toc-text">基本使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#标准选择器find"><span class="toc-number">3.</span> <span class="toc-text">标准选择器find</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CSS选择器"><span class="toc-number">4.</span> <span class="toc-text">CSS选择器</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -260,9 +399,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: true,
 		toc_hide_index: true,
