@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="https://hlg453839615.github.io">
   <title>python中正则的使用 | 像风走了八千里,不问归期</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="与js一致,主要看方法 特殊字符 .除换行符外的任意字符 ^与$起始于结束 量词 * + ?     非捕获型分组 正向前瞻\d(?=xxx), 负向前瞻\d(?!xxx) 正向后顾(?&amp;lt;=xxx)\d, 负向后顾(?&amp;lt;!xxx)\d   方法 re.match(pattern, string)或re.search(pattern, string)返回一个或Null re.split">
+  <meta name="description" content="与js一致,主要看方法 特殊字符 .除换行符外的任意字符 ^与$起始于结束(^和$放在最前和最后) 量词 * + ?     非捕获型分组 正向前瞻\d(?=xxx), 负向前瞻\d(?!xxx) 正向后顾(?&amp;lt;=xxx)\d, 负向后顾(?&amp;lt;!xxx)\d   方法 re.match(pattern, string)或re.search(pattern, string)返回一个或N">
 <meta name="keywords" content="python,正则">
 <meta property="og:type" content="article">
 <meta property="og:title" content="python中正则的使用">
 <meta property="og:url" content="https://hlg453839615.github.io/2018/06/16/python中正则的使用/index.html">
 <meta property="og:site_name" content="像风走了八千里,不问归期">
-<meta property="og:description" content="与js一致,主要看方法 特殊字符 .除换行符外的任意字符 ^与$起始于结束 量词 * + ?     非捕获型分组 正向前瞻\d(?=xxx), 负向前瞻\d(?!xxx) 正向后顾(?&amp;lt;=xxx)\d, 负向后顾(?&amp;lt;!xxx)\d   方法 re.match(pattern, string)或re.search(pattern, string)返回一个或Null re.split">
+<meta property="og:description" content="与js一致,主要看方法 特殊字符 .除换行符外的任意字符 ^与$起始于结束(^和$放在最前和最后) 量词 * + ?     非捕获型分组 正向前瞻\d(?=xxx), 负向前瞻\d(?!xxx) 正向后顾(?&amp;lt;=xxx)\d, 负向后顾(?&amp;lt;!xxx)\d   方法 re.match(pattern, string)或re.search(pattern, string)返回一个或N">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-06-16T02:12:46.253Z">
+<meta property="og:updated_time" content="2018-06-16T03:09:08.279Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python中正则的使用">
-<meta name="twitter:description" content="与js一致,主要看方法 特殊字符 .除换行符外的任意字符 ^与$起始于结束 量词 * + ?     非捕获型分组 正向前瞻\d(?=xxx), 负向前瞻\d(?!xxx) 正向后顾(?&amp;lt;=xxx)\d, 负向后顾(?&amp;lt;!xxx)\d   方法 re.match(pattern, string)或re.search(pattern, string)返回一个或Null re.split">
+<meta name="twitter:description" content="与js一致,主要看方法 特殊字符 .除换行符外的任意字符 ^与$起始于结束(^和$放在最前和最后) 量词 * + ?     非捕获型分组 正向前瞻\d(?=xxx), 负向前瞻\d(?!xxx) 正向后顾(?&amp;lt;=xxx)\d, 负向后顾(?&amp;lt;!xxx)\d   方法 re.match(pattern, string)或re.search(pattern, string)返回一个或N">
   
     <link rel="alternative" href="/atom.xml" title="像风走了八千里,不问归期" type="application/atom+xml">
   
@@ -191,7 +191,7 @@
 <li>与js一致,主要看方法</li>
 <li>特殊字符<ol>
 <li><code>.</code>除换行符外的任意字符</li>
-<li><code>^</code>与<code>$</code>起始于结束</li>
+<li><code>^</code>与<code>$</code>起始于结束(<code>^</code>和<code>$</code>放在最前和最后)</li>
 <li>量词<ol>
 <li><code>* + ?</code></li>
 </ol>
@@ -329,18 +329,18 @@
   
 <nav id="article-nav">
   
-    <a href="/blog/2018/06/16/BeautifulSoup常用api总结/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/blog/2018/06/16/JavaScript中正则的使用/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          BeautifulSoup常用api
+          JavaScript中正则的使用
         
       </div>
     </a>
   
   
-    <a href="/blog/2018/06/12/OSI七层模型结构/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">OSI七层模型结构, TCP/IP四层模型学习笔记</div>
+    <a href="/blog/2018/06/12/网络安全/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">网络安全</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -495,19 +495,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">JavaScript</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">正则</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">OSI</a>
+                <a href="javascript:void(0)" class="js-tag color1">JavaScript</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">TCP/IP</a>
+                <a href="javascript:void(0)" class="js-tag color3">网络</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">安全性测试</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -519,11 +519,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">网络</a>
+                <a href="javascript:void(0)" class="js-tag color4">OSI</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">安全性测试</a>
+                <a href="javascript:void(0)" class="js-tag color2">TCP/IP</a>
               </li>
             
             <div class="clearfix"></div>
