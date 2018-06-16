@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="https://hlg453839615.github.io">
   <title>JavaScript中正则的使用 | 像风走了八千里,不问归期</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="正则表达式类型是object  可以用正则的方法reg = /\d/;reg.exec(str);返回查找的字符串或null,但是只能匹配一次不能全局匹配;返回一个数组,包含匹配到的字符串和分组规则匹配的值reg.test(str);返回true或falsestr.match(reg);返回查找的字符串数组或null,匹配一个;加g时才返回标准数组;不加g时返回类数组包含结果和子集str.repl">
+  <meta name="description" content="可以用正则的方法  reg.exec(str);返回查找的字符串或null,但是只能匹配一次不能全局匹配;返回一个数组,包含匹配到的字符串和分组规则匹配的值 reg.test(str);返回true或false str.match(reg);返回查找的字符串数组或null,匹配一个;加g时才返回标准数组;不加g时返回类数组包含结果和子集 str.replace(reg , str1);str1可">
 <meta name="keywords" content="JavaScript,正则">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JavaScript中正则的使用">
 <meta property="og:url" content="https://hlg453839615.github.io/2018/06/16/JavaScript中正则的使用/index.html">
 <meta property="og:site_name" content="像风走了八千里,不问归期">
-<meta property="og:description" content="正则表达式类型是object  可以用正则的方法reg = /\d/;reg.exec(str);返回查找的字符串或null,但是只能匹配一次不能全局匹配;返回一个数组,包含匹配到的字符串和分组规则匹配的值reg.test(str);返回true或falsestr.match(reg);返回查找的字符串数组或null,匹配一个;加g时才返回标准数组;不加g时返回类数组包含结果和子集str.repl">
+<meta property="og:description" content="可以用正则的方法  reg.exec(str);返回查找的字符串或null,但是只能匹配一次不能全局匹配;返回一个数组,包含匹配到的字符串和分组规则匹配的值 reg.test(str);返回true或false str.match(reg);返回查找的字符串数组或null,匹配一个;加g时才返回标准数组;不加g时返回类数组包含结果和子集 str.replace(reg , str1);str1可">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-06-16T02:17:39.994Z">
+<meta property="og:updated_time" content="2018-06-16T02:22:37.224Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript中正则的使用">
-<meta name="twitter:description" content="正则表达式类型是object  可以用正则的方法reg = /\d/;reg.exec(str);返回查找的字符串或null,但是只能匹配一次不能全局匹配;返回一个数组,包含匹配到的字符串和分组规则匹配的值reg.test(str);返回true或falsestr.match(reg);返回查找的字符串数组或null,匹配一个;加g时才返回标准数组;不加g时返回类数组包含结果和子集str.repl">
+<meta name="twitter:description" content="可以用正则的方法  reg.exec(str);返回查找的字符串或null,但是只能匹配一次不能全局匹配;返回一个数组,包含匹配到的字符串和分组规则匹配的值 reg.test(str);返回true或false str.match(reg);返回查找的字符串数组或null,匹配一个;加g时才返回标准数组;不加g时返回类数组包含结果和子集 str.replace(reg , str1);str1可">
   
     <link rel="alternative" href="/atom.xml" title="像风走了八千里,不问归期" type="application/atom+xml">
   
@@ -187,15 +187,29 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h2><p>类型是<code>object</code></p>
+        <ol>
+<li><p>可以用正则的方法</p>
 <ol>
-<li>可以用正则的方法<br><code>reg = /\d/;</code><br><code>reg.exec(str);</code>返回查找的字符串或null,但是只能匹配一次不能全局匹配;返回一个数组,包含匹配到的字符串和分组规则匹配的值<br><code>reg.test(str);</code>返回true或false<br><code>str.match(reg);</code>返回查找的字符串数组或null,匹配一个;加g时才返回标准数组;不加g时返回类数组包含结果和子集<br><code>str.replace(reg , str1);</code>str1可以用函数代替<code>function(a,b,c,d){}</code>a: 匹配内容 b: 匹配的子集 c:匹配内容出现的序号 d: 整体str<br><code>str.search(reg);</code>返回查找匹配字符串首次出现的下标或-1<br><code>str.split(reg);</code></li>
-<li>创建正则表达式<ol>
+<li><code>reg.exec(str);</code>返回查找的字符串或null,但是只能匹配一次不能全局匹配;返回一个数组,包含匹配到的字符串和分组规则匹配的值</li>
+<li><code>reg.test(str);</code>返回true或false</li>
+<li><code>str.match(reg);</code>返回查找的字符串数组或null,匹配一个;加g时才返回标准数组;不加g时返回类数组包含结果和子集</li>
+<li><code>str.replace(reg , str1);</code>str1可以用函数代替<code>function(a,b,c,d){}</code>a: 匹配内容 b: 匹配的子集 c:匹配内容出现的序号 d: 整体str</li>
+<li><code>str.search(reg);</code>返回查找匹配字符串首次出现的下标或-1</li>
+<li><code>str.split(reg);</code></li>
+</ol>
+</li>
+<li><p>创建正则表达式</p>
+<ol>
 <li>直接量<br><code>var reg = /a/igm;</code></li>
 <li>构造函数<br><code>var reg = new RegExp(/\w/,&#39;igm&#39;);</code><br><code>var reg = new RegExp(&#39;\\w&#39;,&#39;igm&#39;);</code>需要转义</li>
 </ol>
 </li>
-<li>修饰符<br><code>i</code> 忽略大小写<br><code>g</code> 全局匹配(查找所有匹配,而非在找到第一个后停止),加了g后返回标准数组<br><code>m</code> 执行多行匹配</li>
+<li>修饰符<ol>
+<li><code>i</code> 忽略大小写</li>
+<li><code>g</code> 全局匹配(查找所有匹配,而非在找到第一个后停止),加了g后返回标准数组</li>
+<li><code>m</code> 执行多行匹配</li>
+</ol>
+</li>
 <li>特殊字符<ol>
 <li><code>|</code>表示或<br><code>var reg = new RegExp(/abc|def/,&#39;igm&#39;);</code></li>
 <li>字符集<code>[]</code>匹配括号中任意<strong>一个</strong>字符<br> <code>var reg = new RegExp(/[java]/,&#39;igm&#39;);</code><ol>
@@ -213,8 +227,11 @@
 <li>注<strong><code>^</code>在<code>[]</code>才表示非</strong></li>
 </ol>
 </li>
-<li>元字符(转义字符)<br> 1.<code>\</code> 转义符(将一个具有特殊意义的字符变得<strong>没有意义</strong>)<pre><code>1. `\n`字符串换行符 `\t`制表符 `\r`回车符
-</code></pre><ol>
+<li>元字符(转义字符)<ol>
+<li><code>\</code> 转义符(将一个具有特殊意义的字符变得<strong>没有意义</strong>)<ol>
+<li><code>\n</code>字符串换行符 <code>\t</code>制表符 <code>\r</code>回车符</li>
+</ol>
+</li>
 <li><code>\w</code> 匹配一个[0-9A-Za-z_];word</li>
 <li><code>\W</code> 匹配一个[^0-9A-Za-z_]</li>
 <li><code>\d</code> 匹配一个[0-9];digital</li>
@@ -404,18 +421,9 @@
   
 <nav id="article-nav">
   
-    <a href="/blog/2018/06/16/BeautifulSoup常用api总结/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          BeautifulSoup常用api
-        
-      </div>
-    </a>
   
-  
-    <a href="/blog/2018/06/12/OSI七层模型结构/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">OSI七层模型结构, TCP/IP四层模型学习笔记</div>
+    <a href="/blog/2018/06/16/BeautifulSoup常用api总结/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">BeautifulSoup常用api</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -442,7 +450,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#正则表达式"><span class="toc-number">1.</span> <span class="toc-text">正则表达式</span></a></li></ol>
+                    目录，不存在的…
                     </div>
                 </span>
             </div>
@@ -554,19 +562,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">前端</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">html</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">爬虫</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">python</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">html</a>
               </li>
              
               <li class="article-tag-list-item">
