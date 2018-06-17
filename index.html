@@ -392,9 +392,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <ol>
-<li><p>可以用正则的方法</p>
-<ol>
+        <h2 id="JavaScript正则的使用"><a href="#JavaScript正则的使用" class="headerlink" title="JavaScript正则的使用"></a>JavaScript正则的使用</h2><ol>
+<li>可以用正则的方法<ol>
 <li><code>reg.exec(str);</code>返回查找的字符串或null,但是只能匹配一次不能全局匹配;返回一个数组,包含匹配到的字符串和分组规则匹配的值</li>
 <li><code>reg.test(str);</code>返回true或false</li>
 <li><code>str.match(reg);</code>返回查找的字符串数组或null,匹配一个;加g时才返回标准数组;不加g时返回类数组包含结果和子集</li>
@@ -403,8 +402,7 @@
 <li><code>str.split(reg);</code></li>
 </ol>
 </li>
-<li><p>创建正则表达式</p>
-<ol>
+<li>创建正则表达式<ol>
 <li>直接量<br><code>var reg = /a/igm;</code></li>
 <li>构造函数<br><code>var reg = new RegExp(/\w/,&#39;igm&#39;);</code><br><code>var reg = new RegExp(&#39;\\w&#39;,&#39;igm&#39;);</code>需要转义</li>
 </ol>
@@ -416,8 +414,12 @@
 </ol>
 </li>
 <li>特殊字符<ol>
-<li><code>|</code>表示或<br><code>var reg = new RegExp(/abc|def/,&#39;igm&#39;);</code></li>
-<li>字符集<code>[]</code>匹配括号中任意<strong>一个</strong>字符<br> <code>var reg = new RegExp(/[java]/,&#39;igm&#39;);</code><ol>
+<li><code>|</code>表示或<ol>
+<li><code>var reg = new RegExp(/abc|def/,&#39;igm&#39;);</code></li>
+</ol>
+</li>
+<li>字符集<code>[]</code>匹配括号中任意<strong>一个</strong>字符<ol>
+<li><code>var reg = new RegExp(/[java]/,&#39;igm&#39;);</code></li>
 <li>从str中依次遍历j,a,v,a(匹配j或a或v或a)</li>
 <li>[]中任何符号都会被认作匹配字符</li>
 <li><code>[a-zA-Z0-9]</code>匹配一个数字或字母</li>
@@ -487,24 +489,42 @@
 </tbody>
 </table>
 <ol>
-<li>分组<ol>
+<li><p>分组</p>
+<ol>
 <li>捕获型分组<ol>
-<li><code>\1</code><br><code>(n)m\1</code> \1引用<strong>第一个</strong>分组( (n) )匹配的结果,第x个左括号就是第x个匹配规则</li>
-<li><code>RegExp.$1</code><br>获取第一个分组匹配的结果</li>
+<li><code>\1</code><ol>
+<li><code>(n)m\1</code> \1引用<strong>第一个</strong>分组( (n) )匹配的结果,第x个左括号就是第x个匹配规则</li>
+</ol>
+</li>
+<li><code>RegExp.$1</code><ol>
+<li>获取第一个分组匹配的结果</li>
+</ol>
+</li>
 </ol>
 </li>
 <li>非捕获型分组(一种断言)<ol>
-<li>正向前瞻<br><code>var reg = /javascript(?=2007)/;</code>匹配后面是2007的javascript(只拿到javascript);(<code>?:2007</code>)</li>
-<li>负向前瞻<br><code>var reg = /javascript(?!2007)/;</code>匹配后面不是2007的javascript</li>
-<li>正向后顾<br><code>?&lt;=2007</code></li>
-<li>负向后顾<br><code>?&lt;!2007</code>        </li>
+<li>正向前瞻<ol>
+<li><code>var reg = /javascript(?=2007)/;</code>匹配后面是2007的javascript(只拿到javascript);(<code>?:2007</code>)</li>
+</ol>
+</li>
+<li>负向前瞻<ol>
+<li><code>var reg = /javascript(?!2007)/;</code>匹配后面不是2007的javascript</li>
+</ol>
+</li>
+<li>正向后顾<ol>
+<li><code>?&lt;=2007</code></li>
+</ol>
+</li>
+<li>负向后顾<ol>
+<li><code>?&lt;!2007</code>        </li>
 </ol>
 </li>
 </ol>
 </li>
 </ol>
-<ol>
-<li>常见的正则<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">QQ = /^[1-9]\d&#123;4,10&#125;$/;</span><br><span class="line">tel = /^1[3-9]\d&#123;9&#125;$/;</span><br><span class="line">username = /^[A-Za-z]\w&#123;5,15&#125;$/;</span><br><span class="line">password = /^[\w!@#$%^]&#123;6,16&#125;$/;</span><br><span class="line">email = /^[A-Za-z1-9]\w&#123;1,&#125;@[A-Za-z1-9\-]&#123;2,&#125;(\.[A-Za-z]&#123;2,&#125;)&#123;1,3&#125;&#125;$/;</span><br><span class="line">IDcard = /^[1-9]\d&#123;16&#125;\[\dxX]$/;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>常见的正则</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">QQ = /^[1-9]\d&#123;4,10&#125;$/;</span><br><span class="line">tel = /^1[3-9]\d&#123;9&#125;$/;</span><br><span class="line">username = /^[A-Za-z]\w&#123;5,15&#125;$/;</span><br><span class="line">password = /^[\w!@#$%^]&#123;6,16&#125;$/;</span><br><span class="line">email = /^[A-Za-z1-9]\w&#123;1,&#125;@[A-Za-z1-9\-]&#123;2,&#125;(\.[A-Za-z]&#123;2,&#125;)&#123;1,3&#125;&#125;$/;</span><br><span class="line">IDcard = /^[1-9]\d&#123;16&#125;\[\dxX]$/;</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 
@@ -520,11 +540,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">正则</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">正则</a>
         		</li>
       		
 		</ul>
@@ -1453,19 +1473,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">正则</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">JavaScript</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">网络</a>
+                <a href="javascript:void(0)" class="js-tag color3">正则</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">安全性测试</a>
+                <a href="javascript:void(0)" class="js-tag color4">OSI</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">TCP/IP</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1477,11 +1497,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">OSI</a>
+                <a href="javascript:void(0)" class="js-tag color3">网络</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">TCP/IP</a>
+                <a href="javascript:void(0)" class="js-tag color1">安全性测试</a>
               </li>
             
             <div class="clearfix"></div>
