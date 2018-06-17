@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://hlg453839615.github.io">
-  <title>HTML学习笔记(3)-多行省略号 | 像风走了八千里,不问归期</title>
+  <title>JavaScript学习笔记-数据类型 | 像风走了八千里,不问归期</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="12345678老版弹性盒模型display: -webkit-box;规定字体垂直显示-webkit-box-orient: vertical;规定显示几行-webkit-line-clamp: 2;显示隐藏overflow: hidden;">
-<meta name="keywords" content="前端,html">
+  <meta name="description" content="JavaScript数据类型浅析JavaScript语言的类型 数字number js中的Number类型使用的是双精度浮点型,也就是其他语言的double类型 JS number相加精度丢失 var a = &amp;#39;a&amp;#39; - 1;NaN NaN于自己不相等 isNaN()返回布尔值,内部会先使用number()转化  字符串string字符串方法(不会修改原字符串) str.lengt">
+<meta name="keywords" content="JavaScript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="HTML学习笔记(3)-多行省略号">
-<meta property="og:url" content="https://hlg453839615.github.io/2018/01/23/HTML学习笔记(3)-多行省略号/index.html">
+<meta property="og:title" content="JavaScript学习笔记-数据类型">
+<meta property="og:url" content="https://hlg453839615.github.io/2018/06/17/JavsScript学习笔记-基本属性/index.html">
 <meta property="og:site_name" content="像风走了八千里,不问归期">
-<meta property="og:description" content="12345678老版弹性盒模型display: -webkit-box;规定字体垂直显示-webkit-box-orient: vertical;规定显示几行-webkit-line-clamp: 2;显示隐藏overflow: hidden;">
+<meta property="og:description" content="JavaScript数据类型浅析JavaScript语言的类型 数字number js中的Number类型使用的是双精度浮点型,也就是其他语言的double类型 JS number相加精度丢失 var a = &amp;#39;a&amp;#39; - 1;NaN NaN于自己不相等 isNaN()返回布尔值,内部会先使用number()转化  字符串string字符串方法(不会修改原字符串) str.lengt">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-06-15T23:18:27.419Z">
+<meta property="og:updated_time" content="2018-06-17T04:06:11.168Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="HTML学习笔记(3)-多行省略号">
-<meta name="twitter:description" content="12345678老版弹性盒模型display: -webkit-box;规定字体垂直显示-webkit-box-orient: vertical;规定显示几行-webkit-line-clamp: 2;显示隐藏overflow: hidden;">
+<meta name="twitter:title" content="JavaScript学习笔记-数据类型">
+<meta name="twitter:description" content="JavaScript数据类型浅析JavaScript语言的类型 数字number js中的Number类型使用的是双精度浮点型,也就是其他语言的double类型 JS number相加精度丢失 var a = &amp;#39;a&amp;#39; - 1;NaN NaN于自己不相等 isNaN()返回布尔值,内部会先使用number()转化  字符串string字符串方法(不会修改原字符串) str.lengt">
   
     <link rel="alternative" href="/atom.xml" title="像风走了八千里,不问归期" type="application/atom+xml">
   
@@ -171,27 +171,121 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-HTML学习笔记(3)-多行省略号" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-JavsScript学习笔记-基本属性" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      HTML学习笔记(3)-多行省略号
+      JavaScript学习笔记-数据类型
     </h1>
   
 
         
-        <a href="/blog/2018/01/23/HTML学习笔记(3)-多行省略号/" class="archive-article-date">
-  	<time datetime="2018-01-22T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-23</time>
+        <a href="/blog/2018/06/17/JavsScript学习笔记-基本属性/" class="archive-article-date">
+  	<time datetime="2018-06-17T03:33:55.092Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-17</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">老版弹性盒模型</span><br><span class="line">display: -webkit-box;</span><br><span class="line">规定字体垂直显示</span><br><span class="line">-webkit-box-orient: vertical;</span><br><span class="line">规定显示几行</span><br><span class="line">-webkit-line-clamp: 2;</span><br><span class="line">显示隐藏</span><br><span class="line">overflow: hidden;</span><br></pre></td></tr></table></figure>
+        <h2 id="JavaScript数据类型"><a href="#JavaScript数据类型" class="headerlink" title="JavaScript数据类型"></a>JavaScript数据类型</h2><p><a href="http://www.helloyzy.cn/2017/11/05/js%E7%B1%BB%E5%9E%8B/" target="_blank" rel="noopener">浅析JavaScript语言的类型</a></p>
+<h3 id="数字number"><a href="#数字number" class="headerlink" title="数字number"></a>数字number</h3><ol>
+<li>js中的Number类型使用的是双精度浮点型,也就是其他语言的double类型</li>
+<li><a href="https://juejin.im/post/5a6fce10f265da3e261c3c71" target="_blank" rel="noopener">JS number相加精度丢失</a></li>
+<li><code>var a = &#39;a&#39; - 1;</code>NaN</li>
+<li>NaN于自己不相等</li>
+<li><code>isNaN()</code>返回布尔值,内部会先使用<code>number()</code>转化</li>
+</ol>
+<h3 id="字符串string"><a href="#字符串string" class="headerlink" title="字符串string"></a>字符串string</h3><h4 id="字符串方法-不会修改原字符串"><a href="#字符串方法-不会修改原字符串" class="headerlink" title="字符串方法(不会修改原字符串)"></a>字符串方法(不会修改原字符串)</h4><ol>
+<li><code>str.length</code>只可读</li>
+<li><code>str[i]</code>不兼容IE6-7(str.charAt(i))</li>
+<li><code>str.indexOf(value, index)</code>从index位(默认为0)开始检索,返回第一个value的下标或-1</li>
+<li><code>str.lastIndexOf(value, index)</code>从最后一位开始检索,返回第一个value的下标或-1</li>
+<li><code>str.charAt(index)</code>返回执行序号的字符串</li>
+<li><code>str.charCodeAt(index)</code>返回执行序号下字符的ASCII码</li>
+<li><code>String.fromCharCode(80)</code>返回ASCII为80的字符</li>
+<li><code>str.substring( 起始序号-包含 , 结束序号-不包含 )</code>返回截取的字符串</li>
+<li><code>str.slice( 起始序号-包含 , 结束序号-不包含 )</code>返回截取的字符串,负数代表倒数的index</li>
+<li><code>str.substr( 起始序号-包含 , 截取长度 )</code>返回截取的字符串</li>
+<li><code>str.trim</code>去除首尾空格</li>
+<li><code>str.toUpperCase() / str.toLowerCase()</code><br><strong>以下方法可以使用正则</strong></li>
+<li><code>str.match(&#39;c&#39;)</code>返回c或null</li>
+<li><code>str.search(&#39;c&#39;)</code>返回str中第一个c的下标或-1</li>
+<li><code>str.replace(&#39;c&#39;,&#39;d&#39;)</code>只替换第一个(如果使用正则的全局匹配就可替换所有),返回替换后的str,</li>
+<li><code>str.split(&#39;c&#39;)</code>返回用c将str分割成的数组</li>
+</ol>
+<h3 id="布尔值boolean"><a href="#布尔值boolean" class="headerlink" title="布尔值boolean"></a>布尔值boolean</h3><h3 id="对象Object"><a href="#对象Object" class="headerlink" title="对象Object"></a>对象Object</h3><ol>
+<li>可以进行点操作的就是对象</li>
+<li>有js定义的属性,也有自定义对象的属性</li>
+<li>查看对象下的属性<ol>
+<li><code>for in</code><h4 id="节点对象-json-array-window-null…"><a href="#节点对象-json-array-window-null…" class="headerlink" title="节点对象,json,array,window,null…"></a>节点对象,json,array,window,null…</h4></li>
+</ol>
+</li>
+</ol>
+<h4 id="JSON"><a href="#JSON" class="headerlink" title="JSON"></a>JSON</h4><ol>
+<li>声明<ol>
+<li>直接量</li>
+<li>new形式</li>
+</ol>
+</li>
+<li>json中的this<ol>
+<li><code>var person = {&#39;name&#39;: this, &#39;a&#39;: function(){this}}</code></li>
+<li>name对应的this指window</li>
+<li>函数中的this指这个json</li>
+</ol>
+</li>
+<li>删除属性<ol>
+<li><code>delete person.name</code></li>
+</ol>
+</li>
+<li>in判断对象是否具有某种属性<ol>
+<li><code>&#39;name&#39; in person</code>返回布尔值</li>
+</ol>
+</li>
+<li>遍历json<ol>
+<li><code>for (var attr in json){}</code></li>
+</ol>
+</li>
+<li><code>JSON.parse(str) / JSON.stringify(obj)</code></li>
+</ol>
+<h4 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h4><h5 id="数组的方法"><a href="#数组的方法" class="headerlink" title="数组的方法"></a>数组的方法</h5><ol>
+<li><code>数组.length</code> 可读可写</li>
+<li><code>数组[序号]</code> 可读可写</li>
+<li><code>arr.unshift( 新数据1 , 新数据2 )</code><br> 功能: 在原数组开头添加新数据<br> 返回: 新数组的长度<br> 是否改变原数组: 是</li>
+<li><code>arr.push( 新数据1 , 新数据2 )</code><br> 功能: 在原数组最后添加新数据<br> 返回: 新数组的长度<br> 是否改变原数组: 是</li>
+<li><code>arr.shift()</code><br> 功能: 移除数组第一个成员<br> 返回: 移除的成员<br> 是否改变原数组: 是</li>
+<li><code>arr.pop()</code><br> 功能: 移除数组最后一个成员<br> 返回: 移除的成员<br> 是否改变原数组: 是</li>
+<li><code>arr.splice( a , b , c1 , c2 ... )</code><br> a: 开始的序号<br> b: 删除的个数<br> c: 填充的成员<br> 返回: 只返回删除的对象<br> 是否改变原数组: 是<br> 只填一个参数时: 表示从下标为0处开始删除x个</li>
+<li><code>arr.slice( a , b )</code><ol>
+<li>与字符串<code>splice</code>相同</li>
+<li>返回: 切割的数组</li>
+<li>是否改变原数组:  <strong>不会</strong></li>
+</ol>
+</li>
+<li><code>arr.sort(function(x,y){return x-y})</code><br> 功能: 对数字数组排序<pre><code>return x-y : 原数组升序
+return 小于0的数 : 原数组不变
+return y-x : 原数组倒序
+return 大于0的数 : 原数组反转
+</code></pre> 返回: 新数组<br> 是否改变原数组: 是</li>
+<li><code>arr.reverse()</code><br> 功能: 反转数组<br> 返回: 新数组<br> 是否改变原数组: 是</li>
+<li><code>数组1.concat( 数组2 , 数组3 )</code><br>功能: 拼接数组<br>返回: 新数组<br>是否改变原数组: 否</li>
+<li><code>arr.join( 字符串 )</code><br>功能: 将数组成员用参数字符串拼接成字符串<br>返回: 字符串<br>是否改变原数组: 否</li>
+<li><code>Array.isArray( 参数 )</code><br>功能: 判断参数是否为数组<br>返回: 布尔值</li>
+<li><p><code>arr.forEach(function(value,index,arr){})</code><br>功能: 遍历数组<br>是否改变原数组: 是</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var arr = [1,3,2,5,3];</span><br><span class="line">var res = arr.forEach(function(a,b,c)&#123;</span><br><span class="line">      c[b] = ++a;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>arr.filter(function(value,index,arr){})</code><br>return 条件<br>功能: 筛选数组<br>返回: 新数组<br>内部函数返回布尔值<br>是否改变原数组: 否</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var arr = [1,3,2,5,3];</span><br><span class="line">var res = arr.filter(function(a)&#123;</span><br><span class="line">      return a&gt;=3;//筛选&gt;=3成员并组成数组返回</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>arr.map(function(value,index,arr){})</code><br>return 条件<br>功能: 判断成员是否满足条件<br>返回: 布尔值组成的新数组<br>return 运算 : 返回运算后的新数组<br>功能: 成员进行计算<br>返回: 运算后的新数组<br>是否改变原数组: 否<br>return 值: 将数组每一项替换成这个值并返回</p>
+</li>
+<li><code>arr.every(function(value,index,arr){})</code><br>return 条件<br>功能: 判断成员是否满足条件<br>返回: 所有成员满足条件则返回true,否则返回false<br>是否改变原数组: 否</li>
+<li><code>arr.some(function(value,index,arr){})</code><br>return 条件<br>功能: 判断成员是否满足条件<br>返回: 只要有一个成员满足条件则返回true,否则返回false<br>是否改变原数组: 否</li>
+</ol>
+<h3 id="未定义类型undefined"><a href="#未定义类型undefined" class="headerlink" title="未定义类型undefined"></a>未定义类型undefined</h3><h3 id="函数类型"><a href="#函数类型" class="headerlink" title="函数类型"></a>函数类型</h3>
       
 
       
@@ -225,11 +319,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">html</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
         		</li>
       		
 		</ul>
@@ -241,7 +331,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/blog/categories/前端//" class="article-tag-list-link color3">前端</a>
+        			<a href="/blog/categories/JavaScript//" class="article-tag-list-link color1">JavaScript</a>
         		</li>
       		
 		</ul>
@@ -296,7 +386,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://hlg453839615.github.io/2018/01/23/HTML学习笔记(3)-多行省略号/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://hlg453839615.github.io/2018/06/17/JavsScript学习笔记-基本属性/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -310,18 +400,9 @@
   
 <nav id="article-nav">
   
-    <a href="/blog/2018/02/05/HTML学习笔记(4)-水平垂直居中的几种方法/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          水平垂直居中的几种方法
-        
-      </div>
-    </a>
   
-  
-    <a href="/blog/2018/01/22/HTML学习笔记(2)-背景图片/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">HTML学习笔记(2)-背景图片</div>
+    <a href="/blog/2018/06/17/爬虫学习/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">爬虫学习</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -348,7 +429,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    目录，不存在的…
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#JavaScript数据类型"><span class="toc-number">1.</span> <span class="toc-text">JavaScript数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#数字number"><span class="toc-number">1.1.</span> <span class="toc-text">数字number</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#字符串string"><span class="toc-number">1.2.</span> <span class="toc-text">字符串string</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#字符串方法-不会修改原字符串"><span class="toc-number">1.2.1.</span> <span class="toc-text">字符串方法(不会修改原字符串)</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#布尔值boolean"><span class="toc-number">1.3.</span> <span class="toc-text">布尔值boolean</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#对象Object"><span class="toc-number">1.4.</span> <span class="toc-text">对象Object</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#节点对象-json-array-window-null…"><span class="toc-number">1.4.1.</span> <span class="toc-text">节点对象,json,array,window,null…</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#JSON"><span class="toc-number">1.4.2.</span> <span class="toc-text">JSON</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#数组"><span class="toc-number">1.4.3.</span> <span class="toc-text">数组</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#数组的方法"><span class="toc-number">1.4.3.1.</span> <span class="toc-text">数组的方法</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#未定义类型undefined"><span class="toc-number">1.5.</span> <span class="toc-text">未定义类型undefined</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#函数类型"><span class="toc-number">1.6.</span> <span class="toc-text">函数类型</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>

