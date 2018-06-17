@@ -86,11 +86,17 @@
 				
 					<a class="github" target="_blank" href="https://github.com/helingang" title="github"><i class="icon-github"></i></a>
 		        
-					<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
+					<a class="weibo" target="_blank" href="https://weibo.com/1669067241/profile?rightmod=1&wvr=6&mod=personinfo" title="weibo"><i class="icon-weibo"></i></a>
 		        
-					<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
+					<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/he-ha-ha-16/activities" title="zhihu"><i class="icon-zhihu"></i></a>
+		        
+					<a class="jianshu" target="_blank" href="https://www.jianshu.com/u/b7a80accee36" title="jianshu"><i class="icon-jianshu"></i></a>
+		        
+					<a class="segmentfault" target="_blank" href="https://segmentfault.com/" title="segmentfault"><i class="icon-segmentfault"></i></a>
 		        
 					<a class="bilibili" target="_blank" href="https://space.bilibili.com/3889731?from=search&seid=10640974753704362314#/" title="bilibili"><i class="icon-bilibili"></i></a>
+		        
+					<a class="junjin" target="_blank" href="https://juejin.im/user/59f94ae651882558513202d7" title="junjin"><i class="icon-junjin"></i></a>
 		        
 			</div>
 		</nav>
@@ -131,11 +137,17 @@
 					
 						<a class="github" target="_blank" href="https://github.com/helingang" title="github"><i class="icon-github"></i></a>
 			        
-						<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
+						<a class="weibo" target="_blank" href="https://weibo.com/1669067241/profile?rightmod=1&wvr=6&mod=personinfo" title="weibo"><i class="icon-weibo"></i></a>
 			        
-						<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
+						<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/he-ha-ha-16/activities" title="zhihu"><i class="icon-zhihu"></i></a>
+			        
+						<a class="jianshu" target="_blank" href="https://www.jianshu.com/u/b7a80accee36" title="jianshu"><i class="icon-jianshu"></i></a>
+			        
+						<a class="segmentfault" target="_blank" href="https://segmentfault.com/" title="segmentfault"><i class="icon-segmentfault"></i></a>
 			        
 						<a class="bilibili" target="_blank" href="https://space.bilibili.com/3889731?from=search&seid=10640974753704362314#/" title="bilibili"><i class="icon-bilibili"></i></a>
+			        
+						<a class="junjin" target="_blank" href="https://juejin.im/user/59f94ae651882558513202d7" title="junjin"><i class="icon-junjin"></i></a>
 			        
 				</div>
 			</nav>
@@ -380,6 +392,227 @@
 
 
   
+    <article id="post-BeautifulSoup常用api总结" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/2018/06/16/BeautifulSoup常用api总结/">BeautifulSoup常用api</a>
+    </h1>
+  
+
+        
+        <a href="/blog/2018/06/16/BeautifulSoup常用api总结/" class="archive-article-date">
+  	<time datetime="2018-06-15T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-16</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="解析器"><a href="#解析器" class="headerlink" title="解析器"></a>解析器</h2><p>Beautiful Soup支持python标准库中的HTML解析器,还支持一些第三方的解析器,常见的解析器有<br>|解析器|使用方法|<br>|:-:|:-:|<br>|python标准库|BeautifulSoup(markup,’html.parser’)|<br>|lxml HTML解析器|BeautifulSoup(markup,’lxml’)|<br>|lxml XML解析器|BeautifulSoup(markup,’lxml’, ‘xml’)|<br>|html5lib|BeautifulSoup(markup,’html5lib’)|</p>
+<h2 id="基本使用"><a href="#基本使用" class="headerlink" title="基本使用"></a>基本使用</h2><ol>
+<li><code>soup.p</code>获取第一个p标签</li>
+<li><code>soup.p.attrs[&#39;class&#39;]</code>或<code>soup.p[&#39;class&#39;]</code>获取第一个p标签的name属性的值</li>
+<li><code>soup.p.string</code>或<code>soup.p.text</code>获取标签的文本属性</li>
+<li><code>soup.p.children</code>获取第一个p标签的子元素(数组形式)</li>
+<li><code>soup.a.parent</code>获取第一个a标签的父元素</li>
+<li><code>soup.a.next_siblings</code>获取后面的所有兄弟元素,<code>soup.a.next_sibling</code>获取下一个兄弟元素,<code>soup.a.previous_siblings</code>相同</li>
+<li><code>soup.title</code>获取title的内容,<code>soup.title.name</code>获取标签名称<h2 id="标准选择器find"><a href="#标准选择器find" class="headerlink" title="标准选择器find"></a>标准选择器<code>find</code></h2></li>
+<li><code>find_all</code>返回列表(数组)<ol>
+<li><code>soup.find_all(&#39;ul&#39;)</code>获取所有ul标签以及每个ul标签的内部标签</li>
+<li><code>soup.find_all(attrs={&#39;name&#39;: &#39;xxx&#39;})</code>获取所有属性name为xxx的标签</li>
+<li><code>soup.find_all(text=&#39;xxx&#39;)</code>获取文本为xxx的标签</li>
+</ol>
+</li>
+<li><code>find(name, attrs, recursive, text, **kwargs)</code>返回第一个元素 </li>
+</ol>
+<h2 id="CSS选择器"><a href="#CSS选择器" class="headerlink" title="CSS选择器"></a>CSS选择器</h2><ol>
+<li><code>soup.select(&#39;ul&#39;)</code>返回所有ul标签</li>
+<li><code>soup.select(&#39;li&#39;)[0].get_text()</code>获取文本内容</li>
+<li><code>soup.select(&#39;ul&#39;)[0].attrs[&#39;id&#39;]</code>获取第一个ul的id属性值</li>
+</ol>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">爬虫</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/blog/categories/python//" class="article-tag-list-link color2">python</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/blog/2018/06/16/BeautifulSoup常用api总结/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-python中正则的使用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/2018/06/16/python中正则的使用/">python中正则的使用</a>
+    </h1>
+  
+
+        
+        <a href="/blog/2018/06/16/python中正则的使用/" class="archive-article-date">
+  	<time datetime="2018-06-15T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-16</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="python正则的使用"><a href="#python正则的使用" class="headerlink" title="python正则的使用"></a>python正则的使用</h2><ol>
+<li>与js一致,主要看方法</li>
+<li>特殊字符<ol>
+<li><code>.</code>除换行符外的任意字符</li>
+<li><code>^</code>与<code>$</code>起始于结束(<code>^</code>和<code>$</code>放在最前和最后)</li>
+<li>量词<ol>
+<li><code>* + ?</code></li>
+</ol>
+</li>
+</ol>
+</li>
+<li>非捕获型分组<ol>
+<li>正向前瞻<code>\d(?=xxx)</code>, 负向前瞻<code>\d(?!xxx)</code></li>
+<li>正向后顾<code>(?&lt;=xxx)\d</code>, 负向后顾<code>(?&lt;!xxx)\d</code></li>
+</ol>
+</li>
+<li>方法<ol>
+<li><code>re.match(pattern, string)</code>或<code>re.search(pattern, string)</code>返回一个或Null</li>
+<li><code>re.split(&#39;\d&#39;, &#39;1a2b3c&#39;)</code>以正则找到的字符把String切割成数组</li>
+<li><code>re.findall(pattern, string)</code></li>
+</ol>
+</li>
+</ol>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">正则</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/blog/categories/python//" class="article-tag-list-link color2">python</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/blog/2018/06/16/python中正则的使用/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-JavaScript中正则的使用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -548,11 +781,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">正则</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">正则</a>
         		</li>
       		
 		</ul>
@@ -574,227 +807,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/blog/2018/06/16/JavaScript中正则的使用/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-python中正则的使用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/2018/06/16/python中正则的使用/">python中正则的使用</a>
-    </h1>
-  
-
-        
-        <a href="/blog/2018/06/16/python中正则的使用/" class="archive-article-date">
-  	<time datetime="2018-06-15T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-16</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="python正则的使用"><a href="#python正则的使用" class="headerlink" title="python正则的使用"></a>python正则的使用</h2><ol>
-<li>与js一致,主要看方法</li>
-<li>特殊字符<ol>
-<li><code>.</code>除换行符外的任意字符</li>
-<li><code>^</code>与<code>$</code>起始于结束(<code>^</code>和<code>$</code>放在最前和最后)</li>
-<li>量词<ol>
-<li><code>* + ?</code></li>
-</ol>
-</li>
-</ol>
-</li>
-<li>非捕获型分组<ol>
-<li>正向前瞻<code>\d(?=xxx)</code>, 负向前瞻<code>\d(?!xxx)</code></li>
-<li>正向后顾<code>(?&lt;=xxx)\d</code>, 负向后顾<code>(?&lt;!xxx)\d</code></li>
-</ol>
-</li>
-<li>方法<ol>
-<li><code>re.match(pattern, string)</code>或<code>re.search(pattern, string)</code>返回一个或Null</li>
-<li><code>re.split(&#39;\d&#39;, &#39;1a2b3c&#39;)</code>以正则找到的字符把String切割成数组</li>
-<li><code>re.findall(pattern, string)</code></li>
-</ol>
-</li>
-</ol>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">正则</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/blog/categories/python//" class="article-tag-list-link color2">python</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/blog/2018/06/16/python中正则的使用/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-BeautifulSoup常用api总结" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/2018/06/16/BeautifulSoup常用api总结/">BeautifulSoup常用api</a>
-    </h1>
-  
-
-        
-        <a href="/blog/2018/06/16/BeautifulSoup常用api总结/" class="archive-article-date">
-  	<time datetime="2018-06-15T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-16</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="解析器"><a href="#解析器" class="headerlink" title="解析器"></a>解析器</h2><p>Beautiful Soup支持python标准库中的HTML解析器,还支持一些第三方的解析器,常见的解析器有<br>|解析器|使用方法|<br>|:-:|:-:|<br>|python标准库|BeautifulSoup(markup,’html.parser’)|<br>|lxml HTML解析器|BeautifulSoup(markup,’lxml’)|<br>|lxml XML解析器|BeautifulSoup(markup,’lxml’, ‘xml’)|<br>|html5lib|BeautifulSoup(markup,’html5lib’)|</p>
-<h2 id="基本使用"><a href="#基本使用" class="headerlink" title="基本使用"></a>基本使用</h2><ol>
-<li><code>soup.p</code>获取第一个p标签</li>
-<li><code>soup.p.attrs[&#39;class&#39;]</code>或<code>soup.p[&#39;class&#39;]</code>获取第一个p标签的name属性的值</li>
-<li><code>soup.p.string</code>或<code>soup.p.text</code>获取标签的文本属性</li>
-<li><code>soup.p.children</code>获取第一个p标签的子元素(数组形式)</li>
-<li><code>soup.a.parent</code>获取第一个a标签的父元素</li>
-<li><code>soup.a.next_siblings</code>获取后面的所有兄弟元素,<code>soup.a.next_sibling</code>获取下一个兄弟元素,<code>soup.a.previous_siblings</code>相同</li>
-<li><code>soup.title</code>获取title的内容,<code>soup.title.name</code>获取标签名称<h2 id="标准选择器find"><a href="#标准选择器find" class="headerlink" title="标准选择器find"></a>标准选择器<code>find</code></h2></li>
-<li><code>find_all</code>返回列表(数组)<ol>
-<li><code>soup.find_all(&#39;ul&#39;)</code>获取所有ul标签以及每个ul标签的内部标签</li>
-<li><code>soup.find_all(attrs={&#39;name&#39;: &#39;xxx&#39;})</code>获取所有属性name为xxx的标签</li>
-<li><code>soup.find_all(text=&#39;xxx&#39;)</code>获取文本为xxx的标签</li>
-</ol>
-</li>
-<li><code>find(name, attrs, recursive, text, **kwargs)</code>返回第一个元素 </li>
-</ol>
-<h2 id="CSS选择器"><a href="#CSS选择器" class="headerlink" title="CSS选择器"></a>CSS选择器</h2><ol>
-<li><code>soup.select(&#39;ul&#39;)</code>返回所有ul标签</li>
-<li><code>soup.select(&#39;li&#39;)[0].get_text()</code>获取文本内容</li>
-<li><code>soup.select(&#39;ul&#39;)[0].attrs[&#39;id&#39;]</code>获取第一个ul的id属性值</li>
-</ol>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">爬虫</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/blog/categories/python//" class="article-tag-list-link color2">python</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/blog/2018/06/16/BeautifulSoup常用api总结/">展开全文 >></a>
         </p>
       
 
@@ -1503,7 +1515,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
+                <a href="javascript:void(0)" class="js-tag color1">JavaScript</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">正则</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1515,11 +1531,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">正则</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">JavaScript</a>
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
               </li>
              
               <li class="article-tag-list-item">
