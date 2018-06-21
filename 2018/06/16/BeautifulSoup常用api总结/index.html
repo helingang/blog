@@ -9,14 +9,14 @@
   <title>BeautifulSoup常用api | 像风走了八千里,不问归期</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="解析器Beautiful Soup支持python标准库中的HTML解析器,还支持一些第三方的解析器,常见的解析器有|解析器|使用方法||:-:|:-:||python标准库|BeautifulSoup(markup,’html.parser’)||lxml HTML解析器|BeautifulSoup(markup,’lxml’)||lxml XML解析器|BeautifulSoup(markup">
-<meta name="keywords" content="爬虫,python">
+<meta name="keywords" content="爬虫,python,BeautifulSoup">
 <meta property="og:type" content="article">
 <meta property="og:title" content="BeautifulSoup常用api">
 <meta property="og:url" content="https://hlg453839615.github.io/2018/06/16/BeautifulSoup常用api总结/index.html">
 <meta property="og:site_name" content="像风走了八千里,不问归期">
 <meta property="og:description" content="解析器Beautiful Soup支持python标准库中的HTML解析器,还支持一些第三方的解析器,常见的解析器有|解析器|使用方法||:-:|:-:||python标准库|BeautifulSoup(markup,’html.parser’)||lxml HTML解析器|BeautifulSoup(markup,’lxml’)||lxml XML解析器|BeautifulSoup(markup">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-06-18T03:48:55.355Z">
+<meta property="og:updated_time" content="2018-06-21T03:59:48.541Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="BeautifulSoup常用api">
 <meta name="twitter:description" content="解析器Beautiful Soup支持python标准库中的HTML解析器,还支持一些第三方的解析器,常见的解析器有|解析器|使用方法||:-:|:-:||python标准库|BeautifulSoup(markup,’html.parser’)||lxml HTML解析器|BeautifulSoup(markup,’lxml’)||lxml XML解析器|BeautifulSoup(markup">
@@ -202,28 +202,22 @@ var _hmt = _hmt || [];
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="解析器"><a href="#解析器" class="headerlink" title="解析器"></a>解析器</h2><p>Beautiful Soup支持python标准库中的HTML解析器,还支持一些第三方的解析器,常见的解析器有<br>|解析器|使用方法|<br>|:-:|:-:|<br>|python标准库|BeautifulSoup(markup,’html.parser’)|<br>|lxml HTML解析器|BeautifulSoup(markup,’lxml’)|<br>|lxml XML解析器|BeautifulSoup(markup,’lxml’, ‘xml’)|<br>|html5lib|BeautifulSoup(markup,’html5lib’)|<br><a id="more"></a></p>
-<h2 id="基本使用"><a href="#基本使用" class="headerlink" title="基本使用"></a>基本使用</h2><ol>
-<li><code>soup.p</code>获取第一个p标签</li>
-<li><code>soup.p.attrs[&#39;class&#39;]</code>或<code>soup.p[&#39;class&#39;]</code>获取第一个p标签的name属性的值</li>
-<li><code>soup.p.string</code>或<code>soup.p.text</code>获取标签的文本属性</li>
-<li><code>soup.p.children</code>获取第一个p标签的子元素(数组形式)</li>
-<li><code>soup.a.parent</code>获取第一个a标签的父元素</li>
-<li><code>soup.a.next_siblings</code>获取后面的所有兄弟元素,<code>soup.a.next_sibling</code>获取下一个兄弟元素,<code>soup.a.previous_siblings</code>相同</li>
-<li><code>soup.title</code>获取title的内容,<code>soup.title.name</code>获取标签名称<h2 id="标准选择器find"><a href="#标准选择器find" class="headerlink" title="标准选择器find"></a>标准选择器<code>find</code></h2></li>
-<li><code>find_all</code>返回列表(数组)<ol>
-<li><code>soup.find_all(&#39;ul&#39;)</code>获取所有ul标签以及每个ul标签的内部标签</li>
-<li><code>soup.find_all(attrs={&#39;name&#39;: &#39;xxx&#39;})</code>获取所有属性name为xxx的标签</li>
-<li><code>soup.find_all(text=&#39;xxx&#39;)</code>获取文本为xxx的标签</li>
-</ol>
-</li>
-<li><code>find(name, attrs, recursive, text, **kwargs)</code>返回第一个元素 </li>
-</ol>
-<h2 id="CSS选择器"><a href="#CSS选择器" class="headerlink" title="CSS选择器"></a>CSS选择器</h2><ol>
-<li><code>soup.select(&#39;ul&#39;)</code>返回所有ul标签</li>
-<li><code>soup.select(&#39;li&#39;)[0].get_text()</code>获取文本内容</li>
-<li><code>soup.select(&#39;ul&#39;)[0].attrs[&#39;id&#39;]</code>获取第一个ul的id属性值</li>
-</ol>
-
+<h2 id="基本使用"><a href="#基本使用" class="headerlink" title="基本使用"></a>基本使用</h2><pre><code>1. `soup.p`获取第一个p标签
+2. `soup.p.attrs[&apos;class&apos;]`或`soup.p[&apos;class&apos;]`获取第一个p标签的name属性的值
+3. `soup.p.string`或`soup.p.text`获取标签的文本属性
+4. `soup.p.children`获取第一个p标签的子元素(数组形式)
+5. `soup.a.parent`获取第一个a标签的父元素
+6. `soup.a.next_siblings`获取后面的所有兄弟元素,`soup.a.next_sibling`获取下一个兄弟元素,`soup.a.previous_siblings`相同
+7. `soup.title`获取title的内容,`soup.title.name`获取标签名称
+</code></pre><h2 id="标准选择器find"><a href="#标准选择器find" class="headerlink" title="标准选择器find"></a>标准选择器<code>find</code></h2><pre><code>1. `find_all`返回列表(数组)
+    1. `soup.find_all(&apos;ul&apos;)`获取所有ul标签以及每个ul标签的内部标签
+    2. `soup.find_all(attrs={&apos;name&apos;: &apos;xxx&apos;})`获取所有属性name为xxx的标签
+    3. `soup.find_all(text=&apos;xxx&apos;)`获取文本为xxx的标签
+2. `find(name, attrs, recursive, text, **kwargs)`返回第一个元素 
+</code></pre><h2 id="CSS选择器"><a href="#CSS选择器" class="headerlink" title="CSS选择器"></a>CSS选择器</h2><pre><code>1. `soup.select(&apos;ul&apos;)`返回所有ul标签
+2. `soup.select(&apos;li&apos;)[0].get_text()`获取文本内容
+3. `soup.select(&apos;ul&apos;)[0].attrs[&apos;id&apos;]`获取第一个ul的id属性值
+</code></pre>
       
 
       
@@ -262,6 +256,10 @@ var _hmt = _hmt || [];
       		 
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">BeautifulSoup</a>
         		</li>
       		
 		</ul>
@@ -342,18 +340,18 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
-    <a href="/blog/2018/06/17/git和github/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/blog/2018/06/16/python中正则的使用/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          git和github
+          python中正则的使用
         
       </div>
     </a>
   
   
-    <a href="/blog/2018/06/16/JavaScript中正则的使用/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">JavaScript中正则的使用</div>
+    <a href="/blog/2018/06/12/OSI七层模型结构/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">OSI七层模型结构, TCP/IP四层模型学习笔记</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -500,11 +498,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">BeautifulSoup</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">html</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">OSI</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">TCP/IP</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -520,23 +530,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">OSI</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">TCP/IP</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">电影</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">自动化测试</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">selenium</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">电影</a>
               </li>
              
               <li class="article-tag-list-item">

@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="https://hlg453839615.github.io">
   <title>python中正则的使用 | 像风走了八千里,不问归期</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="python正则的使用 与js一致,主要看方法 特殊字符 .除换行符外的任意字符 ^与$起始于结束(^和$放在最前和最后) 量词 * + ?     非捕获型分组 正向前瞻\d(?=xxx), 负向前瞻\d(?!xxx) 正向后顾(?&amp;lt;=xxx)\d, 负向后顾(?&amp;lt;!xxx)\d   方法 re.match(pattern, string)或re.search(pattern, st">
+  <meta name="description" content="python正则的使用1. 与js一致,主要看方法 2. 特殊字符     1. `.`除换行符外的任意字符     2. `^`与`$`起始于结束(`^`和`$`放在最前和最后)     3. 量词         1. `* + ?` 3. 非捕获型分组     1. 正向前瞻`\d(?=xxx)`, 负向前瞻`\d(?!xxx)`     2. 正向后顾`(?&amp;lt;=xxx)\d`, 负向">
 <meta name="keywords" content="python,正则">
 <meta property="og:type" content="article">
 <meta property="og:title" content="python中正则的使用">
 <meta property="og:url" content="https://hlg453839615.github.io/2018/06/16/python中正则的使用/index.html">
 <meta property="og:site_name" content="像风走了八千里,不问归期">
-<meta property="og:description" content="python正则的使用 与js一致,主要看方法 特殊字符 .除换行符外的任意字符 ^与$起始于结束(^和$放在最前和最后) 量词 * + ?     非捕获型分组 正向前瞻\d(?=xxx), 负向前瞻\d(?!xxx) 正向后顾(?&amp;lt;=xxx)\d, 负向后顾(?&amp;lt;!xxx)\d   方法 re.match(pattern, string)或re.search(pattern, st">
+<meta property="og:description" content="python正则的使用1. 与js一致,主要看方法 2. 特殊字符     1. `.`除换行符外的任意字符     2. `^`与`$`起始于结束(`^`和`$`放在最前和最后)     3. 量词         1. `* + ?` 3. 非捕获型分组     1. 正向前瞻`\d(?=xxx)`, 负向前瞻`\d(?!xxx)`     2. 正向后顾`(?&amp;lt;=xxx)\d`, 负向">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-06-18T03:49:55.354Z">
+<meta property="og:updated_time" content="2018-06-21T04:02:18.138Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python中正则的使用">
-<meta name="twitter:description" content="python正则的使用 与js一致,主要看方法 特殊字符 .除换行符外的任意字符 ^与$起始于结束(^和$放在最前和最后) 量词 * + ?     非捕获型分组 正向前瞻\d(?=xxx), 负向前瞻\d(?!xxx) 正向后顾(?&amp;lt;=xxx)\d, 负向后顾(?&amp;lt;!xxx)\d   方法 re.match(pattern, string)或re.search(pattern, st">
+<meta name="twitter:description" content="python正则的使用1. 与js一致,主要看方法 2. 特殊字符     1. `.`除换行符外的任意字符     2. `^`与`$`起始于结束(`^`和`$`放在最前和最后)     3. 量词         1. `* + ?` 3. 非捕获型分组     1. 正向前瞻`\d(?=xxx)`, 负向前瞻`\d(?!xxx)`     2. 正向后顾`(?&amp;lt;=xxx)\d`, 负向">
   
     <link rel="alternative" href="/atom.xml" title="像风走了八千里,不问归期" type="application/atom+xml">
   
@@ -201,30 +201,20 @@ var _hmt = _hmt || [];
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="python正则的使用"><a href="#python正则的使用" class="headerlink" title="python正则的使用"></a>python正则的使用</h2><ol>
-<li>与js一致,主要看方法</li>
-<li>特殊字符<ol>
-<li><code>.</code>除换行符外的任意字符</li>
-<li><code>^</code>与<code>$</code>起始于结束(<code>^</code>和<code>$</code>放在最前和最后)</li>
-<li>量词<ol>
-<li><code>* + ?</code></li>
-</ol>
-</li>
-</ol>
-</li>
-<li>非捕获型分组<ol>
-<li>正向前瞻<code>\d(?=xxx)</code>, 负向前瞻<code>\d(?!xxx)</code></li>
-<li>正向后顾<code>(?&lt;=xxx)\d</code>, 负向后顾<code>(?&lt;!xxx)\d</code></li>
-</ol>
-</li>
-<li>方法<ol>
-<li><code>re.match(pattern, string)</code>或<code>re.search(pattern, string)</code>返回一个或Null</li>
-<li><code>re.split(&#39;\d&#39;, &#39;1a2b3c&#39;)</code>以正则找到的字符把String切割成数组</li>
-<li><code>re.findall(pattern, string)</code><a id="more"></a></li>
-</ol>
-</li>
-</ol>
-
+        <h2 id="python正则的使用"><a href="#python正则的使用" class="headerlink" title="python正则的使用"></a>python正则的使用</h2><pre><code>1. 与js一致,主要看方法
+2. 特殊字符
+    1. `.`除换行符外的任意字符
+    2. `^`与`$`起始于结束(`^`和`$`放在最前和最后)
+    3. 量词
+        1. `* + ?`
+3. 非捕获型分组
+    1. 正向前瞻`\d(?=xxx)`, 负向前瞻`\d(?!xxx)`
+    2. 正向后顾`(?&lt;=xxx)\d`, 负向后顾`(?&lt;!xxx)\d`
+4. 方法
+    1. `re.match(pattern, string)`或`re.search(pattern, string)`返回一个或Null
+    2. `re.split(&apos;\d&apos;, &apos;1a2b3c&apos;)`以正则找到的字符把String切割成数组
+    3. `re.findall(pattern, string)`
+</code></pre><a id="more"></a>
       
 
       
@@ -353,8 +343,8 @@ var _hmt = _hmt || [];
     </a>
   
   
-    <a href="/blog/2018/06/12/网络安全/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">网络安全</div>
+    <a href="/blog/2018/06/16/BeautifulSoup常用api总结/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">BeautifulSoup常用api</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -501,11 +491,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">BeautifulSoup</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">html</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">OSI</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">TCP/IP</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -521,23 +523,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">OSI</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">TCP/IP</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">电影</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">自动化测试</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">selenium</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">电影</a>
               </li>
              
               <li class="article-tag-list-item">
