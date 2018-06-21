@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="https://hlg453839615.github.io">
   <title>BeautifulSoup常用api | 像风走了八千里,不问归期</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="解析器Beautiful Soup支持python标准库中的HTML解析器,还支持一些第三方的解析器,常见的解析器有 |解析器|使用方法| |:-:|:-:| |python标准库|BeautifulSoup(markup,&amp;apos;html.parser&amp;apos;)| |lxml HTML解析器|BeautifulSoup(markup,&amp;apos;lxml&amp;apos;)| |lxml XM">
+  <meta name="description" content="解析器Beautiful Soup支持python标准库中的HTML解析器,还支持一些第三方的解析器,常见的解析器有    解析器 使用方法     python标准库 BeautifulSoup(markup,’html.parser’)   lxml HTML解析器 BeautifulSoup(markup,’lxml’)   lxml XML解析器 BeautifulSoup(markup,">
 <meta name="keywords" content="爬虫,python,BeautifulSoup">
 <meta property="og:type" content="article">
 <meta property="og:title" content="BeautifulSoup常用api">
 <meta property="og:url" content="https://hlg453839615.github.io/2018/06/16/BeautifulSoup常用api总结/index.html">
 <meta property="og:site_name" content="像风走了八千里,不问归期">
-<meta property="og:description" content="解析器Beautiful Soup支持python标准库中的HTML解析器,还支持一些第三方的解析器,常见的解析器有 |解析器|使用方法| |:-:|:-:| |python标准库|BeautifulSoup(markup,&amp;apos;html.parser&amp;apos;)| |lxml HTML解析器|BeautifulSoup(markup,&amp;apos;lxml&amp;apos;)| |lxml XM">
+<meta property="og:description" content="解析器Beautiful Soup支持python标准库中的HTML解析器,还支持一些第三方的解析器,常见的解析器有    解析器 使用方法     python标准库 BeautifulSoup(markup,’html.parser’)   lxml HTML解析器 BeautifulSoup(markup,’lxml’)   lxml XML解析器 BeautifulSoup(markup,">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-06-21T04:04:16.255Z">
+<meta property="og:updated_time" content="2018-06-21T04:06:26.441Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="BeautifulSoup常用api">
-<meta name="twitter:description" content="解析器Beautiful Soup支持python标准库中的HTML解析器,还支持一些第三方的解析器,常见的解析器有 |解析器|使用方法| |:-:|:-:| |python标准库|BeautifulSoup(markup,&amp;apos;html.parser&amp;apos;)| |lxml HTML解析器|BeautifulSoup(markup,&amp;apos;lxml&amp;apos;)| |lxml XM">
+<meta name="twitter:description" content="解析器Beautiful Soup支持python标准库中的HTML解析器,还支持一些第三方的解析器,常见的解析器有    解析器 使用方法     python标准库 BeautifulSoup(markup,’html.parser’)   lxml HTML解析器 BeautifulSoup(markup,’lxml’)   lxml XML解析器 BeautifulSoup(markup,">
   
     <link rel="alternative" href="/atom.xml" title="像风走了八千里,不问归期" type="application/atom+xml">
   
@@ -202,13 +202,33 @@ var _hmt = _hmt || [];
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="解析器"><a href="#解析器" class="headerlink" title="解析器"></a>解析器</h2><pre><code>Beautiful Soup支持python标准库中的HTML解析器,还支持一些第三方的解析器,常见的解析器有
-|解析器|使用方法|
-|:-:|:-:|
-|python标准库|BeautifulSoup(markup,&apos;html.parser&apos;)|
-|lxml HTML解析器|BeautifulSoup(markup,&apos;lxml&apos;)|
-|lxml XML解析器|BeautifulSoup(markup,&apos;lxml&apos;, &apos;xml&apos;)|
-|html5lib|BeautifulSoup(markup,&apos;html5lib&apos;)|
-</code></pre><a id="more"></a>
+</code></pre><table>
+<thead>
+<tr>
+<th style="text-align:center">解析器</th>
+<th style="text-align:center">使用方法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">python标准库</td>
+<td style="text-align:center">BeautifulSoup(markup,’html.parser’)</td>
+</tr>
+<tr>
+<td style="text-align:center">lxml HTML解析器</td>
+<td style="text-align:center">BeautifulSoup(markup,’lxml’)</td>
+</tr>
+<tr>
+<td style="text-align:center">lxml XML解析器</td>
+<td style="text-align:center">BeautifulSoup(markup,’lxml’, ‘xml’)</td>
+</tr>
+<tr>
+<td style="text-align:center">html5lib</td>
+<td style="text-align:center">BeautifulSoup(markup,’html5lib’)</td>
+</tr>
+</tbody>
+</table>
+<a id="more"></a>
 <h2 id="基本使用"><a href="#基本使用" class="headerlink" title="基本使用"></a>基本使用</h2><pre><code>1. `soup.p`获取第一个p标签
 2. `soup.p.attrs[&apos;class&apos;]`或`soup.p[&apos;class&apos;]`获取第一个p标签的name属性的值
 3. `soup.p.string`或`soup.p.text`获取标签的文本属性
@@ -347,11 +367,11 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
-    <a href="/blog/2018/06/17/git和github/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/blog/2018/06/16/python中正则的使用/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          git和github
+          python中正则的使用
         
       </div>
     </a>
@@ -533,15 +553,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">自动化测试</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">selenium</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
               </li>
              
               <li class="article-tag-list-item">

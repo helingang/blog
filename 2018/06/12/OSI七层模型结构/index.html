@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="像风走了八千里,不问归期">
 <meta property="og:description" content="OSI七层和TCP/IP四层的关系1. TCP/IP先有协议再提出的模型,是参照OSI模型 2. OSI是理论下的模型,而TCP/IP已被广泛使用 3. TCP transmission control protocol 传输控制协议 4. UDP user data protocol 用户数据报协议">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-06-21T04:02:14.186Z">
+<meta property="og:updated_time" content="2018-06-21T04:06:10.420Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="OSI七层模型结构, TCP&#x2F;IP四层模型学习笔记">
 <meta name="twitter:description" content="OSI七层和TCP/IP四层的关系1. TCP/IP先有协议再提出的模型,是参照OSI模型 2. OSI是理论下的模型,而TCP/IP已被广泛使用 3. TCP transmission control protocol 传输控制协议 4. UDP user data protocol 用户数据报协议">
@@ -206,29 +206,85 @@ var _hmt = _hmt || [];
 3. TCP transmission control protocol 传输控制协议
 4. UDP user data protocol 用户数据报协议
 </code></pre><a id="more"></a>
-<h1 id="OSI七层模型"><a href="#OSI七层模型" class="headerlink" title="OSI七层模型"></a>OSI七层模型</h1><pre><code>|OSI|功能|协议|
-|:-:|:-|:-:|
-|应用层|面向计算机用户,提供应用程序和网络之间的接口|HTTP, HTTPS, FTP, TELNET, SSH, SMTP, POP3等|
-|表示层|处理来自应用层的的命令和数据,结果传给会话层|N/A|
-|会话层|不同机器上的用户之间建立会话|N/A|
-|传输层|为会话层和传输层提供传输服务|TCP, UDP|
-|网络层||IP等|
-|数据链路层|数据链路层的数据传输单元成为帧, 就是将网络层转发的数据封装为帧, 传输给物理层, 以及分析物理层传输过来的数据帧|SLIP, CSLIP, PPP, ARP, RARP, MTU等|
-|数据层||ISO2110等|
-</code></pre><h1 id="TCP模型"><a href="#TCP模型" class="headerlink" title="TCP模型"></a>TCP模型</h1><pre><code>|OSI|TCP/IP|协议|
-|:-:|:-:|:-:|
-|应用层/表示层/会话层|应用层|HTTP, FTP, TFTP, SMIP, SNMP, DNS|
-|传输层|传输层|TCP, UDP|
-|网络层|网络层|ICMP, IGMP, IP, ARP, RARP|
-|数据链路层/物理层|网络接口层|由底层网络定义协议|
-</code></pre><h1 id="交互实例"><a href="#交互实例" class="headerlink" title="交互实例"></a>交互实例</h1><pre><code>发送端每通过一层则增加首部,接收端每通过一层则删除首部
-|交互|发送端|接收端|
-|:-:|:-|:-|
-|应用层|HTTP数据|HTTP数据 |
-|传输层| TCP首部(HTTP数据) | TCP首部(HTTP数据) |
-|网络层|IP首部(TCP首部(HTTP数据) | IP首部(TCP首部(HTTP数据) |
-|链路层| 以太网首部(IP首部(TCP首部(HTTP数据))) | 以太网首部(IP首部(TCP首部(HTTP数据))) |
-</code></pre>
+<h1 id="OSI七层模型"><a href="#OSI七层模型" class="headerlink" title="OSI七层模型"></a>OSI七层模型</h1><table>
+<thead>
+<tr>
+<th style="text-align:center">OSI</th>
+<th style="text-align:left">功能</th>
+<th style="text-align:center">协议</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">应用层</td>
+<td style="text-align:left">面向计算机用户,提供应用程序和网络之间的接口</td>
+<td style="text-align:center">HTTP, HTTPS, FTP, TELNET, SSH, SMTP, POP3等</td>
+</tr>
+<tr>
+<td style="text-align:center">表示层</td>
+<td style="text-align:left">处理来自应用层的的命令和数据,结果传给会话层</td>
+<td style="text-align:center">N/A</td>
+</tr>
+<tr>
+<td style="text-align:center">会话层</td>
+<td style="text-align:left">不同机器上的用户之间建立会话</td>
+<td style="text-align:center">N/A</td>
+</tr>
+<tr>
+<td style="text-align:center">传输层</td>
+<td style="text-align:left">为会话层和传输层提供传输服务</td>
+<td style="text-align:center">TCP, UDP</td>
+</tr>
+<tr>
+<td style="text-align:center">网络层</td>
+<td style="text-align:left"></td>
+<td style="text-align:center">IP等</td>
+</tr>
+<tr>
+<td style="text-align:center">数据链路层</td>
+<td style="text-align:left">数据链路层的数据传输单元成为帧, 就是将网络层转发的数据封装为帧, 传输给物理层, 以及分析物理层传输过来的数据帧</td>
+<td style="text-align:center">SLIP, CSLIP, PPP, ARP, RARP, MTU等</td>
+</tr>
+<tr>
+<td style="text-align:center">数据层</td>
+<td style="text-align:left"></td>
+<td style="text-align:center">ISO2110等</td>
+</tr>
+</tbody>
+</table>
+<h1 id="TCP模型"><a href="#TCP模型" class="headerlink" title="TCP模型"></a>TCP模型</h1><table>
+<thead>
+<tr>
+<th style="text-align:center">OSI</th>
+<th style="text-align:center">TCP/IP</th>
+<th style="text-align:center">协议</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">应用层/表示层/会话层</td>
+<td style="text-align:center">应用层</td>
+<td style="text-align:center">HTTP, FTP, TFTP, SMIP, SNMP, DNS</td>
+</tr>
+<tr>
+<td style="text-align:center">传输层</td>
+<td style="text-align:center">传输层</td>
+<td style="text-align:center">TCP, UDP</td>
+</tr>
+<tr>
+<td style="text-align:center">网络层</td>
+<td style="text-align:center">网络层</td>
+<td style="text-align:center">ICMP, IGMP, IP, ARP, RARP</td>
+</tr>
+<tr>
+<td style="text-align:center">数据链路层/物理层</td>
+<td style="text-align:center">网络接口层</td>
+<td style="text-align:center">由底层网络定义协议</td>
+</tr>
+</tbody>
+</table>
+<h1 id="交互实例"><a href="#交互实例" class="headerlink" title="交互实例"></a>交互实例</h1><p>发送端每通过一层则增加首部,接收端每通过一层则删除首部<br>|交互|发送端|接收端|<br>|:-:|:-|:-|<br>|应用层|HTTP数据|HTTP数据 |<br>|传输层| TCP首部(HTTP数据) | TCP首部(HTTP数据) |<br>|网络层|IP首部(TCP首部(HTTP数据) | IP首部(TCP首部(HTTP数据) |<br>|链路层| 以太网首部(IP首部(TCP首部(HTTP数据))) | 以太网首部(IP首部(TCP首部(HTTP数据))) |</p>
+
       
 
       
@@ -347,11 +403,11 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
-    <a href="/blog/2018/06/16/python中正则的使用/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/blog/2018/06/16/JavaScript中正则的使用/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          python中正则的使用
+          JavaScript中正则的使用
         
       </div>
     </a>
@@ -533,15 +589,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">自动化测试</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">selenium</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
               </li>
              
               <li class="article-tag-list-item">
