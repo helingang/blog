@@ -181,6 +181,100 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-JavsScript学习笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/2018/06/17/JavsScript学习笔记/">JavaScript学习笔记-数据类型</a>
+    </h1>
+  
+
+        
+        <a href="/blog/2018/06/17/JavsScript学习笔记/" class="archive-article-date">
+  	<time datetime="2018-06-17T03:33:55.092Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-17</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="JavaScript数据类型"><a href="#JavaScript数据类型" class="headerlink" title="JavaScript数据类型"></a>JavaScript数据类型</h2><pre><code>[浅析JavaScript语言的类型](http://www.helloyzy.cn/2017/11/05/js%E7%B1%BB%E5%9E%8B/)
+</code></pre><h3 id="数字number"><a href="#数字number" class="headerlink" title="数字number"></a>数字number</h3><pre><code>1. js中的Number类型使用的是双精度浮点型,也就是其他语言的double类型
+2. [JS number相加精度丢失](https://juejin.im/post/5a6fce10f265da3e261c3c71)
+3. `var a = &apos;a&apos; - 1;`NaN
+4. NaN于自己不相等
+5. `isNaN()`返回布尔值,内部会先使用`number()`转化
+</code></pre>
+        
+          <a class="article-more-a" href="/blog/2018/06/17/JavsScript学习笔记/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/blog/categories/JavaScript//" class="article-tag-list-link color1">JavaScript</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/blog/2018/06/17/JavsScript学习笔记/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+  
     <article id="post-爬虫学习" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -364,19 +458,19 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-BeautifulSoup常用api总结" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-JavaScript中正则的使用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/blog/2018/06/16/BeautifulSoup常用api总结/">BeautifulSoup常用api</a>
+      <a class="article-title" href="/blog/2018/06/16/JavaScript中正则的使用/">JavaScript中正则的使用</a>
     </h1>
   
 
         
-        <a href="/blog/2018/06/16/BeautifulSoup常用api总结/" class="archive-article-date">
+        <a href="/blog/2018/06/16/JavaScript中正则的使用/" class="archive-article-date">
   	<time datetime="2018-06-15T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-16</time>
 </a>
         
@@ -384,35 +478,16 @@ var _hmt = _hmt || [];
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="解析器"><a href="#解析器" class="headerlink" title="解析器"></a>解析器</h2><pre><code>1. Beautiful Soup支持python标准库中的HTML解析器,还支持一些第三方的解析器,常见的解析器有
-</code></pre><table>
-<thead>
-<tr>
-<th style="text-align:center">解析器</th>
-<th style="text-align:center">使用方法</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">python标准库</td>
-<td style="text-align:center">BeautifulSoup(markup,’html.parser’)</td>
-</tr>
-<tr>
-<td style="text-align:center">lxml HTML解析器</td>
-<td style="text-align:center">BeautifulSoup(markup,’lxml’)</td>
-</tr>
-<tr>
-<td style="text-align:center">lxml XML解析器</td>
-<td style="text-align:center">BeautifulSoup(markup,’lxml’, ‘xml’)</td>
-</tr>
-<tr>
-<td style="text-align:center">html5lib</td>
-<td style="text-align:center">BeautifulSoup(markup,’html5lib’)</td>
-</tr>
-</tbody>
-</table>
+        <h2 id="JavaScript正则的使用"><a href="#JavaScript正则的使用" class="headerlink" title="JavaScript正则的使用"></a>JavaScript正则的使用</h2><pre><code>1. 可以用正则的方法
+    1. `reg.exec(str);`返回查找的字符串或null,但是只能匹配一次不能全局匹配;返回一个数组,包含匹配到的字符串和分组规则匹配的值
+    2. `reg.test(str);`返回true或false
+    3. `str.match(reg);`返回查找的字符串数组或null,匹配一个;加g时才返回标准数组;不加g时返回类数组包含结果和子集
+    4. `str.replace(reg , str1);`str1可以用函数代替`function(a,b,c,d){}`a: 匹配内容 b: 匹配的子集 c:匹配内容出现的序号 d: 整体str
+    5. `str.search(reg);`返回查找匹配字符串首次出现的下标或-1
+    6. `str.split(reg);`
+</code></pre>
         
-          <a class="article-more-a" href="/blog/2018/06/16/BeautifulSoup常用api总结/#more">more >></a>
+          <a class="article-more-a" href="/blog/2018/06/16/JavaScript中正则的使用/#more">more >></a>
         
       
 
@@ -426,15 +501,11 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">爬虫</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">BeautifulSoup</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">正则</a>
         		</li>
       		
 		</ul>
@@ -446,7 +517,7 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/blog/categories/python//" class="article-tag-list-link color2">python</a>
+        			<a href="/blog/categories/JavaScript//" class="article-tag-list-link color1">JavaScript</a>
         		</li>
       		
 		</ul>
@@ -455,7 +526,7 @@ var _hmt = _hmt || [];
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/blog/2018/06/16/BeautifulSoup常用api总结/">展开全文 >></a>
+          <a class="article-more-a" href="/blog/2018/06/16/JavaScript中正则的使用/">展开全文 >></a>
         </p>
       
 
@@ -588,19 +659,19 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-JavaScript中正则的使用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-BeautifulSoup常用api总结" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/blog/2018/06/16/JavaScript中正则的使用/">JavaScript中正则的使用</a>
+      <a class="article-title" href="/blog/2018/06/16/BeautifulSoup常用api总结/">BeautifulSoup常用api</a>
     </h1>
   
 
         
-        <a href="/blog/2018/06/16/JavaScript中正则的使用/" class="archive-article-date">
+        <a href="/blog/2018/06/16/BeautifulSoup常用api总结/" class="archive-article-date">
   	<time datetime="2018-06-15T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-16</time>
 </a>
         
@@ -608,16 +679,35 @@ var _hmt = _hmt || [];
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="JavaScript正则的使用"><a href="#JavaScript正则的使用" class="headerlink" title="JavaScript正则的使用"></a>JavaScript正则的使用</h2><pre><code>1. 可以用正则的方法
-    1. `reg.exec(str);`返回查找的字符串或null,但是只能匹配一次不能全局匹配;返回一个数组,包含匹配到的字符串和分组规则匹配的值
-    2. `reg.test(str);`返回true或false
-    3. `str.match(reg);`返回查找的字符串数组或null,匹配一个;加g时才返回标准数组;不加g时返回类数组包含结果和子集
-    4. `str.replace(reg , str1);`str1可以用函数代替`function(a,b,c,d){}`a: 匹配内容 b: 匹配的子集 c:匹配内容出现的序号 d: 整体str
-    5. `str.search(reg);`返回查找匹配字符串首次出现的下标或-1
-    6. `str.split(reg);`
-</code></pre>
+        <h2 id="解析器"><a href="#解析器" class="headerlink" title="解析器"></a>解析器</h2><pre><code>1. Beautiful Soup支持python标准库中的HTML解析器,还支持一些第三方的解析器,常见的解析器有
+</code></pre><table>
+<thead>
+<tr>
+<th style="text-align:center">解析器</th>
+<th style="text-align:center">使用方法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">python标准库</td>
+<td style="text-align:center">BeautifulSoup(markup,’html.parser’)</td>
+</tr>
+<tr>
+<td style="text-align:center">lxml HTML解析器</td>
+<td style="text-align:center">BeautifulSoup(markup,’lxml’)</td>
+</tr>
+<tr>
+<td style="text-align:center">lxml XML解析器</td>
+<td style="text-align:center">BeautifulSoup(markup,’lxml’, ‘xml’)</td>
+</tr>
+<tr>
+<td style="text-align:center">html5lib</td>
+<td style="text-align:center">BeautifulSoup(markup,’html5lib’)</td>
+</tr>
+</tbody>
+</table>
         
-          <a class="article-more-a" href="/blog/2018/06/16/JavaScript中正则的使用/#more">more >></a>
+          <a class="article-more-a" href="/blog/2018/06/16/BeautifulSoup常用api总结/#more">more >></a>
         
       
 
@@ -631,11 +721,15 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">爬虫</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">正则</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">BeautifulSoup</a>
         		</li>
       		
 		</ul>
@@ -647,7 +741,7 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/blog/categories/JavaScript//" class="article-tag-list-link color1">JavaScript</a>
+        			<a href="/blog/categories/python//" class="article-tag-list-link color2">python</a>
         		</li>
       		
 		</ul>
@@ -656,7 +750,7 @@ var _hmt = _hmt || [];
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/blog/2018/06/16/JavaScript中正则的使用/">展开全文 >></a>
+          <a class="article-more-a" href="/blog/2018/06/16/BeautifulSoup常用api总结/">展开全文 >></a>
         </p>
       
 
@@ -1070,98 +1164,6 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-HTML学习笔记(4)-水平垂直居中的几种方法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/2018/02/05/HTML学习笔记(4)-水平垂直居中的几种方法/">水平垂直居中的几种方法</a>
-    </h1>
-  
-
-        
-        <a href="/blog/2018/02/05/HTML学习笔记(4)-水平垂直居中的几种方法/" class="archive-article-date">
-  	<time datetime="2018-02-04T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-05</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="第一种方法-子级添加transform"><a href="#第一种方法-子级添加transform" class="headerlink" title="第一种方法 子级添加transform"></a>第一种方法 子级添加transform</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">父级</span><br><span class="line">position: relative</span><br><span class="line">子级</span><br><span class="line">position: absolute;</span><br><span class="line">top: 50%;</span><br><span class="line">left: 50%;</span><br><span class="line">transform: translate(-50%,-50%);</span><br></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/blog/2018/02/05/HTML学习笔记(4)-水平垂直居中的几种方法/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">html</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/blog/categories/前端//" class="article-tag-list-link color3">前端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/blog/2018/02/05/HTML学习笔记(4)-水平垂直居中的几种方法/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/blog/">&laquo; Prev</a><a class="page-number" href="/blog/">1</a><span class="page-number current">2</span><a class="page-number" href="/blog/page/3/">3</a><a class="extend next" rel="next" href="/blog/page/3/">Next &raquo;</a>
@@ -1313,15 +1315,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">requests</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">sqlserver</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">urllib</a>
+                <a href="javascript:void(0)" class="js-tag color4">requests</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1330,6 +1328,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">wordcloud</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">urllib</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1345,6 +1347,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">电影</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">自动化测试</a>
               </li>
              
@@ -1354,10 +1360,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">安全性测试</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">电影</a>
               </li>
             
             <div class="clearfix"></div>
