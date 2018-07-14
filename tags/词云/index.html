@@ -6,20 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://hlg453839615.github.io">
-  <title>JavaScript中正则的使用 | 像风走了八千里,不问归期</title>
+  <title>Tag: 词云 | 像风走了八千里,不问归期</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="JavaScript正则的使用1. 可以用正则的方法     1. `reg.exec(str);`返回查找的字符串或null,但是只能匹配一次不能全局匹配;返回一个数组,包含匹配到的字符串和分组规则匹配的值     2. `reg.test(str);`返回true或false     3. `str.match(reg);`返回查找的字符串数组或null,匹配一个;加g时才返回标准数组;不加g">
-<meta name="keywords" content="JavaScript,正则">
-<meta property="og:type" content="article">
-<meta property="og:title" content="JavaScript中正则的使用">
-<meta property="og:url" content="https://hlg453839615.github.io/2018/06/16/JavaScript中正则的使用/index.html">
+  <meta name="description" content="LostStars&apos;s blog">
+<meta property="og:type" content="website">
+<meta property="og:title" content="像风走了八千里,不问归期">
+<meta property="og:url" content="https://hlg453839615.github.io/tags/词云/index.html">
 <meta property="og:site_name" content="像风走了八千里,不问归期">
-<meta property="og:description" content="JavaScript正则的使用1. 可以用正则的方法     1. `reg.exec(str);`返回查找的字符串或null,但是只能匹配一次不能全局匹配;返回一个数组,包含匹配到的字符串和分组规则匹配的值     2. `reg.test(str);`返回true或false     3. `str.match(reg);`返回查找的字符串数组或null,匹配一个;加g时才返回标准数组;不加g">
+<meta property="og:description" content="LostStars&apos;s blog">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-06-21T04:01:24.014Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JavaScript中正则的使用">
-<meta name="twitter:description" content="JavaScript正则的使用1. 可以用正则的方法     1. `reg.exec(str);`返回查找的字符串或null,但是只能匹配一次不能全局匹配;返回一个数组,包含匹配到的字符串和分组规则匹配的值     2. `reg.test(str);`返回true或false     3. `str.match(reg);`返回查找的字符串数组或null,匹配一个;加g时才返回标准数组;不加g">
+<meta name="twitter:title" content="像风走了八千里,不问归期">
+<meta name="twitter:description" content="LostStars&apos;s blog">
   
     <link rel="alternative" href="/atom.xml" title="像风走了八千里,不问归期" type="application/atom+xml">
   
@@ -181,299 +179,79 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-JavaScript中正则的使用" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      JavaScript中正则的使用
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/blog/archives/2018" class="archive-year">2018</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/blog/2018/07/14/wordcloud制作词云/" class="archive-article-date">
+  	<time datetime="2018-07-13T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-14</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/blog/2018/07/14/wordcloud制作词云/">制作词云</a>
     </h1>
   
 
-        
-        <a href="/blog/2018/06/16/JavaScript中正则的使用/" class="archive-article-date">
-  	<time datetime="2018-06-15T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-16</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="JavaScript正则的使用"><a href="#JavaScript正则的使用" class="headerlink" title="JavaScript正则的使用"></a>JavaScript正则的使用</h2><pre><code>1. 可以用正则的方法
-    1. `reg.exec(str);`返回查找的字符串或null,但是只能匹配一次不能全局匹配;返回一个数组,包含匹配到的字符串和分组规则匹配的值
-    2. `reg.test(str);`返回true或false
-    3. `str.match(reg);`返回查找的字符串数组或null,匹配一个;加g时才返回标准数组;不加g时返回类数组包含结果和子集
-    4. `str.replace(reg , str1);`str1可以用函数代替`function(a,b,c,d){}`a: 匹配内容 b: 匹配的子集 c:匹配内容出现的序号 d: 整体str
-    5. `str.search(reg);`返回查找匹配字符串首次出现的下标或-1
-    6. `str.split(reg);`
-</code></pre><a id="more"></a>
-<pre><code>2. 创建正则表达式
-    1. 直接量
-    `var reg = /a/igm;`
-    2. 构造函数
-    `var reg = new RegExp(/\w/,&apos;igm&apos;);`
-    `var reg = new RegExp(&apos;\\w&apos;,&apos;igm&apos;);`需要转义
-3. 修饰符
-    1. `i` 忽略大小写
-    2. `g` 全局匹配(查找所有匹配,而非在找到第一个后停止),加了g后返回标准数组
-    3. `m` 执行多行匹配
-4. 特殊字符
-    1. `|`表示或
-        1. `var reg = new RegExp(/abc|def/,&apos;igm&apos;);`
-    2. 字符集`[]`匹配括号中任意**一个**字符
-        1. `var reg = new RegExp(/[java]/,&apos;igm&apos;);`
-        2. 从str中依次遍历j,a,v,a(匹配j或a或v或a)
-        3. []中任何符号都会被认作匹配字符
-        4. `[a-zA-Z0-9]`匹配一个数字或字母
-        5. `[^0-9]`匹配一个非0-9的word
-        6. `[\u4e00-\u9fa5]`匹配一个中文
-    3. `^`与`$`
-        1. `/^java\w*2017$/;`//匹配以java开头,2017结尾的字符
-        2. `/^a/;`//以a开头
-        3. `/a$/;`//以a结尾
-        4. 注**`^`在`[]`才表示非**
-    4. 元字符(转义字符)
-        1. `\` 转义符(将一个具有特殊意义的字符变得**没有意义**)
-            1. `\n`字符串换行符 `\t`制表符 `\r`回车符
-        2. `\w` 匹配一个[0-9A-Za-z_];word
-        3. `\W` 匹配一个[^0-9A-Za-z_]
-        4. `\d` 匹配一个[0-9];digital
-        5. `\D` 匹配一个[^0-9]
-        6. `\s` 匹配一个空格
-        7. `\S` 匹配一个非空格
-        8. `\b` 匹配一个 单词边界(除了\w之外的都可充当单词边界)
-        9. `\B`匹配不在单词边界上的字符
-        10. `.`匹配所有字符(除了字符串换行符\n,注意不是\.)
-5. 量词(针对前面一个符号(或子集))
-    1. n? 匹配0个或1个n
-    2. n* 匹配0个,1个或多个n
-    3. n+ 匹配1个或多个n
-    4. n{x} 匹配x个n
-    5. n{x,y} 匹配x~y个n
-    6. n{x,} 匹配至少x个n
-
-6. 贪婪和惰性(针对量词)
-</code></pre><p>量词默认贪婪(尽可能多的匹配)<br>如要添加惰性,则<code>?</code>后面不能添加东西<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var str = &apos;a1111abc22222222222abc&apos;</span><br><span class="line">var reg = /a\w*?abc/;//惰性</span><br><span class="line">var reg1 = /a\w*abc/;//贪婪</span><br><span class="line">//贪婪: 匹配完整个字符串然后从最后开始吐</span><br><span class="line">//惰性: 从头开始匹配尽量少的匹配</span><br></pre></td></tr></table></figure></p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">尽可能多的匹配</th>
-<th style="text-align:center">尽可能少的匹配</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">+(匹配一个或多个)</td>
-<td style="text-align:center">+?(选择匹配1个)</td>
-</tr>
-<tr>
-<td style="text-align:center">*(匹配0个一个或多个)</td>
-<td style="text-align:center">*?(选择匹配0个</td>
-</tr>
-<tr>
-<td style="text-align:center">{1,20}</td>
-<td style="text-align:center">{1,20}?(选择匹配1个)</td>
-</tr>
-</tbody>
-</table>
-<pre><code>7. 分组
-    1. 捕获型分组
-        1. `\1`
-            1. `(n)m\1` \1引用**第一个**分组( (n) )匹配的结果,第x个左括号就是第x个匹配规则
-        2. `RegExp.$1`
-            1. 获取第一个分组匹配的结果
-    2. 非捕获型分组(一种断言)
-        1. 正向前瞻
-            1. `var reg = /javascript(?=2007)/;`匹配后面是2007的javascript(只拿到javascript);(`?:2007`)
-        2. 负向前瞻
-            1. `var reg = /javascript(?!2007)/;`匹配后面不是2007的javascript
-        3. 正向后顾
-            1. `?&lt;=2007`
-        4. 负向后顾
-            1. `?&lt;!2007`        
-
-8. 常见的正则
-</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">QQ = /^[1-9]\d&#123;4,10&#125;$/;</span><br><span class="line">tel = /^1[3-9]\d&#123;9&#125;$/;</span><br><span class="line">username = /^[A-Za-z]\w&#123;5,15&#125;$/;</span><br><span class="line">password = /^[\w!@#$%^]&#123;6,16&#125;$/;</span><br><span class="line">email = /^[A-Za-z1-9]\w&#123;1,&#125;@[A-Za-z1-9\-]&#123;2,&#125;(\.[A-Za-z]&#123;2,&#125;)&#123;1,3&#125;&#125;$/;</span><br><span class="line">IDcard = /^[1-9]\d&#123;16&#125;\[\dxX]$/;</span><br></pre></td></tr></table></figure>
-
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">正则</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">词云</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">wordcloud</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/blog/categories/JavaScript//" class="article-tag-list-link color1">JavaScript</a>
+        			<a href="/blog/categories/python//" class="article-tag-list-link color2">python</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://hlg453839615.github.io/2018/06/16/JavaScript中正则的使用/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/blog/2018/06/17/爬虫学习/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          爬虫学习
-        
-      </div>
-    </a>
   
   
-    <a href="/blog/2018/06/16/BeautifulSoup常用api总结/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">BeautifulSoup常用api</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-        <div class="toc-container tooltip-left">
-            <i class="icon-font icon-category"></i>
-            <div class="tooltip tooltip-east">
-                <span class="tooltip-item">
-                </span>
-                <span class="tooltip-content">
-                    <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#JavaScript正则的使用"><span class="toc-number">1.</span> <span class="toc-text">JavaScript正则的使用</span></a></li></ol>
-                    </div>
-                </span>
-            </div>
-        </div>
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-
-  
-
+    
 
 
           </div>
@@ -498,9 +276,9 @@ var _hmt = _hmt || [];
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: true,
 		toc_hide_index: true,
