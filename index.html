@@ -202,22 +202,10 @@ var _hmt = _hmt || [];
     <div class="article-entry" itemprop="articleBody">
       
         <p></p><h2 style="">效果图<p></p>
-<p><img src="/2018/07/14/wordcloud制作词云/./wordcloud制作词云/wordcloud.png" style="width=80%"></p>
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p><a href="https://www.lfd.uci.edu/~gohlke/pythonlibs/#wordcloud" target="_blank" rel="noopener">windows安装词云</a></p>
-<ol>
-<li><p>导入模块</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">from wordcloud import WordCloud</span><br><span class="line">import matplotlib.pyplot as plt</span><br><span class="line">from os import path</span><br><span class="line">from scipy.misc import imread</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>得到底图的二维数组数据</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pic_address = path.abspath(&apos;1.jpg&apos;)</span><br><span class="line">pic = imread(pic_address)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>读取文字数据</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">text = open(&apos;data.txt&apos;, encoding = &apos;UTF-8&apos;).read()</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>设置词云参数并生成词云图</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">wc = WordCloud(</span><br><span class="line">    background_color = &apos;black&apos;,</span><br><span class="line">    max_words = 2000,</span><br><span class="line">    height = 300,</span><br><span class="line">    width = 400,</span><br><span class="line">    font_path = &apos;C:\Windows\Fonts\simfang.ttf&apos;,</span><br><span class="line">    max_font_size = 100,</span><br><span class="line">    random_state = 100,</span><br><span class="line">    mask = pic</span><br><span class="line">)</span><br><span class="line">wc.generate(text = text)</span><br><span class="line">plt.imshow(myword)</span><br><span class="line">plt.axis(&apos;off&apos;)</span><br><span class="line">plt.show()</span><br><span class="line">wc.to_file(&apos;1.png&apos;)</span><br></pre></td></tr></table></figure></li>
-</ol>
-</h2>
+<p><img src="/2018/07/14/wordcloud制作词云/wordcloud.png" alt="Alt text"><br></p></h2>
+        
+          <a class="article-more-a" href="/blog/2018/07/14/wordcloud制作词云/#more">more >></a>
+        
       
 
       
@@ -478,97 +466,6 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-python连接SqlServer" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/2018/06/29/python连接SqlServer/">python连接SqlServer</a>
-    </h1>
-  
-
-        
-        <a href="/blog/2018/06/29/python连接SqlServer/" class="archive-article-date">
-  	<time datetime="2018-06-28T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-29</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="pyodbc"><a href="#pyodbc" class="headerlink" title="pyodbc"></a>pyodbc</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"># code</span><br><span class="line">import pyodbc</span><br><span class="line"></span><br><span class="line">connection = pyodbc.connect(&apos;DRIVER=&#123;SQL Server Native Client 11.0&#125;;SERVER=192.168.2.223;DATABASE=LIMS_test;UID=sa;PWD=Zjsoft@&apos;)</span><br><span class="line"># 创建指针</span><br><span class="line">cursor = connection.cursor()</span><br><span class="line">cursor.execute(&apos;select a from tbl where b=? and c=?&apos;, (x, y))</span><br><span class="line">rows = cursor.fetchall()</span><br><span class="line">row = cursor.fetchone()</span><br><span class="line"></span><br><span class="line">count = cursor.execute(&apos;update users set last_logon=? where user_id=?&apos;, x, y).rowcount</span><br><span class="line">count = cursor.execute(&apos;delete from users where user_id=1&apos;).rowcount</span><br></pre></td></tr></table></figure>
-<p><a href="https://github.com/mkleehammer/pyodbc/wiki" target="_blank" rel="noopener">pyodbc在github上的文档</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">sqlserver</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/blog/categories/python//" class="article-tag-list-link color2">python</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/blog/2018/06/29/python连接SqlServer/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-  
     <article id="post-jmeter环境变量的配置" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -634,6 +531,97 @@ var _hmt = _hmt || [];
       
         <p class="article-more-link">
           <a class="article-more-a" href="/blog/2018/06/29/jmeter环境变量的配置/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+  
+    <article id="post-python连接SqlServer" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/2018/06/29/python连接SqlServer/">python连接SqlServer</a>
+    </h1>
+  
+
+        
+        <a href="/blog/2018/06/29/python连接SqlServer/" class="archive-article-date">
+  	<time datetime="2018-06-28T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-29</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="pyodbc"><a href="#pyodbc" class="headerlink" title="pyodbc"></a>pyodbc</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"># code</span><br><span class="line">import pyodbc</span><br><span class="line"></span><br><span class="line">connection = pyodbc.connect(&apos;DRIVER=&#123;SQL Server Native Client 11.0&#125;;SERVER=192.168.2.223;DATABASE=LIMS_test;UID=sa;PWD=Zjsoft@&apos;)</span><br><span class="line"># 创建指针</span><br><span class="line">cursor = connection.cursor()</span><br><span class="line">cursor.execute(&apos;select a from tbl where b=? and c=?&apos;, (x, y))</span><br><span class="line">rows = cursor.fetchall()</span><br><span class="line">row = cursor.fetchone()</span><br><span class="line"></span><br><span class="line">count = cursor.execute(&apos;update users set last_logon=? where user_id=?&apos;, x, y).rowcount</span><br><span class="line">count = cursor.execute(&apos;delete from users where user_id=1&apos;).rowcount</span><br></pre></td></tr></table></figure>
+<p><a href="https://github.com/mkleehammer/pyodbc/wiki" target="_blank" rel="noopener">pyodbc在github上的文档</a></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">sqlserver</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/blog/categories/python//" class="article-tag-list-link color2">python</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/blog/2018/06/29/python连接SqlServer/">展开全文 >></a>
         </p>
       
 
@@ -1234,14 +1222,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Selenium</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">自动化</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">JavaScript</a>
               </li>
              
@@ -1250,11 +1230,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
+                <a href="javascript:void(0)" class="js-tag color4">Selenium</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">sqlserver</a>
+                <a href="javascript:void(0)" class="js-tag color4">自动化</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1266,11 +1246,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Jmeter</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">requests</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">urllib</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">sqlserver</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1298,10 +1290,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">电影</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">网络</a>
               </li>
              
@@ -1310,7 +1298,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">urllib</a>
+                <a href="javascript:void(0)" class="js-tag color3">电影</a>
               </li>
             
             <div class="clearfix"></div>
