@@ -17,7 +17,7 @@
 <meta property="og:description" content="效果图">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://hlg453839615.github.io/blog/2018/07/14/wordcloud制作词云/wordcloud.png">
-<meta property="og:updated_time" content="2018-07-15T04:43:44.284Z">
+<meta property="og:updated_time" content="2018-07-15T15:23:03.369Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="wordcloud制作词云">
 <meta name="twitter:description" content="效果图">
@@ -219,11 +219,11 @@ var _hmt = _hmt || [];
 </ol>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pic_address = path.abspath(&apos;1.jpg&apos;)</span><br><span class="line">pic = imread(pic_address)</span><br></pre></td></tr></table></figure>
 <ol>
-<li><p>读取文字数据</p>
+<li>读取文字数据</li>
+</ol>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">text = open(&apos;data.txt&apos;, encoding = &apos;UTF-8&apos;).read()</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>设置词云参数并生成词云图</p>
-</li>
+<ol>
+<li>设置词云参数并生成词云图</li>
 </ol>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">wc = WordCloud(</span><br><span class="line">    background_color = &apos;black&apos;,</span><br><span class="line">    max_words = 2000,</span><br><span class="line">    height = 300,</span><br><span class="line">    width = 400,</span><br><span class="line">    font_path = &apos;C:\Windows\Fonts\simfang.ttf&apos;,</span><br><span class="line">    max_font_size = 100,</span><br><span class="line">    random_state = 100,</span><br><span class="line">    mask = pic</span><br><span class="line">)</span><br><span class="line">wc.generate(text = text)</span><br><span class="line">plt.imshow(myword)</span><br><span class="line">plt.axis(&apos;off&apos;)</span><br><span class="line">plt.show()</span><br><span class="line">wc.to_file(&apos;1.png&apos;)</span><br></pre></td></tr></table></figure></h2>
       
@@ -390,10 +390,10 @@ var _hmt = _hmt || [];
 12pic_address = path.abspath(&#39;1.jpg&#39;)pic = imread(pic_address)
 
 读取文字数据
+
 1text = open(&#39;data.txt&#39;, encoding = &#39;UTF-8&#39;).read()
 
 设置词云参数并生成词云图
-
 
 123456789101112131415wc = WordCloud(    background_color = &#39;black&#39;,    max_words = 2000,    height = 300,    width = 400,    font_path = &#39;C:\Windows\Fonts\simfang.ttf&#39;,    max_font_size = 100,    random_state = 100,    mask = pic)wc.generate(text = text)plt.imshow(myword)plt.axis(&#39;off&#39;)plt.show()wc.to_file(&#39;1.png&#39;)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装"><span class="toc-number">2.</span> <span class="toc-text">安装</span></a></li></ol>
                     </div>
@@ -560,15 +560,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">OSI</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">TCP/IP</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">JavaScript</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">正则</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -580,11 +584,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">OSI</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">TCP/IP</a>
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -596,7 +596,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">urllib</a>
+                <a href="javascript:void(0)" class="js-tag color4">requests</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -612,7 +612,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">requests</a>
+                <a href="javascript:void(0)" class="js-tag color2">urllib</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -624,19 +624,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">自动化测试</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">电影</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">网络</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">安全性测试</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">自动化测试</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">电影</a>
               </li>
             
             <div class="clearfix"></div>
