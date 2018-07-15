@@ -185,7 +185,240 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-HTML学习笔记(5)-过渡,动画,变换" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      HTML学习笔记(5)-过渡,动画,变换
+    </h1>
+  
+
+        
+        <a href="/blog/2018/02/13/HTML学习笔记(5)-过渡,动画,变换/" class="archive-article-date">
+  	<time datetime="2018-02-12T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-13</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="过渡transition"><a href="#过渡transition" class="headerlink" title="过渡transition"></a>过渡transition</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">单样式写法</span><br><span class="line">规定为谁添加过渡效果(display不支持过渡)</span><br><span class="line">transition-property: all; /*默认为all*/</span><br><span class="line"></span><br><span class="line">规定过渡效果花费的时间(s/ms)</span><br><span class="line">transition-duration: ;</span><br><span class="line"></span><br><span class="line">规定过渡效果延迟的时间(s/ms)</span><br><span class="line">transition-delay: ;</span><br><span class="line"></span><br><span class="line">规定过渡的速度曲线</span><br><span class="line">transition-timing-function:</span><br><span class="line">linear; /*匀速*/</span><br><span class="line">ease; /*慢快慢(默认)*/</span><br><span class="line">ease-in; /*匀加速*/</span><br><span class="line">ease-out; /*匀减速*/</span><br><span class="line">ease-in-out; /*快慢快*/</span><br><span class="line">cubic-bezier(n,n,n,n); /*贝赛尔曲线*/</span><br><span class="line">[贝赛尔曲线](http://cubic-bezier.com/#.29)</span><br><span class="line"></span><br><span class="line">复合写法(多个值用逗号隔开)</span><br><span class="line">transition: width 1s 2s,background .1s;</span><br><span class="line">transition: all .5s;</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<p>过渡的特点<br>简单易用;但是需要事件触发,只会执行一次,只有开始和结束两个状态,一条属性只能定义一个过渡</p>
+<h2 id="动画animation"><a href="#动画animation" class="headerlink" title="动画animation"></a>动画animation</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">单样式写法</span><br><span class="line">规定动画的名称</span><br><span class="line">animation-name: move;</span><br><span class="line"></span><br><span class="line">规定动画的持续时间(s/ms)</span><br><span class="line">animation-duration: ;</span><br><span class="line"></span><br><span class="line">规定动画延迟时间(s/ms)</span><br><span class="line">animation-delay: ;</span><br><span class="line"></span><br><span class="line">运动曲线</span><br><span class="line">animation-timing-function:</span><br><span class="line"></span><br><span class="line">规定动画执行的次数</span><br><span class="line">animation-iteration-count: infinite/数字;</span><br><span class="line"></span><br><span class="line">规定动画执行的方向</span><br><span class="line">animation-direction: normal(默认);alternate(轮流反向播放)</span><br><span class="line"></span><br><span class="line">规定动画执行结束后停在什么状态(初始值或者结束值)(不能和执行方向同时存在)</span><br><span class="line">animation-fill-mode: backwards;forwards;both</span><br><span class="line"></span><br><span class="line">规定动画的状态</span><br><span class="line">animation-play-state: running(默认);paused;</span><br><span class="line"></span><br><span class="line">绑定动画(可以只有to)</span><br><span class="line">@keyframes move&#123;</span><br><span class="line">    from&#123;width: 100px;&#125;</span><br><span class="line">    to&#123;width: 200px;&#125;</span><br><span class="line">&#125;</span><br><span class="line">@keyframes move&#123;</span><br><span class="line">    0%&#123;width: 200px;&#125;</span><br><span class="line">    100%&#123;width: 300px;&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">复合属性</span><br><span class="line">animation: move 1s 0.2s linear infinite alternate running;</span><br></pre></td></tr></table></figure>
+<h2 id="变换transform"><a href="#变换transform" class="headerlink" title="变换transform"></a>变换transform</h2><p>允许对元素进行旋转,缩放,移动或倾斜</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">规定旋转的角度</span><br><span class="line">deg/turn/rad/grad</span><br><span class="line">transform: rotate(120deg);</span><br><span class="line"></span><br><span class="line">规定基点(写在元素中)</span><br><span class="line">transform-origin: left top;</span><br><span class="line"></span><br><span class="line">规定放大的倍数</span><br><span class="line">transform: scale(1.2);</span><br><span class="line"></span><br><span class="line">规定位移</span><br><span class="line">transform: translate(100px,200px);/*百分比的基数为自身*/</span><br><span class="line"></span><br><span class="line">规定倾斜</span><br><span class="line">transform: skew(50deg,60deg)</span><br><span class="line"></span><br><span class="line">复合属性</span><br><span class="line">transform: rotate(200deg) scale(.5);</span><br></pre></td></tr></table></figure>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">html</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/blog/categories/前端//" class="article-tag-list-link color3">前端</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://hlg453839615.github.io/2018/02/13/HTML学习笔记(5)-过渡,动画,变换/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/blog/2018/06/07/基于python + Selenium的自动化学习(unittest)/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          基于python + Selenium的自动化学习(unittest框架)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/blog/2018/02/05/HTML学习笔记(4)-水平垂直居中的几种方法/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">水平垂直居中的几种方法</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#过渡transition"><span class="toc-number">1.</span> <span class="toc-text">过渡transition</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#动画animation"><span class="toc-number">2.</span> <span class="toc-text">动画animation</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#变换transform"><span class="toc-number">3.</span> <span class="toc-text">变换transform</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>
+
+
+
+
+    
+
+
+
+  
+  
+  
+
+  
+
+  
+
+  
+
+
+
+  
+  <!-- 来必力City版安装代码 -->
+<div id="lv-container" data-id="city" data-uid="MTAyMC8zODA1Ni8xNDU4Ng==">
+	<script type="text/javascript">
+        (function(d, s) {
+            var j, e = d.getElementsByTagName(s)[0];
+
+            if (typeof LivereTower === 'function') { return; }
+
+            j = d.createElement(s);
+            j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+            j.async = true;
+
+            e.parentNode.insertBefore(j, e);
+        })(document, 'script');
+	</script>
+<noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+</div>
+<!-- City版安装代码已完成 -->
+  
+
+
+
           </div>
         </div>
       </div>
@@ -306,14 +539,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">OSI</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">TCP/IP</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Selenium</a>
               </li>
              
@@ -322,7 +547,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Jmeter</a>
+                <a href="javascript:void(0)" class="js-tag color4">OSI</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">TCP/IP</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -330,7 +559,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Jmeter</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">sqlserver</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">requests</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -346,7 +583,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">requests</a>
+                <a href="javascript:void(0)" class="js-tag color1">自动化测试</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -359,10 +596,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">headless</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">自动化测试</a>
               </li>
              
               <li class="article-tag-list-item">

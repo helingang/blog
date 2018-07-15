@@ -185,7 +185,350 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-OSI七层模型结构" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      OSI七层模型结构, TCP/IP四层模型学习笔记
+    </h1>
+  
+
+        
+        <a href="/blog/2018/06/12/OSI七层模型结构/" class="archive-article-date">
+  	<time datetime="2018-06-11T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-12</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="OSI七层和TCP-IP四层的关系"><a href="#OSI七层和TCP-IP四层的关系" class="headerlink" title="OSI七层和TCP/IP四层的关系"></a>OSI七层和TCP/IP四层的关系</h1><pre><code>1. TCP/IP先有协议再提出的模型,是参照OSI模型
+2. OSI是理论下的模型,而TCP/IP已被广泛使用
+3. TCP transmission control protocol 传输控制协议
+4. UDP user data protocol 用户数据报协议
+</code></pre><a id="more"></a>
+<h1 id="OSI七层模型"><a href="#OSI七层模型" class="headerlink" title="OSI七层模型"></a>OSI七层模型</h1><pre><code>1. OSI模型结构
+</code></pre><table>
+<thead>
+<tr>
+<th style="text-align:center">OSI</th>
+<th style="text-align:left">功能</th>
+<th style="text-align:center">协议</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">应用层</td>
+<td style="text-align:left">面向计算机用户,提供应用程序和网络之间的接口</td>
+<td style="text-align:center">HTTP, HTTPS, FTP, TELNET, SSH, SMTP, POP3等</td>
+</tr>
+<tr>
+<td style="text-align:center">表示层</td>
+<td style="text-align:left">处理来自应用层的的命令和数据,结果传给会话层</td>
+<td style="text-align:center">N/A</td>
+</tr>
+<tr>
+<td style="text-align:center">会话层</td>
+<td style="text-align:left">不同机器上的用户之间建立会话</td>
+<td style="text-align:center">N/A</td>
+</tr>
+<tr>
+<td style="text-align:center">传输层</td>
+<td style="text-align:left">为会话层和传输层提供传输服务</td>
+<td style="text-align:center">TCP, UDP</td>
+</tr>
+<tr>
+<td style="text-align:center">网络层</td>
+<td style="text-align:left"></td>
+<td style="text-align:center">IP等</td>
+</tr>
+<tr>
+<td style="text-align:center">数据链路层</td>
+<td style="text-align:left">数据链路层的数据传输单元成为帧, 就是将网络层转发的数据封装为帧, 传输给物理层, 以及分析物理层传输过来的数据帧</td>
+<td style="text-align:center">SLIP, CSLIP, PPP, ARP, RARP, MTU等</td>
+</tr>
+<tr>
+<td style="text-align:center">数据层</td>
+<td style="text-align:left"></td>
+<td style="text-align:center">ISO2110等</td>
+</tr>
+</tbody>
+</table>
+<h1 id="TCP模型"><a href="#TCP模型" class="headerlink" title="TCP模型"></a>TCP模型</h1><pre><code>1. TCP模型结构
+</code></pre><table>
+<thead>
+<tr>
+<th style="text-align:center">OSI</th>
+<th style="text-align:center">TCP/IP</th>
+<th style="text-align:center">协议</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">应用层/表示层/会话层</td>
+<td style="text-align:center">应用层</td>
+<td style="text-align:center">HTTP, FTP, TFTP, SMIP, SNMP, DNS</td>
+</tr>
+<tr>
+<td style="text-align:center">传输层</td>
+<td style="text-align:center">传输层</td>
+<td style="text-align:center">TCP, UDP</td>
+</tr>
+<tr>
+<td style="text-align:center">网络层</td>
+<td style="text-align:center">网络层</td>
+<td style="text-align:center">ICMP, IGMP, IP, ARP, RARP</td>
+</tr>
+<tr>
+<td style="text-align:center">数据链路层/物理层</td>
+<td style="text-align:center">网络接口层</td>
+<td style="text-align:center">由底层网络定义协议</td>
+</tr>
+</tbody>
+</table>
+<h1 id="交互实例"><a href="#交互实例" class="headerlink" title="交互实例"></a>交互实例</h1><pre><code>1. 发送端每通过一层则增加首部,接收端每通过一层则删除首部
+</code></pre><table>
+<thead>
+<tr>
+<th style="text-align:center">交互</th>
+<th style="text-align:left">发送端</th>
+<th style="text-align:left">接收端</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">应用层</td>
+<td style="text-align:left">HTTP数据</td>
+<td style="text-align:left">HTTP数据</td>
+</tr>
+<tr>
+<td style="text-align:center">传输层</td>
+<td style="text-align:left">TCP首部(HTTP数据)</td>
+<td style="text-align:left">TCP首部(HTTP数据)</td>
+</tr>
+<tr>
+<td style="text-align:center">网络层</td>
+<td style="text-align:left">IP首部(TCP首部(HTTP数据)</td>
+<td style="text-align:left">IP首部(TCP首部(HTTP数据)</td>
+</tr>
+<tr>
+<td style="text-align:center">链路层</td>
+<td style="text-align:left">以太网首部(IP首部(TCP首部(HTTP数据)))</td>
+<td style="text-align:left">以太网首部(IP首部(TCP首部(HTTP数据)))</td>
+</tr>
+</tbody>
+</table>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">OSI</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">TCP/IP</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/blog/categories/网络//" class="article-tag-list-link color3">网络</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://hlg453839615.github.io/2018/06/12/OSI七层模型结构/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/blog/2018/06/16/python中正则的使用/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          python中正则的使用
+        
+      </div>
+    </a>
+  
+  
+    <a href="/blog/2018/06/12/网络安全/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">网络安全</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#OSI七层和TCP-IP四层的关系"><span class="toc-number">1.</span> <span class="toc-text">OSI七层和TCP/IP四层的关系</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#OSI七层模型"><span class="toc-number">2.</span> <span class="toc-text">OSI七层模型</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#TCP模型"><span class="toc-number">3.</span> <span class="toc-text">TCP模型</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#交互实例"><span class="toc-number">4.</span> <span class="toc-text">交互实例</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>
+
+
+
+
+    
+
+
+
+  
+  
+  
+
+  
+
+  
+
+  
+
+
+
+  
+  <!-- 来必力City版安装代码 -->
+<div id="lv-container" data-id="city" data-uid="MTAyMC8zODA1Ni8xNDU4Ng==">
+	<script type="text/javascript">
+        (function(d, s) {
+            var j, e = d.getElementsByTagName(s)[0];
+
+            if (typeof LivereTower === 'function') { return; }
+
+            j = d.createElement(s);
+            j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+            j.async = true;
+
+            e.parentNode.insertBefore(j, e);
+        })(document, 'script');
+	</script>
+<noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+</div>
+<!-- City版安装代码已完成 -->
+  
+
+
+
           </div>
         </div>
       </div>
@@ -306,14 +649,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">OSI</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">TCP/IP</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Selenium</a>
               </li>
              
@@ -322,7 +657,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Jmeter</a>
+                <a href="javascript:void(0)" class="js-tag color4">OSI</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">TCP/IP</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -330,7 +669,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Jmeter</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">sqlserver</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">requests</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -346,7 +693,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">requests</a>
+                <a href="javascript:void(0)" class="js-tag color1">自动化测试</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -359,10 +706,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">headless</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">自动化测试</a>
               </li>
              
               <li class="article-tag-list-item">

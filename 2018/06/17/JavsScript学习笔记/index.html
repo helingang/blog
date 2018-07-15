@@ -185,7 +185,356 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-JavsScript学习笔记" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      JavaScript学习笔记-数据类型
+    </h1>
+  
+
+        
+        <a href="/blog/2018/06/17/JavsScript学习笔记/" class="archive-article-date">
+  	<time datetime="2018-06-17T03:33:55.092Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-17</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="JavaScript数据类型"><a href="#JavaScript数据类型" class="headerlink" title="JavaScript数据类型"></a>JavaScript数据类型</h2><pre><code>[浅析JavaScript语言的类型](http://www.helloyzy.cn/2017/11/05/js%E7%B1%BB%E5%9E%8B/)
+</code></pre><h3 id="数字number"><a href="#数字number" class="headerlink" title="数字number"></a>数字number</h3><pre><code>1. js中的Number类型使用的是双精度浮点型,也就是其他语言的double类型
+2. [JS number相加精度丢失](https://juejin.im/post/5a6fce10f265da3e261c3c71)
+3. `var a = &apos;a&apos; - 1;`NaN
+4. NaN于自己不相等
+5. `isNaN()`返回布尔值,内部会先使用`number()`转化
+</code></pre><a id="more"></a>
+<h3 id="字符串string"><a href="#字符串string" class="headerlink" title="字符串string"></a>字符串string</h3><h4 id="字符串方法-不会修改原字符串"><a href="#字符串方法-不会修改原字符串" class="headerlink" title="字符串方法(不会修改原字符串)"></a>字符串方法(不会修改原字符串)</h4><pre><code>1. `str.length`只可读
+2. `str[i]`不兼容IE6-7(str.charAt(i))
+3. `str.indexOf(value, index)`从index位(默认为0)开始检索,返回第一个value的下标或-1
+4. `str.lastIndexOf(value, index)`从最后一位开始检索,返回第一个value的下标或-1
+5. `str.charAt(index)`返回执行序号的字符串
+6. `str.charCodeAt(index)`返回执行序号下字符的ASCII码
+7. `String.fromCharCode(80)`返回ASCII为80的字符
+8. `str.substring( 起始序号-包含 , 结束序号-不包含 )`返回截取的字符串
+9. `str.slice( 起始序号-包含 , 结束序号-不包含 )`返回截取的字符串,负数代表倒数的index
+10. `str.substr( 起始序号-包含 , 截取长度 )`返回截取的字符串
+11. `str.trim`去除首尾空格
+12. `str.toUpperCase() / str.toLowerCase()`
+</code></pre><p><strong>以下方法可以使用正则</strong></p>
+<pre><code>13. `str.match(&apos;c&apos;)`返回c或null
+14. `str.search(&apos;c&apos;)`返回str中第一个c的下标或-1
+15. `str.replace(&apos;c&apos;,&apos;d&apos;)`只替换第一个(如果使用正则的全局匹配就可替换所有),返回替换后的str,
+16. `str.split(&apos;c&apos;)`返回用c将str分割成的数组
+</code></pre><h3 id="布尔值boolean"><a href="#布尔值boolean" class="headerlink" title="布尔值boolean"></a>布尔值boolean</h3><h3 id="对象Object"><a href="#对象Object" class="headerlink" title="对象Object"></a>对象Object</h3><pre><code>1. 可以进行点操作的就是对象
+2. 有js定义的属性,也有自定义对象的属性
+3. 查看对象下的属性
+    1. `for in`
+</code></pre><h4 id="节点对象-json-array-window-null…"><a href="#节点对象-json-array-window-null…" class="headerlink" title="节点对象,json,array,window,null…"></a>节点对象,json,array,window,null…</h4><h4 id="JSON"><a href="#JSON" class="headerlink" title="JSON"></a>JSON</h4><pre><code>1. 声明
+    1. 直接量
+    2. new形式
+2. json中的this
+    1. `var person = {&apos;name&apos;: this, &apos;a&apos;: function(){this}}`
+    2. name对应的this指window
+    3. 函数中的this指这个json
+3. 删除属性
+    1. `delete person.name`
+4. in判断对象是否具有某种属性
+    1. `&apos;name&apos; in person`返回布尔值
+5. 遍历json
+    1. `for (var attr in json){}`
+6. `JSON.parse(str) / JSON.stringify(obj)`
+</code></pre><h4 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h4><h5 id="数组的方法"><a href="#数组的方法" class="headerlink" title="数组的方法"></a>数组的方法</h5><pre><code>1. `数组.length` 可读可写
+2. `数组[序号]` 可读可写
+3. `arr.unshift( 新数据1 , 新数据2 )`
+    功能: 在原数组开头添加新数据
+    返回: 新数组的长度
+    是否改变原数组: 是
+4. `arr.push( 新数据1 , 新数据2 )`
+    功能: 在原数组最后添加新数据
+    返回: 新数组的长度
+    是否改变原数组: 是
+5. `arr.shift()`
+    功能: 移除数组第一个成员
+    返回: 移除的成员
+    是否改变原数组: 是
+6. `arr.pop()`
+    功能: 移除数组最后一个成员
+    返回: 移除的成员
+    是否改变原数组: 是
+7. `arr.splice( a , b , c1 , c2 ... )`
+    a: 开始的序号
+    b: 删除的个数
+    c: 填充的成员
+    返回: 只返回删除的对象
+    是否改变原数组: 是
+    只填一个参数时: 表示从下标为0处开始删除x个
+7. `arr.slice( a , b )`
+    1. 与字符串`splice`相同
+    2. 返回: 切割的数组
+    3. 是否改变原数组:  **不会**
+8. `arr.sort(function(x,y){return x-y})`
+    功能: 对数字数组排序
+        return x-y : 原数组升序
+        return 小于0的数 : 原数组不变
+        return y-x : 原数组倒序
+        return 大于0的数 : 原数组反转
+    返回: 新数组
+    是否改变原数组: 是
+9. `arr.reverse()`
+    功能: 反转数组
+    返回: 新数组
+    是否改变原数组: 是
+10. `数组1.concat( 数组2 , 数组3 )`
+    功能: 拼接数组
+    返回: 新数组
+    是否改变原数组: 否
+11. `arr.join( 字符串 )`
+    功能: 将数组成员用参数字符串拼接成字符串
+    返回: 字符串
+    是否改变原数组: 否
+12. `Array.isArray( 参数 )`
+    功能: 判断参数是否为数组
+    返回: 布尔值
+13. `arr.forEach(function(value,index,arr){})`
+    功能: 遍历数组
+    是否改变原数组: 是
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var arr = [1,3,2,5,3];</span><br><span class="line">var res = arr.forEach(function(a,b,c)&#123;</span><br><span class="line">    c[b] = ++a;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+14. `arr.filter(function(value,index,arr){})`
+    return 条件
+    功能: 筛选数组
+    返回: 新数组
+    内部函数返回布尔值
+    是否改变原数组: 否
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var arr = [1,3,2,5,3];</span><br><span class="line">var res = arr.filter(function(a)&#123;</span><br><span class="line">    return a&gt;=3;//筛选&gt;=3成员并组成数组返回</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+15. `arr.map(function(value,index,arr){})`
+    return 条件
+    功能: 判断成员是否满足条件
+    返回: 布尔值组成的新数组
+    return 运算 : 返回运算后的新数组
+    功能: 成员进行计算
+    返回: 运算后的新数组
+    是否改变原数组: 否
+    return 值: 将数组每一项替换成这个值并返回
+16. `arr.every(function(value,index,arr){})`
+    return 条件
+    功能: 判断成员是否满足条件
+    返回: 所有成员满足条件则返回true,否则返回false
+    是否改变原数组: 否
+17. `arr.some(function(value,index,arr){})`
+    return 条件
+    功能: 判断成员是否满足条件
+    返回: 只要有一个成员满足条件则返回true,否则返回false
+    是否改变原数组: 否
+</code></pre><h3 id="未定义类型undefined"><a href="#未定义类型undefined" class="headerlink" title="未定义类型undefined"></a>未定义类型undefined</h3><h3 id="函数类型"><a href="#函数类型" class="headerlink" title="函数类型"></a>函数类型</h3>
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/blog/categories/JavaScript//" class="article-tag-list-link color1">JavaScript</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://hlg453839615.github.io/2018/06/17/JavsScript学习笔记/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/blog/2018/06/21/解忧杂货店/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          解忧杂货店
+        
+      </div>
+    </a>
+  
+  
+    <a href="/blog/2018/06/17/git和github/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">git和github</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#JavaScript数据类型"><span class="toc-number">1.</span> <span class="toc-text">JavaScript数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#数字number"><span class="toc-number">1.1.</span> <span class="toc-text">数字number</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#字符串string"><span class="toc-number">1.2.</span> <span class="toc-text">字符串string</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#字符串方法-不会修改原字符串"><span class="toc-number">1.2.1.</span> <span class="toc-text">字符串方法(不会修改原字符串)</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#布尔值boolean"><span class="toc-number">1.3.</span> <span class="toc-text">布尔值boolean</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#对象Object"><span class="toc-number">1.4.</span> <span class="toc-text">对象Object</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#节点对象-json-array-window-null…"><span class="toc-number">1.4.1.</span> <span class="toc-text">节点对象,json,array,window,null…</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#JSON"><span class="toc-number">1.4.2.</span> <span class="toc-text">JSON</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#数组"><span class="toc-number">1.4.3.</span> <span class="toc-text">数组</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#数组的方法"><span class="toc-number">1.4.3.1.</span> <span class="toc-text">数组的方法</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#未定义类型undefined"><span class="toc-number">1.5.</span> <span class="toc-text">未定义类型undefined</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#函数类型"><span class="toc-number">1.6.</span> <span class="toc-text">函数类型</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>
+
+
+
+
+    
+
+
+
+  
+  
+  
+
+  
+
+  
+
+  
+
+
+
+  
+  <!-- 来必力City版安装代码 -->
+<div id="lv-container" data-id="city" data-uid="MTAyMC8zODA1Ni8xNDU4Ng==">
+	<script type="text/javascript">
+        (function(d, s) {
+            var j, e = d.getElementsByTagName(s)[0];
+
+            if (typeof LivereTower === 'function') { return; }
+
+            j = d.createElement(s);
+            j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+            j.async = true;
+
+            e.parentNode.insertBefore(j, e);
+        })(document, 'script');
+	</script>
+<noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+</div>
+<!-- City版安装代码已完成 -->
+  
+
+
+
           </div>
         </div>
       </div>
@@ -306,14 +655,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">OSI</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">TCP/IP</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Selenium</a>
               </li>
              
@@ -322,7 +663,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Jmeter</a>
+                <a href="javascript:void(0)" class="js-tag color4">OSI</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">TCP/IP</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -330,7 +675,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Jmeter</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">sqlserver</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">requests</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -346,7 +699,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">requests</a>
+                <a href="javascript:void(0)" class="js-tag color1">自动化测试</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -359,10 +712,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">headless</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">自动化测试</a>
               </li>
              
               <li class="article-tag-list-item">
