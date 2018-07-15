@@ -185,276 +185,7 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-git和github" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      git和github
-    </h1>
-  
-
-        
-        <a href="/blog/2018/06/17/git和github/" class="archive-article-date">
-  	<time datetime="2018-06-16T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-17</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="什么是git"><a href="#什么是git" class="headerlink" title="什么是git"></a>什么是git</h2><p>开源的免费的代码管理软件</p>
-<h2 id="什么是github"><a href="#什么是github" class="headerlink" title="什么是github"></a>什么是github</h2><p>一个免费的远程代码仓库<br><a id="more"></a></p>
-<h2 id="分布式和集中式"><a href="#分布式和集中式" class="headerlink" title="分布式和集中式"></a>分布式和集中式</h2><pre><code>1. 集中式
-    1. 代码集中在一个中央服务器上,所有代码提交到一个服务器中进行管理,代表(SVN)
-    2. 缺点:中央服务器故障
-2. 分布式
-    1. 每个人可在本地创建代码仓库,可以与远程代码仓库同步代码,也可以互相同步代码
-    2. 优点:
-        1. 每一次提取操作,实际都是对代码仓库的完整备份,git中每一个克隆库都是平等的,可以从任何一个版本库的克隆来创建属于你自己的版本库
-        2. 可以脱离git管理代码
-        3. 提交在本地完成,提交旧版本会创建分支
-        4. git提交不会被打断,不能自动同步的冲突提示手动完成
-</code></pre><h2 id="代码管理"><a href="#代码管理" class="headerlink" title="代码管理"></a>代码管理</h2><h3 id="本地管理"><a href="#本地管理" class="headerlink" title="本地管理"></a>本地管理</h3><h4 id="工作区-gt-暂存区-gt-分支"><a href="#工作区-gt-暂存区-gt-分支" class="headerlink" title="工作区-&gt;暂存区-&gt;分支"></a>工作区-&gt;暂存区-&gt;分支</h4><pre><code>1. `git add .`提交当前工作区中的所有文件到暂存区
-2. `git commit -m &apos;xxx&apos;`将暂存区中所有的内容提交到本地分支
-</code></pre><h3 id="配置本地email和用户名信息"><a href="#配置本地email和用户名信息" class="headerlink" title="配置本地email和用户名信息"></a>配置本地email和用户名信息</h3><pre><code>1. `git config --global user.email &apos;xxx@qq.com&apos;`
-2. `git config --global user.name &apos;xxxx&apos;`
-</code></pre><h4 id="查看日志"><a href="#查看日志" class="headerlink" title="查看日志"></a>查看日志</h4><pre><code>1. `git log`
-</code></pre><h3 id="远程管理"><a href="#远程管理" class="headerlink" title="远程管理"></a>远程管理</h3><h4 id="推送到代码仓库"><a href="#推送到代码仓库" class="headerlink" title="推送到代码仓库"></a>推送到代码仓库</h4><pre><code>1. `git remote add origin git@xxx`本地与远程仓库进行关联
-2. `ssh-keygen -t rsa -C &apos;xxx@qq.com&apos;`绑定sshkey然后在git上添加SSH
-3. `git pull`PULL代码
-4. `git push origin master`push到origin这个仓库的master分支
-</code></pre><h3 id="克隆"><a href="#克隆" class="headerlink" title="克隆"></a>克隆</h3><pre><code>1. `git clone git@xxx`
-</code></pre><h3 id="分支"><a href="#分支" class="headerlink" title="分支"></a>分支</h3><pre><code>1. `git branch dev`创建分支
-2. `git branch -b dev`创建并切换分支
-3. `git branch`查看当前的分支信息
-4. `git checkout dev`切换分支
-</code></pre><h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><p><a href="https://juejin.im/book/5a124b29f265da431d3c472e/section/5a124b936fb9a0450002a6c3" target="_blank" rel="noopener">Git 原理详解及实用指南</a><br><a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/" target="_blank" rel="noopener">Git教程 - 廖雪峰的官方网站</a></p>
-
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">git</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/blog/categories/git//" class="article-tag-list-link color4">git</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
-        </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://hlg453839615.github.io/2018/06/17/git和github/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/blog/2018/06/17/JavsScript学习笔记/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          JavaScript学习笔记-数据类型
-        
-      </div>
-    </a>
-  
-  
-    <a href="/blog/2018/06/17/爬虫学习/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">爬虫学习</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-        <div class="toc-container tooltip-left">
-            <i class="icon-font icon-category"></i>
-            <div class="tooltip tooltip-east">
-                <span class="tooltip-item">
-                </span>
-                <span class="tooltip-content">
-                    <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#什么是git"><span class="toc-number">1.</span> <span class="toc-text">什么是git</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#什么是github"><span class="toc-number">2.</span> <span class="toc-text">什么是github</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#分布式和集中式"><span class="toc-number">3.</span> <span class="toc-text">分布式和集中式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码管理"><span class="toc-number">4.</span> <span class="toc-text">代码管理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#本地管理"><span class="toc-number">4.1.</span> <span class="toc-text">本地管理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#工作区-gt-暂存区-gt-分支"><span class="toc-number">4.1.1.</span> <span class="toc-text">工作区-&gt;暂存区-&gt;分支</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#配置本地email和用户名信息"><span class="toc-number">4.2.</span> <span class="toc-text">配置本地email和用户名信息</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#查看日志"><span class="toc-number">4.2.1.</span> <span class="toc-text">查看日志</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#远程管理"><span class="toc-number">4.3.</span> <span class="toc-text">远程管理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#推送到代码仓库"><span class="toc-number">4.3.1.</span> <span class="toc-text">推送到代码仓库</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#克隆"><span class="toc-number">4.4.</span> <span class="toc-text">克隆</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#分支"><span class="toc-number">4.5.</span> <span class="toc-text">分支</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#链接"><span class="toc-number">5.</span> <span class="toc-text">链接</span></a></li></ol>
-                    </div>
-                </span>
-            </div>
-        </div>
-        
-    </div>
-</aside>
-
-
-
-
-    
-    <!-- 来必力City版安装代码 -->
-<div id="lv-container" data-id="city" data-uid="MTAyMC8zODA1Ni8xNDU4Ng==">
-	<script type="text/javascript">
-        (function(d, s) {
-            var j, e = d.getElementsByTagName(s)[0];
-
-            if (typeof LivereTower === 'function') { return; }
-
-            j = d.createElement(s);
-            j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-            j.async = true;
-
-            e.parentNode.insertBefore(j, e);
-        })(document, 'script');
-	</script>
-<noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
-</div>
-<!-- City版安装代码已完成 -->
-    
-
-
-
-  
-  
-  
-
-  
-
-  
-
-  
-
-
-
-  
-  <!-- 来必力City版安装代码 -->
-<div id="lv-container" data-id="city" data-uid="MTAyMC8zODA1Ni8xNDU4Ng==">
-	<script type="text/javascript">
-        (function(d, s) {
-            var j, e = d.getElementsByTagName(s)[0];
-
-            if (typeof LivereTower === 'function') { return; }
-
-            j = d.createElement(s);
-            j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-            j.async = true;
-
-            e.parentNode.insertBefore(j, e);
-        })(document, 'script');
-	</script>
-<noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
-</div>
-<!-- City版安装代码已完成 -->
-  
-
-
-
+            
           </div>
         </div>
       </div>
@@ -547,14 +278,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">前端</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">html</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">爬虫</a>
               </li>
              
@@ -564,6 +287,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">BeautifulSoup</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">html</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -579,7 +310,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Jmeter</a>
+                <a href="javascript:void(0)" class="js-tag color4">OSI</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">TCP/IP</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -591,19 +326,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">OSI</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">TCP/IP</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">sqlserver</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">urllib</a>
+                <a href="javascript:void(0)" class="js-tag color2">Jmeter</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -619,6 +346,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">urllib</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">selenium</a>
               </li>
              
@@ -631,15 +362,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">自动化测试</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">网络</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">安全性测试</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">自动化测试</a>
               </li>
              
               <li class="article-tag-list-item">
