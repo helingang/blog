@@ -17,7 +17,7 @@
 <meta property="og:description" content="效果图      安装  windows安装词云   导入模块   1234from wordcloud import WordCloudimport matplotlib.pyplot as pltfrom os import pathfrom scipy.misc import imread">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://hlg453839615.github.io/blog/2018/07/14/wordcloud制作词云/wordcloud.png">
-<meta property="og:updated_time" content="2018-07-20T13:15:53.309Z">
+<meta property="og:updated_time" content="2018-07-20T13:19:23.566Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="wordcloud制作词云">
 <meta name="twitter:description" content="效果图      安装  windows安装词云   导入模块   1234from wordcloud import WordCloudimport matplotlib.pyplot as pltfrom os import pathfrom scipy.misc import imread">
@@ -203,13 +203,13 @@ var _hmt = _hmt || [];
     
     <div class="article-entry" itemprop="articleBody">
       
-        <ol>
+        <ul>
 <li><h3>效果图</h3>
 
 </li>
-</ol>
+</ul>
 <p><img src="/blog/2018/07/14/wordcloud制作词云/wordcloud.png" alt="Alt Text"></p>
-<ol>
+<ul>
 <li><p>安装</p>
 <blockquote>
 <p><a href="https://www.lfd.uci.edu/~gohlke/pythonlibs/#wordcloud" target="_blank" rel="noopener">windows安装词云</a></p>
@@ -217,20 +217,20 @@ var _hmt = _hmt || [];
 </li>
 <li><p>导入模块</p>
 </li>
-</ol>
+</ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">from wordcloud import WordCloud</span><br><span class="line">import matplotlib.pyplot as plt</span><br><span class="line">from os import path</span><br><span class="line">from scipy.misc import imread</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
-<ol>
+<ul>
 <li>得到底图的二维数组数据</li>
-</ol>
+</ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pic_address = path.abspath(&apos;1.jpg&apos;)</span><br><span class="line">pic = imread(pic_address)</span><br></pre></td></tr></table></figure>
-<ol>
+<ul>
 <li>读取文字数据</li>
-</ol>
+</ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">text = open(&apos;data.txt&apos;, encoding = &apos;UTF-8&apos;).read()</span><br></pre></td></tr></table></figure>
-<ol>
+<ul>
 <li>设置词云参数并生成词云图</li>
-</ol>
+</ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">wc = WordCloud(</span><br><span class="line">    background_color = &apos;black&apos;,</span><br><span class="line">    max_words = 2000,</span><br><span class="line">    height = 300,</span><br><span class="line">    width = 400,</span><br><span class="line">    font_path = &apos;C:\Windows\Fonts\simfang.ttf&apos;,</span><br><span class="line">    max_font_size = 100,</span><br><span class="line">    random_state = 100,</span><br><span class="line">    mask = pic</span><br><span class="line">)</span><br><span class="line">wc.generate(text = text)</span><br><span class="line">plt.imshow(myword)</span><br><span class="line">plt.axis(&apos;off&apos;)</span><br><span class="line">plt.show()</span><br><span class="line">wc.to_file(&apos;1.png&apos;)</span><br></pre></td></tr></table></figure>
       
 
@@ -536,11 +536,27 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">爬虫</a>
+                <a href="javascript:void(0)" class="js-tag color4">Selenium</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">python</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">自动化</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">OSI</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">TCP/IP</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">爬虫</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -560,23 +576,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Selenium</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">自动化</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">OSI</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">TCP/IP</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Jmeter</a>
+                <a href="javascript:void(0)" class="js-tag color4">requests</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -584,7 +584,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">urllib</a>
+                <a href="javascript:void(0)" class="js-tag color2">Jmeter</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -600,7 +600,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">requests</a>
+                <a href="javascript:void(0)" class="js-tag color2">urllib</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">自动化测试</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -612,7 +616,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">自动化测试</a>
+                <a href="javascript:void(0)" class="js-tag color3">电影</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -621,10 +625,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">安全性测试</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">电影</a>
               </li>
             
             <div class="clearfix"></div>
