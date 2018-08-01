@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="像风走了八千里,不问归期">
 <meta property="og:description" content="JavaScript正则的使用可以用正则的方法 reg.exec(str);返回查找的字符串或null,但是只能匹配一次不能全局匹配;返回一个数组,包含匹配到的字符串和分组规则匹配的值 reg.test(str);返回true或false str.match(reg);返回查找的字符串数组或null,匹配一个;加g时才返回标准数组;不加g时返回类数组包含结果和子集 str.replace(reg">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-01T14:22:25.190Z">
+<meta property="og:updated_time" content="2018-08-01T14:25:23.323Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript中正则的使用">
 <meta name="twitter:description" content="JavaScript正则的使用可以用正则的方法 reg.exec(str);返回查找的字符串或null,但是只能匹配一次不能全局匹配;返回一个数组,包含匹配到的字符串和分组规则匹配的值 reg.test(str);返回true或false str.match(reg);返回查找的字符串数组或null,匹配一个;加g时才返回标准数组;不加g时返回类数组包含结果和子集 str.replace(reg">
@@ -257,11 +257,11 @@ var _hmt = _hmt || [];
 <li>n{x,y} 匹配x~y个n</li>
 <li>n{x,} 匹配至少x个n</li>
 </ol>
-<h4 id="贪婪和惰性-针对量词"><a href="#贪婪和惰性-针对量词" class="headerlink" title="贪婪和惰性(针对量词)"></a>贪婪和惰性(针对量词)</h4><ul>
+<h4 id="贪婪和惰性-针对量词"><a href="#贪婪和惰性-针对量词" class="headerlink" title="贪婪和惰性(针对量词)"></a>贪婪和惰性(针对量词)</h4><ol>
 <li>量词默认贪婪(尽可能多的匹配)</li>
 <li>如要添加惰性,则<code>?</code>后面不能添加东西<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var str = &apos;a1111abc22222222222abc&apos;</span><br><span class="line">var reg = /a\w*?abc/;//惰性</span><br><span class="line">var reg1 = /a\w*abc/;//贪婪</span><br><span class="line">//贪婪: 匹配完整个字符串然后从最后开始吐</span><br><span class="line">//惰性: 从头开始匹配尽量少的匹配</span><br></pre></td></tr></table></figure>
 </li>
-</ul>
+</ol>
 <table>
 <thead>
 <tr>
@@ -436,18 +436,18 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
-    <a href="/blog/2018/06/16/python中正则的使用/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/blog/2018/06/16/BeautifulSoup常用api总结/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          python中正则的使用
+          BeautifulSoup常用api
         
       </div>
     </a>
   
   
-    <a href="/blog/2018/06/12/OSI七层模型结构/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">OSI七层模型结构, TCP/IP四层模型学习笔记</div>
+    <a href="/blog/2018/06/16/python中正则的使用/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">python中正则的使用</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -671,23 +671,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">sqlserver</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">requests</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">urllib</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">词云</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">wordcloud</a>
+                <a href="javascript:void(0)" class="js-tag color5">sqlserver</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -704,6 +692,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">自动化测试</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">urllib</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">词云</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">wordcloud</a>
               </li>
              
               <li class="article-tag-list-item">
