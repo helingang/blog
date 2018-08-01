@@ -562,19 +562,19 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-JavaScript中正则的使用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-python中正则的使用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/blog/2018/06/16/JavaScript中正则的使用/">JavaScript中正则的使用</a>
+      <a class="article-title" href="/blog/2018/06/16/python中正则的使用/">python中正则的使用</a>
     </h1>
   
 
         
-        <a href="/blog/2018/06/16/JavaScript中正则的使用/" class="archive-article-date">
+        <a href="/blog/2018/06/16/python中正则的使用/" class="archive-article-date">
   	<time datetime="2018-06-15T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-16</time>
 </a>
         
@@ -582,16 +582,20 @@ var _hmt = _hmt || [];
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="JavaScript正则的使用"><a href="#JavaScript正则的使用" class="headerlink" title="JavaScript正则的使用"></a>JavaScript正则的使用</h2><h4 id="可以用正则的方法"><a href="#可以用正则的方法" class="headerlink" title="可以用正则的方法"></a>可以用正则的方法</h4><ul>
-<li><code>reg.exec(str);</code>返回查找的字符串或null,但是只能匹配一次不能全局匹配;返回一个数组,包含匹配到的字符串和分组规则匹配的值</li>
-<li><code>reg.test(str);</code>返回true或false</li>
-<li><code>str.match(reg);</code>返回查找的字符串数组或null,匹配一个;加g时才返回标准数组;不加g时返回类数组包含结果和子集</li>
-<li><code>str.replace(reg , str1);</code>str1可以用函数代替<code>function(a,b,c,d){}</code>a: 匹配内容 b: 匹配的子集 c:匹配内容出现的序号 d: 整体str</li>
-<li><code>str.search(reg);</code>返回查找匹配字符串首次出现的下标或-1</li>
-<li><code>str.split(reg);</code></li></ul>
-        
-          <a class="article-more-a" href="/blog/2018/06/16/JavaScript中正则的使用/#more">more >></a>
-        
+        <h2 id="python正则的使用"><a href="#python正则的使用" class="headerlink" title="python正则的使用"></a>python正则的使用</h2><pre><code>1. 与js一致,主要看方法
+2. 特殊字符
+    1. `.`除换行符外的任意字符
+    2. `^`与`$`起始于结束(`^`和`$`放在最前和最后)
+    3. 量词
+        1. `* + ?`
+3. 非捕获型分组
+    1. 正向前瞻`\d(?=xxx)`, 负向前瞻`\d(?!xxx)`
+    2. 正向后顾`(?&lt;=xxx)\d`, 负向后顾`(?&lt;!xxx)\d`
+4. 方法
+    1. `re.match(pattern, string)`或`re.search(pattern, string)`返回一个或Null
+    2. `re.split(&apos;\d&apos;, &apos;1a2b3c&apos;)`以正则找到的字符把String切割成数组
+    3. `re.findall(pattern, string)`
+</code></pre>
       
 
       
@@ -604,7 +608,7 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
@@ -620,7 +624,7 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/blog/categories/JavaScript//" class="article-tag-list-link color1">JavaScript</a>
+        			<a href="/blog/categories/python//" class="article-tag-list-link color2">python</a>
         		</li>
       		
 		</ul>
@@ -629,7 +633,7 @@ var _hmt = _hmt || [];
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/blog/2018/06/16/JavaScript中正则的使用/">展开全文 >></a>
+          <a class="article-more-a" href="/blog/2018/06/16/python中正则的使用/">展开全文 >></a>
         </p>
       
 
@@ -790,19 +794,19 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-python中正则的使用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-JavaScript中正则的使用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/blog/2018/06/16/python中正则的使用/">python中正则的使用</a>
+      <a class="article-title" href="/blog/2018/06/16/JavaScript中正则的使用/">JavaScript中正则的使用</a>
     </h1>
   
 
         
-        <a href="/blog/2018/06/16/python中正则的使用/" class="archive-article-date">
+        <a href="/blog/2018/06/16/JavaScript中正则的使用/" class="archive-article-date">
   	<time datetime="2018-06-15T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-16</time>
 </a>
         
@@ -810,20 +814,16 @@ var _hmt = _hmt || [];
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="python正则的使用"><a href="#python正则的使用" class="headerlink" title="python正则的使用"></a>python正则的使用</h2><pre><code>1. 与js一致,主要看方法
-2. 特殊字符
-    1. `.`除换行符外的任意字符
-    2. `^`与`$`起始于结束(`^`和`$`放在最前和最后)
-    3. 量词
-        1. `* + ?`
-3. 非捕获型分组
-    1. 正向前瞻`\d(?=xxx)`, 负向前瞻`\d(?!xxx)`
-    2. 正向后顾`(?&lt;=xxx)\d`, 负向后顾`(?&lt;!xxx)\d`
-4. 方法
-    1. `re.match(pattern, string)`或`re.search(pattern, string)`返回一个或Null
-    2. `re.split(&apos;\d&apos;, &apos;1a2b3c&apos;)`以正则找到的字符把String切割成数组
-    3. `re.findall(pattern, string)`
-</code></pre>
+        <h2 id="JavaScript正则的使用"><a href="#JavaScript正则的使用" class="headerlink" title="JavaScript正则的使用"></a>JavaScript正则的使用</h2><h4 id="可以用正则的方法"><a href="#可以用正则的方法" class="headerlink" title="可以用正则的方法"></a>可以用正则的方法</h4><ul>
+<li><code>reg.exec(str);</code>返回查找的字符串或null,但是只能匹配一次不能全局匹配;返回一个数组,包含匹配到的字符串和分组规则匹配的值</li>
+<li><code>reg.test(str);</code>返回true或false</li>
+<li><code>str.match(reg);</code>返回查找的字符串数组或null,匹配一个;加g时才返回标准数组;不加g时返回类数组包含结果和子集</li>
+<li><code>str.replace(reg , str1);</code>str1可以用函数代替<code>function(a,b,c,d){}</code>a: 匹配内容 b: 匹配的子集 c:匹配内容出现的序号 d: 整体str</li>
+<li><code>str.search(reg);</code>返回查找匹配字符串首次出现的下标或-1</li>
+<li><code>str.split(reg);</code></li></ul>
+        
+          <a class="article-more-a" href="/blog/2018/06/16/JavaScript中正则的使用/#more">more >></a>
+        
       
 
       
@@ -836,7 +836,7 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
@@ -852,7 +852,7 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/blog/categories/python//" class="article-tag-list-link color2">python</a>
+        			<a href="/blog/categories/JavaScript//" class="article-tag-list-link color1">JavaScript</a>
         		</li>
       		
 		</ul>
@@ -861,7 +861,7 @@ var _hmt = _hmt || [];
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/blog/2018/06/16/python中正则的使用/">展开全文 >></a>
+          <a class="article-more-a" href="/blog/2018/06/16/JavaScript中正则的使用/">展开全文 >></a>
         </p>
       
 
@@ -1342,15 +1342,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Jmeter</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">git</a>
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Jmeter</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">sqlserver</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">urllib</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1370,10 +1374,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">urllib</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">词云</a>
               </li>
              
@@ -1386,15 +1386,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">电影</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">网络</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">安全性测试</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">电影</a>
               </li>
             
             <div class="clearfix"></div>
