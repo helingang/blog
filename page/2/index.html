@@ -181,6 +181,102 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-urllib库的使用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/2018/06/21/urllib库的使用/">urllib库的使用</a>
+    </h1>
+  
+
+        
+        <a href="/blog/2018/06/21/urllib库的使用/" class="archive-article-date">
+  	<time datetime="2018-06-21T06:14:13.134Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-21</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="urllib库"><a href="#urllib库" class="headerlink" title="urllib库"></a>urllib库</h2><h3 id="模拟get请求"><a href="#模拟get请求" class="headerlink" title="模拟get请求"></a>模拟get请求</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">from urllib import request</span><br><span class="line"></span><br><span class="line"># 创建req对象</span><br><span class="line">req = request.Request(&apos;http://www.douban.com&apos;)</span><br><span class="line">req.add_header(&apos;User-Agent&apos;, &apos;Mozilla/6.0 (iPhone; CPU iPhone OS 8_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/8.0 Mobile/10A5376e Safari/8536.25&apos;)</span><br><span class="line">with request.urlopen(req) as f:</span><br><span class="line">    print(f.status, f.reason) # f.getcode() 200</span><br><span class="line">    print(&apos;------&apos;)</span><br><span class="line">    # 响应头</span><br><span class="line">    # print(f.info())</span><br><span class="line">    for k, v in f.getheaders():</span><br><span class="line">        print(k, v)</span><br><span class="line">    # 响应体</span><br><span class="line">    res = f.read()</span><br><span class="line">    res = res.decode(&apos;utf-8&apos;)</span><br><span class="line">    print(&apos;------&apos;)</span><br><span class="line">    print(res)</span><br></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/blog/2018/06/21/urllib库的使用/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">urllib</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/blog/categories/python//" class="article-tag-list-link color2">python</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/blog/2018/06/21/urllib库的使用/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-解忧杂货店" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -562,19 +658,19 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-python中正则的使用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-JavaScript中正则的使用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/blog/2018/06/16/python中正则的使用/">python中正则的使用</a>
+      <a class="article-title" href="/blog/2018/06/16/JavaScript中正则的使用/">JavaScript中正则的使用</a>
     </h1>
   
 
         
-        <a href="/blog/2018/06/16/python中正则的使用/" class="archive-article-date">
+        <a href="/blog/2018/06/16/JavaScript中正则的使用/" class="archive-article-date">
   	<time datetime="2018-06-15T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-16</time>
 </a>
         
@@ -582,20 +678,16 @@ var _hmt = _hmt || [];
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="python正则的使用"><a href="#python正则的使用" class="headerlink" title="python正则的使用"></a>python正则的使用</h2><pre><code>1. 与js一致,主要看方法
-2. 特殊字符
-    1. `.`除换行符外的任意字符
-    2. `^`与`$`起始于结束(`^`和`$`放在最前和最后)
-    3. 量词
-        1. `* + ?`
-3. 非捕获型分组
-    1. 正向前瞻`\d(?=xxx)`, 负向前瞻`\d(?!xxx)`
-    2. 正向后顾`(?&lt;=xxx)\d`, 负向后顾`(?&lt;!xxx)\d`
-4. 方法
-    1. `re.match(pattern, string)`或`re.search(pattern, string)`返回一个或Null
-    2. `re.split(&apos;\d&apos;, &apos;1a2b3c&apos;)`以正则找到的字符把String切割成数组
-    3. `re.findall(pattern, string)`
-</code></pre>
+        <h2 id="JavaScript正则的使用"><a href="#JavaScript正则的使用" class="headerlink" title="JavaScript正则的使用"></a>JavaScript正则的使用</h2><h4 id="可以用正则的方法"><a href="#可以用正则的方法" class="headerlink" title="可以用正则的方法"></a>可以用正则的方法</h4><ul>
+<li><code>reg.exec(str);</code>返回查找的字符串或null,但是只能匹配一次不能全局匹配;返回一个数组,包含匹配到的字符串和分组规则匹配的值</li>
+<li><code>reg.test(str);</code>返回true或false</li>
+<li><code>str.match(reg);</code>返回查找的字符串数组或null,匹配一个;加g时才返回标准数组;不加g时返回类数组包含结果和子集</li>
+<li><code>str.replace(reg , str1);</code>str1可以用函数代替<code>function(a,b,c,d){}</code>a: 匹配内容 b: 匹配的子集 c:匹配内容出现的序号 d: 整体str</li>
+<li><code>str.search(reg);</code>返回查找匹配字符串首次出现的下标或-1</li>
+<li><code>str.split(reg);</code></li></ul>
+        
+          <a class="article-more-a" href="/blog/2018/06/16/JavaScript中正则的使用/#more">more >></a>
+        
       
 
       
@@ -608,7 +700,7 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
@@ -624,7 +716,7 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/blog/categories/python//" class="article-tag-list-link color2">python</a>
+        			<a href="/blog/categories/JavaScript//" class="article-tag-list-link color1">JavaScript</a>
         		</li>
       		
 		</ul>
@@ -633,7 +725,7 @@ var _hmt = _hmt || [];
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/blog/2018/06/16/python中正则的使用/">展开全文 >></a>
+          <a class="article-more-a" href="/blog/2018/06/16/JavaScript中正则的使用/">展开全文 >></a>
         </p>
       
 
@@ -794,19 +886,19 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-JavaScript中正则的使用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-python中正则的使用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/blog/2018/06/16/JavaScript中正则的使用/">JavaScript中正则的使用</a>
+      <a class="article-title" href="/blog/2018/06/16/python中正则的使用/">python中正则的使用</a>
     </h1>
   
 
         
-        <a href="/blog/2018/06/16/JavaScript中正则的使用/" class="archive-article-date">
+        <a href="/blog/2018/06/16/python中正则的使用/" class="archive-article-date">
   	<time datetime="2018-06-15T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-16</time>
 </a>
         
@@ -814,16 +906,20 @@ var _hmt = _hmt || [];
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="JavaScript正则的使用"><a href="#JavaScript正则的使用" class="headerlink" title="JavaScript正则的使用"></a>JavaScript正则的使用</h2><h4 id="可以用正则的方法"><a href="#可以用正则的方法" class="headerlink" title="可以用正则的方法"></a>可以用正则的方法</h4><ul>
-<li><code>reg.exec(str);</code>返回查找的字符串或null,但是只能匹配一次不能全局匹配;返回一个数组,包含匹配到的字符串和分组规则匹配的值</li>
-<li><code>reg.test(str);</code>返回true或false</li>
-<li><code>str.match(reg);</code>返回查找的字符串数组或null,匹配一个;加g时才返回标准数组;不加g时返回类数组包含结果和子集</li>
-<li><code>str.replace(reg , str1);</code>str1可以用函数代替<code>function(a,b,c,d){}</code>a: 匹配内容 b: 匹配的子集 c:匹配内容出现的序号 d: 整体str</li>
-<li><code>str.search(reg);</code>返回查找匹配字符串首次出现的下标或-1</li>
-<li><code>str.split(reg);</code></li></ul>
-        
-          <a class="article-more-a" href="/blog/2018/06/16/JavaScript中正则的使用/#more">more >></a>
-        
+        <h2 id="python正则的使用"><a href="#python正则的使用" class="headerlink" title="python正则的使用"></a>python正则的使用</h2><pre><code>1. 与js一致,主要看方法
+2. 特殊字符
+    1. `.`除换行符外的任意字符
+    2. `^`与`$`起始于结束(`^`和`$`放在最前和最后)
+    3. 量词
+        1. `* + ?`
+3. 非捕获型分组
+    1. 正向前瞻`\d(?=xxx)`, 负向前瞻`\d(?!xxx)`
+    2. 正向后顾`(?&lt;=xxx)\d`, 负向后顾`(?&lt;!xxx)\d`
+4. 方法
+    1. `re.match(pattern, string)`或`re.search(pattern, string)`返回一个或Null
+    2. `re.split(&apos;\d&apos;, &apos;1a2b3c&apos;)`以正则找到的字符把String切割成数组
+    3. `re.findall(pattern, string)`
+</code></pre>
       
 
       
@@ -836,7 +932,7 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
@@ -852,7 +948,7 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/blog/categories/JavaScript//" class="article-tag-list-link color1">JavaScript</a>
+        			<a href="/blog/categories/python//" class="article-tag-list-link color2">python</a>
         		</li>
       		
 		</ul>
@@ -861,7 +957,7 @@ var _hmt = _hmt || [];
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/blog/2018/06/16/JavaScript中正则的使用/">展开全文 >></a>
+          <a class="article-more-a" href="/blog/2018/06/16/python中正则的使用/">展开全文 >></a>
         </p>
       
 
@@ -1098,107 +1194,6 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-基于python + Selenium的自动化学习(unittest)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/2018/06/07/基于python + Selenium的自动化学习(unittest)/">基于python + Selenium的自动化学习(unittest框架)</a>
-    </h1>
-  
-
-        
-        <a href="/blog/2018/06/07/基于python + Selenium的自动化学习(unittest)/" class="archive-article-date">
-  	<time datetime="2018-06-06T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-07</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="webUI"><a href="#webUI" class="headerlink" title="webUI"></a>webUI</h1><h2 id="项目目录"><a href="#项目目录" class="headerlink" title="项目目录"></a>项目目录</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">├─report</span><br><span class="line">└─test_case</span><br><span class="line">    ├─base</span><br><span class="line">    └─search</span><br><span class="line">index.py</span><br></pre></td></tr></table></figure>
-<p>report: html报告<br>test_case: 测试用例<br>test_case/base/base.py: 全局基础类<br>test_case/base/search_base.py: 模块基础类<br>test_case/base/test_search.py: 模块测试用例<br>index.py: 入口文件<br></p>
-        
-          <a class="article-more-a" href="/blog/2018/06/07/基于python + Selenium的自动化学习(unittest)/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Selenium</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">自动化测试</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/blog/categories/测试//" class="article-tag-list-link color3">测试</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/blog/2018/06/07/基于python + Selenium的自动化学习(unittest)/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/blog/">&laquo; Prev</a><a class="page-number" href="/blog/">1</a><span class="page-number current">2</span><a class="page-number" href="/blog/page/3/">3</a><a class="extend next" rel="next" href="/blog/page/3/">Next &raquo;</a>
@@ -1298,6 +1293,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">html</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">爬虫</a>
               </li>
              
@@ -1310,27 +1313,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">前端</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">html</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">JavaScript</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">正则</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">OSI</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">TCP/IP</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1342,23 +1325,35 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">flask</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">jemter</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">OSI</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">TCP/IP</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">git</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Jmeter</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">sqlserver</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">urllib</a>
+                <a href="javascript:void(0)" class="js-tag color3">正则</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">requests</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">sqlserver</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1382,11 +1377,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">自动化测试</a>
+                <a href="javascript:void(0)" class="js-tag color2">urllib</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">电影</a>
+                <a href="javascript:void(0)" class="js-tag color2">Jmeter</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1395,6 +1390,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">安全性测试</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">电影</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">自动化测试</a>
               </li>
             
             <div class="clearfix"></div>
