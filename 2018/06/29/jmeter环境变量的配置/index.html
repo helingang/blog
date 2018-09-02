@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="像风走了八千里,不问归期">
 <meta property="og:description" content="jdk 下载地址 变量名JAVA_HOME, 变量值C:\Program Files\Java\jdk1.8.0_51 (即jdk安装的位置) 变量名Path, 变量值%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin 变量名CLASSPATH, 变量值.;%JAVA_HOME%lib;%JAVA_HOME%lib\tools.jar  jmeter 变量名JMETER_HOM">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-15T04:28:40.988Z">
+<meta property="og:updated_time" content="2018-08-25T05:40:59.120Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Jemter环境变量的配置">
 <meta name="twitter:description" content="jdk 下载地址 变量名JAVA_HOME, 变量值C:\Program Files\Java\jdk1.8.0_51 (即jdk安装的位置) 变量名Path, 变量值%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin 变量名CLASSPATH, 变量值.;%JAVA_HOME%lib;%JAVA_HOME%lib\tools.jar  jmeter 变量名JMETER_HOM">
@@ -211,6 +211,13 @@ var _hmt = _hmt || [];
 <li>变量名<code>JMETER_HOME</code>, 变量值<code>C:\Program Files\apache-jmeter-2.11</code></li>
 <li>变量名<code>CLASSPATH</code>, 变量值<code>%JMETER_HOME%\lib\ext\ApacheJMeter_core.jar;%JMETER_HOME%\lib\jorphan.jar;%JMETER_HOME%\lib/logkit-2.0.jar;</code></li>
 </ul>
+<h2 id="非GUI压测"><a href="#非GUI压测" class="headerlink" title="非GUI压测"></a>非GUI压测</h2><ul>
+<li><code>jmeter  -n -t [jmx path] -l [jtl path] -e -o [html result path]</code></li>
+<li>ps:<ol>
+<li>jtl文件和html目录需提前删除</li>
+</ol>
+</li>
+</ul>
 
       
 
@@ -326,18 +333,18 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
-    <a href="/blog/2018/06/29/python连接SqlServer/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/blog/2018/06/29/python中获取当前时间/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          python连接SqlServer
+          python中获取当前时间
         
       </div>
     </a>
   
   
-    <a href="/blog/2018/06/29/python中获取当前时间/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">python中获取当前时间</div>
+    <a href="/blog/2018/06/29/python连接SqlServer/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">python连接SqlServer</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -364,7 +371,7 @@ var _hmt = _hmt || [];
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#jdk"><span class="toc-number">1.</span> <span class="toc-text">jdk</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#jmeter"><span class="toc-number">2.</span> <span class="toc-text">jmeter</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#jdk"><span class="toc-number">1.</span> <span class="toc-text">jdk</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#jmeter"><span class="toc-number">2.</span> <span class="toc-text">jmeter</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#非GUI压测"><span class="toc-number">3.</span> <span class="toc-text">非GUI压测</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -509,6 +516,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">html</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">爬虫</a>
               </li>
              
@@ -521,27 +536,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+                <a href="javascript:void(0)" class="js-tag color4">Selenium</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">html</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">JavaScript</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">正则</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">OSI</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">TCP/IP</a>
+                <a href="javascript:void(0)" class="js-tag color4">自动化</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -553,15 +552,27 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Selenium</a>
+                <a href="javascript:void(0)" class="js-tag color4">OSI</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">自动化</a>
+                <a href="javascript:void(0)" class="js-tag color2">TCP/IP</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">JavaScript</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">正则</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">urllib</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -573,19 +584,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">urllib</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">词云</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">wordcloud</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">自动化测试</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -601,15 +604,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">电影</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">网络</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">安全性测试</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">电影</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">自动化测试</a>
               </li>
             
             <div class="clearfix"></div>
@@ -694,6 +701,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           
             <li class="search-li">
               <a href="https://juejin.im/post/5b348041f265da59622abde0" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>使用requests库编写爬虫</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="https://github.com/facert/awesome-spider" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>爬虫资源</a>
             </li>
           
             <li class="search-li">
